@@ -1,6 +1,11 @@
-<?php get_header(); ?>
+<?php
+    session_start();
+    get_head(); 
+?>
 
 	<main>
+        
+        ?php get_navigation(); ?>
 	    
 	    <section class="hero_image">
            
