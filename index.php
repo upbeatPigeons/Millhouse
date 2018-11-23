@@ -24,4 +24,13 @@
            </div>       
            
         </section>
+
+
 	</main>
+
+<form class="reg" action="includes/register.php" method="POST">
+  <input class="reg--margin" type="text" name="username" id="username" placeholder="username" required>
+  <input class="reg--margin" type="text" name="password" id="password" placeholder="password" required>
+
+  <input type="submit" name="register" value="Register">
+</form>
