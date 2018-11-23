@@ -1,4 +1,5 @@
 <?php
     session_start();
-    get_head(); 
+    include "../includes/head.php";
+    include "../includes/footer.php"; 
 ?>

@@ -1,6 +1,6 @@
 <?php
     session_start();
-    get_head(); 
+    require "includes/head.php"
 ?>
 
 	<main class="index_wrapper">
