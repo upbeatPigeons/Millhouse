@@ -1,0 +1,43 @@
+nav {
+    .current {
+        color: $palepink_color;
+      
+    }
+
+    .nav_logo {
+        width: 7rem;
+        height: 4rem;
+        margin-right: 100px;
+        margin-left: 40px;
+    }
+
+    .navbar-toggler {
+        margin-top: 15px;
+        margin-left: 15px;    
+        } 
+    
+    .navbar-left{
+            a{
+            padding-left: 0;
+            }
+    }
+
+    ul {
+        li {
+            list-style: none;
+
+            a {
+                display: block;
+                text-decoration: none;
+              
+                
+
+                &:hover {
+                    color:blue;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,64 @@
+/* line 2, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/components/_nav.scss */
+nav .current {
+  color: #D7BCC8;
+}
+
+/* line 7, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/components/_nav.scss */
+nav .nav_logo {
+  width: 7rem;
+  height: 4rem;
+  margin-right: 100px;
+  margin-left: 40px;
+}
+
+/* line 14, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/components/_nav.scss */
+nav .navbar-toggler {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+/* line 20, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/components/_nav.scss */
+nav .navbar-left a {
+  padding-left: 0;
+}
+
+/* line 26, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/components/_nav.scss */
+nav ul li {
+  list-style: none;
+}
+
+/* line 29, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/components/_nav.scss */
+nav ul li a {
+  display: block;
+  text-decoration: none;
+}
+
+/* line 35, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/components/_nav.scss */
+nav ul li a:hover {
+  color: blue;
+  text-decoration: none;
+}
+
+/* line 1, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/components/_footer.scss */
+footer {
+  background-color: #1C3045;
+  height: 4rem;
+}
+
+/* line 1, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/pages/_index.scss */
+.index-wrapper {
+  background-color: #D7BCC8;
+}
+
+/* line 4, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/pages/_index.scss */
+.index-wrapper .index_container {
+  background-color: #D7BCC8;
+}
+
+/* line 11, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/pages/_index.scss */
+.index_logo {
+  height: 4rem;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=../css/style.map */

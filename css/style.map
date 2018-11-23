@@ -1,0 +1,28 @@
+{
+	"version": 3,
+	"file": "../sass/style.css",
+	"sources": [
+		"../sass/style.scss",
+		"../sass/helpers/_mixins.scss",
+		"../sass/helpers/_variables.scss",
+		"../sass/_typography.scss",
+		"../sass/components/_button.scss",
+		"../sass/components/_nav.scss",
+		"../sass/components/_footer.scss",
+		"../sass/pages/_home.scss",
+		"../sass/pages/_index.scss"
+	],
+	"sourcesContent": [
+		"//**** */helpers\n@import \"helpers/mixins\";\n@import \"helpers/variables\";\n\n//**** */typography\n@import \"typography\";\n\n//**** */components\n@import \"components/button\";\n@import \"components/nav\";\n@import \"components/footer\";\n\n\n//**** */pages\n@import \"pages/home\";\n@import \"pages/index\";\n\n//**** */typography\n@import \"typography\";",
+		"",
+		"//colors\n\n$white_color: #F0F0F0;\n$darkblue_color: #1C3045;\n$palegreen_color: #A6C9C6;\n$brightpink_color: #FAC8CD;\n$palepink_color: #D7BCC8;\n$paleblue_color: #95B8D1;\n$blacl_color: #252525;\n$purple_color: #60495A;\n",
+		"",
+		"",
+		"nav {\n    .current {\n        color: $palepink_color;\n      \n    }\n\n    .nav_logo {\n        width: 7rem;\n        height: 4rem;\n        margin-right: 100px;\n        margin-left: 40px;\n    }\n\n    .navbar-toggler {\n        margin-top: 15px;\n        margin-left: 15px;    \n        } \n    \n    .navbar-left{\n            a{\n            padding-left: 0;\n            }\n    }\n\n    ul {\n        li {\n            list-style: none;\n\n            a {\n                display: block;\n                text-decoration: none;\n              \n                \n\n                &:hover {\n                    color:blue;\n                    text-decoration: none;\n                }\n            }\n        }\n    }\n\n}",
+		"footer{\n    background-color: $darkblue_color;\n    height: 4rem;\n}",
+		"//This styles are specific styles for home.php",
+		".index-wrapper{\n    background-color: $palepink_color;\n    \n    .index_container{\n        background-color: $palepink_color;\n        \n        \n    }\n}\n\n.index_logo{\n    height: 4rem;\n    justify-content: center;\n}"
+	],
+	"mappings": ";AKAA,AACI,GADD,CACC,QAAQ,CAAC;EACL,KAAK,EHII,OAAO;CGFnB;;;AAJL,AAMI,GAND,CAMC,SAAS,CAAC;EACN,KAAK,EAAE,IAAK;EACZ,MAAM,EAAE,IAAK;EACb,YAAY,EAAE,KAAM;EACpB,WAAW,EAAE,IAAK;CACrB;;;AAXL,AAaI,GAbD,CAaC,eAAe,CAAC;EACZ,UAAU,EAAE,IAAK;EACjB,WAAW,EAAE,IAAK;CACjB;;;AAhBT,AAmBY,GAnBT,CAkBC,YAAY,CACJ,CAAC,CAAA;EACD,YAAY,EAAE,CAAE;CACf;;;AArBb,AAyBQ,GAzBL,CAwBC,EAAE,CACE,EAAE,CAAC;EACC,UAAU,EAAE,IAAK;CAapB;;;AAvCT,AA4BY,GA5BT,CAwBC,EAAE,CACE,EAAE,CAGE,CAAC,CAAC;EACE,OAAO,EAAE,KAAM;EACf,eAAe,EAAE,IAAK;CAQzB;;;AAtCb,AA4BY,GA5BT,CAwBC,EAAE,CACE,EAAE,CAGE,CAAC,AAMI,MAAM,CAAC;EACJ,KAAK,EAAC,IAAK;EACX,eAAe,EAAE,IAAK;CACzB;;;ACrCjB,AAAA,MAAM,CAAA;EACF,gBAAgB,EJEH,OAAO;EIDpB,MAAM,EAAE,IAAK;CAChB;;;AEHD,AAAA,cAAc,CAAA;EACV,gBAAgB,ENKH,OAAO;CMEvB;;;AARD,AAGI,cAHU,CAGV,gBAAgB,CAAA;EACZ,gBAAgB,ENEP,OAAO;CMCnB;;;AAGL,AAAA,WAAW,CAAA;EACP,MAAM,EAAE,IAAK;EACb,eAAe,EAAE,MAAO;CAC3B",
+	"names": []
+}
