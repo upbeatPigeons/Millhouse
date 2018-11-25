@@ -19,12 +19,18 @@ if (isset($_POST['register'])) {
 
   //Fetch the row.  
   $row = $statement->fetch(PDO::FETCH_ASSOC);
-
   //If the provided username already exists - display error.
   if ($row['num'] > 0) {
     //TODO: some sort of error handling
     die("user taken");
   } else {
+  
+  //If the provided password is shorter than 6 chars - display error.
+  $password = $_POST['password']; 
+  if (strlen($password) <= 6){
+    //TODO: some sort of error handling
+    die("Choose a password longer then 6 character");
+  }
 
 
   //Hash the password as we do NOT want to store our passwords in plain text.
@@ -38,7 +44,6 @@ if (isset($_POST['register'])) {
 
   //need this for execute statment
   $username = $_POST['username'];
-
   //Bind our variables.
   $statement->execute(
     [
@@ -49,11 +54,10 @@ if (isset($_POST['register'])) {
 
   //Execute the statement and insert the new account.
   $result = $statement->execute();
-  var_dump($result);
   //If the signup process is successful.
   if ($result) {
       //TODO: A thank you message
-      header('Location: index.php');
+      header('Location: ../index.php');
     }
   }
 }
