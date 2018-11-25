@@ -15,6 +15,7 @@ switch ($_GET["action"]) {
   $title = $_POST["title"];
   $description = $_POST["description"];
   $category = $_POST["category"];
+  $image_url = $_POST["image"];
 
   $do_redirect = true;
 
@@ -49,6 +50,12 @@ switch ($_GET["action"]) {
   if ($do_redirect) {
 	 // Replace created_by with $_SESSION["user_id"] when available
     $new_post = new Post($_POST["title"], $_POST["description"], $_POST["created_by"], $_POST["category"]);
+
+    // if the image url is not empty, set it
+    if (!empty($image_url)) {
+       $new_post->set_image($image_url);
+    }
+
     $access_posts->create($new_post);
 	 // echo to test that it works to create the post
 	 // echo "Created post with title " . $new_post->get_title();
