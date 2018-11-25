@@ -26,6 +26,24 @@ class Access_posts
   	]);
   }
 
+  public function list_posts()
+  {
+    $statement = $this->pdo->prepare("SELECT * from posts ORDER BY date DESC");
+    // execute and return as list of Post objects
+  }
+
+  public function list_posts_for_user($user_id)
+  {
+    $statement = $this->pdo->prepare("SELECT * from posts WHERE user_id = :user_id ORDER BY date DESC");
+    // execute and return as list of Post objects
+  }
+
+  public function delete_posts($post_id) 
+  {
+    $statement = $this->pdo->prepare("DELETE from posts WHERE id = :id")
+    // execute 
+  }
+
 }
 
 ?>
