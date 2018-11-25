@@ -5,9 +5,8 @@ require ('database_connection.php');
 //assume that the user has submitted the registration form.
 if (isset($_POST['register'])) {
 
-  //Retrieve the field values from our registration form.
-  $username = !empty($_POST['username']) ? trim($_POST['username']) : null;
-  $pass = !empty($_POST['password']) ? trim($_POST['password']) : null;
+  //Retrieve the field value from registration form.
+  $username = $_POST['username'];
 
   //Construct the SQL statement and prepare it.
   $sql = "SELECT COUNT(username) AS num FROM users WHERE username = :username";
@@ -33,8 +32,8 @@ if (isset($_POST['register'])) {
   }
 
   //Hash the password as we do NOT want to store our passwords in plain text.
-  //$passwordHash = password_hash($pass, PASSWORD_BCRYPT, array("cost" => 12));
-  $hashed_password = password_hash($pass, PASSWORD_DEFAULT);
+  //$passwordHash = password_hash($password, PASSWORD_BCRYPT, array("cost" => 12));
+  $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
   //Prepare our INSERT statement.
   //Remember: We are inserting a new row into our users table.
