@@ -23,7 +23,7 @@ if (isset($_POST['register'])) {
   if ($row['num'] > 0) {
     //TODO: some sort of error handling
     die("user taken");
-  } else {
+  } 
   
   //If the provided password is shorter than 6 chars - display error.
   $password = $_POST['password']; 
@@ -31,7 +31,6 @@ if (isset($_POST['register'])) {
     //TODO: some sort of error handling
     die("Choose a password longer then 6 character");
   }
-
 
   //Hash the password as we do NOT want to store our passwords in plain text.
   //$passwordHash = password_hash($pass, PASSWORD_BCRYPT, array("cost" => 12));
@@ -56,8 +55,10 @@ if (isset($_POST['register'])) {
   $result = $statement->execute();
   //If the signup process is successful.
   if ($result) {
-      //TODO: A thank you message
-      header('Location: ../index.php');
-    }
+    //It's redirecting to this page temp so query won't inserting twice to database
+    //TODO: A thank you message
+    header('Location: ../views/single_post_page.php');
+    
   }
+  exit();
 }
