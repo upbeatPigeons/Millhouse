@@ -25,12 +25,29 @@
            
         </section>
 
-
 	</main>
+
+
 
 <form class="reg" action="includes/register.php" method="POST">
   <input class="reg--margin" type="text" name="username" id="username" placeholder="username" required>
-  <input class="reg--margin" type="text" name="password" id="password" placeholder="password" required>
-
+  <input class="reg--margin" type="password" name="password" id="password" placeholder="password" required>
   <input type="submit" name="register" value="Register">
 </form>
+<br>
+<form class="reg" action="includes/login.php" method="POST">
+  <input class="reg--margin" type="text" name="username" id="username" placeholder="username" required>
+  <input class="reg--margin" type="password" name="password" id="password" placeholder="password" required>
+  <input type="submit" name="register" value="Log in">
+	<?php
+	if(isset($_GET["error"])){
+		echo str_ireplace("_", " ", $_GET["error"]);
+	}?>
+</form>
+<p>
+		<?php
+		var_dump($_SESSION["username"]);
+		if(isset($_SESSION["username"])){
+			echo "Hello ".$_SESSION["username"]."!";
+		}?>
+</p>

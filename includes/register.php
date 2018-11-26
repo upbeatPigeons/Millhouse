@@ -45,7 +45,7 @@ if (isset($_POST['register'])) {
         //Remember: We are inserting a new row into our users table.
         $sql = "INSERT INTO users(username, password) VALUES (:username, :password)";
         $statement = $pdo->prepare($sql);
-        var_dump($statement);
+        
         //Bind our variables.
         $statement->execute(
           [
