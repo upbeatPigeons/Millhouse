@@ -1,11 +1,11 @@
 <?php
-require_once ('Register.php');
+
+require_once ('RegisterDataSetup.php');
 
 class Register
 {
   private $pdo;
-  private $sql;
-  private $hashed_password;
+
   /* Inject the pdo connection so it is available inside of the class
    * so we can call it with '$this->pdo', always available inside of the class
    */
@@ -14,47 +14,33 @@ class Register
     $this->pdo = $pdo;
   }
   
-  public function check_for_user_in_database($username)
+  public function check_for_user_in_database(RegisterDataSetup $new_user)
   { 
+    
     //Construct the SQL statement and prepare it.
-    $sql = "SELECT COUNT(username) AS num FROM users WHERE username = :username";
-    $statement = $this->pdo->prepare($sql);
-    //Bind the provided username to our prepared statement.
-    $statement->bindValue(':username', $username);
-    //Execute.
-    $statement->execute();
-    //Fetch the row.  
-    $row = $statement->fetch(PDO::FETCH_ASSOC);
-    //If the provided username already exists - display error.
-    if ($row['num'] > 0) 
-    {
-      //TODO: some sort of error handling
-      die("user taken");
-    } 
+    $statement = $this->pdo->prepare(
+      "SELECT COUNT(username) AS num FROM users WHERE username = :username"
+    );
+    //Bind and execute the provided username to our prepared statement.
+    $statement->execute ([
+  		":username" => $new_user->get_username(),
+    ]);
+    //Fetch the row, to be able to check if it's taken
+    $row = $statement->fetch(PDO::FETCH_ASSOC);  
   }
 
-  public function set_hashed_password($hashed_password) 
-  {
-    password_hash($password, PASSWORD_DEFAULT);
-  }
-
-  public function register_user(Register $new_user) 
+  public function register_user(RegisterDataSetup $new_user) 
   {
     //Prepare our INSERT statement.
     //Remember: We are inserting a new row into our users table.
-    $sql = "INSERT INTO users(username, password) VALUES (:username, :password)";
-    $statement = $pdo->prepare($sql);
-
-    //FIXME: remove these two lines
-    //need this for execute statment
-    //$username = $_POST['username'];
-    //Bind our variables.
-    $statement->execute(
-      [
-      ":username" => $username,
-      ":password" => $hashed_password
-      ]
+    $statement = $this->pdo->prepare(
+      "INSERT INTO users(username, password) VALUES (:username, :password)"
     );
+    //Bind our variables.
+    $statement->execute([
+      ":username" => $new_user->get_username(),
+      ":password" => $new_user->get_password()
+    ]);   
   }
 
   public function redirect_registered_user() 
