@@ -43,15 +43,4 @@ class Register
     ]);   
   }
 
-  public function redirect_registered_user() 
-  {
-    //Execute the statement and insert the new account.
-    $result = $statement->execute();
-    //If the signup process is successful.
-    if ($result) {
-      //It's redirecting to this page temp so query won't inserting twice to database
-      //TODO: A thank you message
-      header('Location: ../views/single_post_page.php');
-    }
-  }
 }

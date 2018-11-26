@@ -37,7 +37,12 @@ else
   //If Username is not taken, go ahead and actually register
   print_r("thank you for registering");
   $registration_steps->register_user($new_user);
+
+  //Redirect, or idk what's supposed to happen here
+  header('Location: ../index.php');
 }
+
+
 
 
 
