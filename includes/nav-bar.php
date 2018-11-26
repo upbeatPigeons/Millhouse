@@ -28,7 +28,7 @@
                         <a class="nav-link" href="http://localhost:8888/millhouse/Millhouse/views/about_page.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="http://localhost:8888/millhouse/Millhouse/views/contact_page.php">Contact</a>
                     </li>
                 </ul>
                 

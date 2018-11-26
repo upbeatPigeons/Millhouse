@@ -25,13 +25,19 @@
 
 			<div class="row signin_wrapper justify-content-between">
 				<div class="col-12 col-md-4">
+				
 					<h2>Sign In</h2>
-					<!-- Here we need to include right form -->
-					<?php include "../includes/login_form.php"; ?>
+					<!-- Should Sign In form be an include? -->
+					  <form class="reg" action="includes/register.php" method="POST">
+          	<input class="reg--margin" type="text" name="username" id="username" placeholder="username" required>
+          	<input class="reg--margin" type="text" name="password" id="password" placeholder="password" required>
+          	<input type="submit" name="register" value="Register">
+          </form>
 
 					<h2>Register</h2>
 					<!-- Here we need to include right form -->
 					<?php include "../includes/register_form.php"; ?>
+					
 
 
 					<!-- Col -->
@@ -42,7 +48,7 @@
 					<!-- Col -->
 				</div>
 
-				<!-- Row -->
+			<!-- Row -->
 			</div>
 
 		</section>
