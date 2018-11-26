@@ -28,7 +28,7 @@
 
 	</main>
 
-<form class="reg" action="includes/register.php" method="POST">
+<form class="reg" action="includes/actions_register.php" method="POST">
   <input class="reg--margin" type="text" name="username" id="username" placeholder="username" required>
   <input class="reg--margin" type="text" name="password" id="password" placeholder="password" required>
 
