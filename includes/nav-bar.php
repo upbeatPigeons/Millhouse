@@ -16,10 +16,16 @@
                
                 <ul class="navbar-nav navbar-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
+                        <a class="nav-link" href="http://localhost:8888/millhouse/Millhouse/views/home_page.php">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="http://localhost:8888/millhouse/Millhouse/views/login_page.php">Sign in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:8888/millhouse/Millhouse/views/create_post_page.php">Create Post</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:8888/millhouse/Millhouse/views/about_page.php">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
