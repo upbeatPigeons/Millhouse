@@ -22,7 +22,7 @@ class Post
 	{
 		$this->title = $title;
 		$this->description = $description;
-		$this->date = date("l jS \of F Y h:i:s A"); // Prints something like: Monday 8th of August 2005 03:12:46 PM
+		$this->date = date("Y-m-d"); // Prints sql friendly date 2018-11-22
 		$this->created_by = $created_by;
 		$this->category = $category; 
 	}
