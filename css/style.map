@@ -9,20 +9,22 @@
 		"../sass/components/_button.scss",
 		"../sass/components/_nav.scss",
 		"../sass/components/_footer.scss",
+		"../sass/pages/_index.scss",
 		"../sass/pages/_home.scss",
-		"../sass/pages/_index.scss"
+		"../sass/pages/_login.scss"
 	],
 	"sourcesContent": [
-		"//**** */helpers\n@import \"helpers/mixins\";\n@import \"helpers/variables\";\n\n//**** */typography\n@import \"typography\";\n\n//**** */components\n@import \"components/button\";\n@import \"components/nav\";\n@import \"components/footer\";\n\n\n//**** */pages\n@import \"pages/home\";\n@import \"pages/index\";\n\n//**** */typography\n@import \"typography\";",
+		"//**** */helpers\n@import \"helpers/mixins\";\n@import \"helpers/variables\";\n\n//**** */typography\n@import \"typography\";\n\n//**** */components\n@import \"components/button\";\n@import \"components/nav\";\n@import \"components/footer\";\n\n\n//**** */pages\n@import \"pages/index\";\n@import \"pages/home\";\n@import \"pages/login\";",
 		"",
-		"//colors\n$enable-gradients: true;\n\n$white_color: #F0F0F0;\n$darkblue_color: #1C3045;\n$palegreen_color: #A6C9C6;\n$brightpink_color: #FAC8CD;\n$palepink_color: #D7BCC8;\n$paleblue_color: #95B8D1;\n$blacl_color: #252525;\n$purple_color: #60495A;\n",
+		"//colors\n$enable-gradients: true;\n\n$white_color: #F0F0F0;\n$darkblue_color: #1C3045;\n$palegreen_color: #A6C9C6;\n$brightpink_color: #FAC8CD;\n$palepink_color: #D7BCC8;\n$paleblue_color: #95B8D1;\n$blacl_color: #252525;\n$purple_color: #60495A;\n\n//bootstrap themes\n\n$brand-primary: $darkblue_color;\n$brand-danger: $palepink_color;\n$brand-inverse: $white_color;",
 		"",
 		"",
-		"nav {\n    .current {\n        color: $palepink_color;\n      \n    }\n\n    .nav_logo {\n        width: 7rem;\n        height: 4rem;\n        margin-right: 100px;\n        margin-left: 40px;\n    }\n\n    .navbar-toggler {\n        margin-top: 15px;\n        margin-left: 15px;    \n        } \n    \n    .navbar-left{\n            a{\n            padding-left: 0;\n            }\n    }\n\n    ul {\n        li {\n            list-style: none;\n\n            a {\n                display: block;\n                text-decoration: none;\n              \n                \n\n                &:hover {\n                    color:blue;\n                    text-decoration: none;\n                }\n            }\n        }\n    }\n\n}",
-		"footer{\n    background-color: $darkblue_color;\n    height: 4rem;\n}",
+		"",
+		"footer {\n    height: 4rem;\n    width: 100%;\n    background-color: $darkblue_color;\n    color: $white_color;\n    text-align: center;\n}",
+		"\n/*Background image*/\n\n.hero_image{\n    height: 800px;\n    background-image: url(../../images/millhouse_shop.png);\n    background-repeat: no-repeat; \n    background-size: cover;  \n    background-position: center center;\n    z-index: -100;\n}\n\n.logo_container{\n    \n    .logo-image{\n        width: 10rem;\n        //need to align in the center, cheating margin\n        margin-left: 5rem;\n    }\n}\n\n.index_container{\n    background-color: $palepink_color;\n} \n",
 		"//This styles are specific styles for home.php",
-		".logo-image{\n    marging: 200px;\n}"
+		""
 	],
-	"mappings": ";AKAA,AACI,GADD,CACC,QAAQ,CAAC;EACL,KAAK,EHKI,OAAO;CGHnB;;;AAJL,AAMI,GAND,CAMC,SAAS,CAAC;EACN,KAAK,EAAE,IAAK;EACZ,MAAM,EAAE,IAAK;EACb,YAAY,EAAE,KAAM;EACpB,WAAW,EAAE,IAAK;CACrB;;;AAXL,AAaI,GAbD,CAaC,eAAe,CAAC;EACZ,UAAU,EAAE,IAAK;EACjB,WAAW,EAAE,IAAK;CACjB;;;AAhBT,AAmBY,GAnBT,CAkBC,YAAY,CACJ,CAAC,CAAA;EACD,YAAY,EAAE,CAAE;CACf;;;AArBb,AAyBQ,GAzBL,CAwBC,EAAE,CACE,EAAE,CAAC;EACC,UAAU,EAAE,IAAK;CAapB;;;AAvCT,AA4BY,GA5BT,CAwBC,EAAE,CACE,EAAE,CAGE,CAAC,CAAC;EACE,OAAO,EAAE,KAAM;EACf,eAAe,EAAE,IAAK;CAQzB;;;AAtCb,AA4BY,GA5BT,CAwBC,EAAE,CACE,EAAE,CAGE,CAAC,AAMI,MAAM,CAAC;EACJ,KAAK,EAAC,IAAK;EACX,eAAe,EAAE,IAAK;CACzB;;;ACrCjB,AAAA,MAAM,CAAA;EACF,gBAAgB,EJGH,OAAO;EIFpB,MAAM,EAAE,IAAK;CAChB;;;AEHD,AAAA,WAAW,CAAA;EACP,OAAO,EAAE,KAAM;CAClB",
+	"mappings": ";AMAA,AAAA,MAAM,CAAC;EACH,MAAM,EAAE,IAAK;EACb,KAAK,EAAE,IAAK;EACZ,gBAAgB,EJCH,OAAO;EIApB,KAAK,EJDK,OAAO;EIEjB,UAAU,EAAE,MAAO;CACtB;;ACLD,oBAAoB;;AAEpB,AAAA,WAAW,CAAA;EACP,MAAM,EAAE,KAAM;EACd,gBAAgB,EAAqC,oCAAC;EACtD,iBAAiB,EAAE,SAAU;EAC7B,eAAe,EAAE,KAAM;EACvB,mBAAmB,EAAE,aAAc;EACnC,OAAO,EAAE,IAAK;CACjB;;;AAED,AAEI,eAFW,CAEX,WAAW,CAAA;EACP,KAAK,EAAE,KAAM;EAEb,WAAW,EAAE,IAAK;CACrB;;;AAGL,AAAA,gBAAgB,CAAA;EACZ,gBAAgB,ELfH,OAAO;CKgBvB",
 	"names": []
 }

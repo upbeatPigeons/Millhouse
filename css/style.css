@@ -1,53 +1,32 @@
-/* line 2, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/components/_nav.scss */
-nav .current {
-  color: #D7BCC8;
-}
-
-/* line 7, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/components/_nav.scss */
-nav .nav_logo {
-  width: 7rem;
-  height: 4rem;
-  margin-right: 100px;
-  margin-left: 40px;
-}
-
-/* line 14, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/components/_nav.scss */
-nav .navbar-toggler {
-  margin-top: 15px;
-  margin-left: 15px;
-}
-
-/* line 20, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/components/_nav.scss */
-nav .navbar-left a {
-  padding-left: 0;
-}
-
-/* line 26, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/components/_nav.scss */
-nav ul li {
-  list-style: none;
-}
-
-/* line 29, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/components/_nav.scss */
-nav ul li a {
-  display: block;
-  text-decoration: none;
-}
-
-/* line 35, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/components/_nav.scss */
-nav ul li a:hover {
-  color: blue;
-  text-decoration: none;
-}
-
 /* line 1, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/components/_footer.scss */
 footer {
-  background-color: #1C3045;
   height: 4rem;
+  width: 100%;
+  background-color: #1C3045;
+  color: #F0F0F0;
+  text-align: center;
 }
 
-/* line 1, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/pages/_index.scss */
-.logo-image {
-  marging: 200px;
+/*Background image*/
+/* line 4, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/pages/_index.scss */
+.hero_image {
+  height: 800px;
+  background-image: url(../../images/millhouse_shop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  z-index: -100;
+}
+
+/* line 15, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/pages/_index.scss */
+.logo_container .logo-image {
+  width: 10rem;
+  margin-left: 5rem;
+}
+
+/* line 22, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/pages/_index.scss */
+.index_container {
+  background-color: #D7BCC8;
 }
 
 /*# sourceMappingURL=../css/style.map */
