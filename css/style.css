@@ -46,19 +46,8 @@ footer {
 }
 
 /* line 1, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/pages/_index.scss */
-.index-wrapper {
-  background-color: #D7BCC8;
-}
-
-/* line 4, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/pages/_index.scss */
-.index-wrapper .index_container {
-  background-color: #D7BCC8;
-}
-
-/* line 11, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/pages/_index.scss */
-.index_logo {
-  height: 4rem;
-  justify-content: center;
+.logo-image {
+  marging: 200px;
 }
 
 /*# sourceMappingURL=../css/style.map */

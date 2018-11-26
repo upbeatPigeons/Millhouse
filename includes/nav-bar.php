@@ -1,29 +1,43 @@
 <body>
-   
+
     <div class="body-wrapper">
 
         <header>
-            
-            <nav class="nav" role="navigation">
-              
-               <div class="logo">
-                  <a href="">
-                    <img src="" alt="Logo" class="logo-img">
-                 </a>
-               </div>
-               
-               <div>
-                
-                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                
-             </div>    
 
+            <!--Navbar-->
+
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+                <div class="container">
+
+                    <a class="navbar-brand" href="http://localhost:8888/millhouse/Millhouse/">
+                        <img src="../images/logo_dark.png" alt="Logo" class="logo-img">
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Profile</a>
+                            </li>
+                        </ul>
+
+                        <form class="form-inline">
+                            <div class="md-form my-0">
+                                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </nav>
-           
         </header>
-    
