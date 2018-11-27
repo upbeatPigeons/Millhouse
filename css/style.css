@@ -1,0 +1,31 @@
+/* line 1, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/components/_footer.scss */
+footer {
+  height: 4rem;
+  background-color: #1C3045;
+  color: #F0F0F0;
+  text-align: center;
+}
+
+/*Background image*/
+/* line 4, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/pages/_index.scss */
+.hero_image {
+  height: 800px;
+  background-image: url(../../images/millhouse_shop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  z-index: -100;
+}
+
+/* line 15, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/pages/_index.scss */
+.logo_container .logo-image {
+  width: 10rem;
+  margin-left: 5rem;
+}
+
+/* line 22, /Applications/MAMP/htdocs/millhouse/Millhouse/sass/pages/_index.scss */
+.index_container {
+  background-color: #D7BCC8;
+}
+
+/*# sourceMappingURL=../css/style.map */

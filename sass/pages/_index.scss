@@ -1,0 +1,24 @@
+
+/*Background image*/
+
+.hero_image{
+    height: 800px;
+    background-image: url(../../images/millhouse_shop.png);
+    background-repeat: no-repeat; 
+    background-size: cover;  
+    background-position: center center;
+    z-index: -100;
+}
+
+.logo_container{
+    
+    .logo-image{
+        width: 10rem;
+        //need to align in the center, cheating margin
+        margin-left: 5rem;
+    }
+}
+
+.index_container{
+    background-color: $palepink_color;
+} 
