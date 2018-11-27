@@ -1,6 +1,8 @@
 <?php
 
+
 require_once ('RegisterDataSetup.php');
+//Register uses the incoming data from Class RegisterDataSetup and is controlled by register_controller
 
 class Register
 {
@@ -24,7 +26,7 @@ class Register
     $statement->execute ([
   		":username" => $new_user->get_username(),
     ]);
-    //Return the row, to be able to check if it's taken
+    //Return the row, to be able to check if the usrname is taken
     return $statement->fetch(PDO::FETCH_ASSOC);  
 
   }

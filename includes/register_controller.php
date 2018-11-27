@@ -2,12 +2,9 @@
 session_start();
 
 require_once ("database_connection.php");
-require_once ("../classes/RegisterDataSetup.php");
 require_once ("../classes/Register.php");
 
-/*
-* Controller file and $_POST Globals
-*/
+/* register_controller is the "central" for Register and here is were al the functions in Register are initialized and the instances of both classes RegisterDataSetup and Register are initalized. Register_controller also contains error-handling and $_POST Globals */
 
 $register_username = $_POST['username'];
 $register_password = $_POST['password']; 
@@ -42,7 +39,7 @@ else
   //The varification is happening afterthe user is actually added
   print_r("thank you for registering");
 
-  //Redirect, or idk what's supposed to happen here. It's comented for develop reasons
+  //Redirect, or idk what's supposed to happen here. It's commented for develop reasons
   //header('Location: ../index.php');
 }
 
