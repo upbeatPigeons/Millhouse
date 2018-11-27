@@ -9,21 +9,21 @@ require_once ("../classes/Register.php");
 * Controller file and $_POST Globals
 */
 
-$register_username = $_POST['username'];
-$register_password = $_POST['password']; 
+$username = $_POST['username'];
+$password = $_POST['password']; 
 
 $registration_steps = new Register($pdo);
 /* ***Error handling */
 
-//If the provided register_password is shorter than 6 chars - display error.
-if (strlen($register_password) <= 6)
+//If the provided password is shorter than 6 chars - display error.
+if (strlen($password) <= 6)
 {
   //TODO: some sort of error handling
-  die("Choose a register_password longer then 6 character");
+  die("Choose a password longer then 6 character");
 }
 
 //Create an instance with the data from the form
-$new_user = new RegisterDataSetup($register_username, $register_password);
+$new_user = new RegisterDataSetup($username, $password);
 //Check if username is avalible with the new instance of user
 $registration_steps->check_for_user_in_database($new_user);
 
