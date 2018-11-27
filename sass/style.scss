@@ -1,14 +1,17 @@
+//**** */helpers
+@import "helpers/mixins";
+@import "helpers/variables";
+
+//**** */typography
+@import "typography";
+
 //**** */components
 @import "components/button";
 @import "components/nav";
 @import "components/footer";
 
-//**** */helpers
-@import "helpers/mixins";
-@import "helpers/vaiables";
 
 //**** */pages
+@import "pages/index";
 @import "pages/home";
-
-//**** */typography
-@import "typography";
+@import "pages/login";
