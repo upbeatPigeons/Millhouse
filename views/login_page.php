@@ -33,7 +33,7 @@
 
 					<h2>Register</h2>
 					<!-- Here we need to include right form -->
-					<form class="reg" action="includes/register.php" method="POST">
+					<form class="reg" action="../includes/register_controller.php" method="POST">
           		<input type="text" name="username" id="username" placeholder="username" required>
           		<input type="text" name="password" id="password" placeholder="password" required>
           		<input type="submit" name="register" value="Register">
