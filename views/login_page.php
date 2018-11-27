@@ -28,7 +28,7 @@
 				
 					<h2>Sign In</h2>
 					<!-- Should Sign In form be an include? -->
-				  	<?php include "../includes/register_form.php"; ?>
+				  <?php /* include "../includes/register_form.php"; */ ?>
 					  
 
 					<h2>Register</h2>
