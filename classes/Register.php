@@ -24,16 +24,9 @@ class Register
     $statement->execute ([
   		":username" => $new_user->get_username(),
     ]);
-    //Fetch the row, to be able to check if it's taken
-    $row = $statement->fetch(PDO::FETCH_ASSOC);  
-    var_dump($row);
-    
-    //TEST
-    if ($row['num'] > 0) 
-    {
-      //TODO: some sort of error handling
-      die("user taken");
-    } 
+    //Return the row, to be able to check if it's taken
+    return $statement->fetch(PDO::FETCH_ASSOC);  
+
   }
 
   public function register_user(RegisterDataSetup $new_user) 
