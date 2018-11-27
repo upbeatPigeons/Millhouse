@@ -28,18 +28,17 @@
 				
 					<h2>Sign In</h2>
 					<!-- Should Sign In form be an include? -->
-					  <form class="reg" action="includes/register.php" method="POST">
-          	<input class="reg--margin" type="text" name="username" id="username" placeholder="username" required>
-          	<input class="reg--margin" type="text" name="password" id="password" placeholder="password" required>
-          	<input type="submit" name="register" value="Register">
-          </form>
+				  	<?php include "../includes/register_form.php"; ?>
+					  
 
 					<h2>Register</h2>
 					<!-- Here we need to include right form -->
-					<?php include "../includes/register_form.php"; ?>
+					<form class="reg" action="includes/register.php" method="POST">
+          		<input type="text" name="username" id="username" placeholder="username" required>
+          		<input type="text" name="password" id="password" placeholder="password" required>
+          		<input type="submit" name="register" value="Register">
+          </form>
 					
-
-
 					<!-- Col -->
 				</div>
 
