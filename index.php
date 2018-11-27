@@ -69,11 +69,6 @@
     ?>
 </body>
 
-<<<<<<< HEAD
+
 </html>
-=======
-<form class="reg" action="includes/register_controller.php" method="POST">
-  <input class="reg--margin" type="text" name="username" id="username" placeholder="username" required>
-  <input class="reg--margin" type="text" name="password" id="password" placeholder="password" required>
->>>>>>> 9429665dcdb8d94a58d46f45d679cbd17d1dd0fc
 

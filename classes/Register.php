@@ -15,8 +15,7 @@ class Register
   }
   
   public function check_for_user_in_database(RegisterDataSetup $new_user)
-  { 
-    
+  {  
     //Construct the SQL statement and prepare it.
     $statement = $this->pdo->prepare(
       "SELECT COUNT(username) AS num FROM users WHERE username = :username"
@@ -25,8 +24,9 @@ class Register
     $statement->execute ([
   		":username" => $new_user->get_username(),
     ]);
-    //Fetch the row, to be able to check if it's taken
-    $row = $statement->fetch(PDO::FETCH_ASSOC);  
+    //Return the row, to be able to check if it's taken
+    return $statement->fetch(PDO::FETCH_ASSOC);  
+
   }
 
   public function register_user(RegisterDataSetup $new_user) 
