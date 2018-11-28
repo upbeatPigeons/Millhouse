@@ -30,7 +30,7 @@ require_once "create_posts_functions.php";
 	</div>
 		<div class="form-group">
 		<label for="description">Enter text</label>
-		<textarea class="form-control" name="description" rows="10"cols="30">Write blog content</textarea>
+		<textarea class="form-control" name="description" rows="10"cols="30"></textarea>
 		<div class="<?php get_class_for_error_message($empty_description)?>"><?php echo $empty_description_error_message;?></div>
 	</div>
 	<p>Text here</p>
