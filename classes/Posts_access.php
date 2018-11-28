@@ -26,13 +26,15 @@ class Access_posts
   	]);
   }
 
-  public function list_posts()
+  public function list_all_posts()
   {
     $statement = $this->pdo->prepare("SELECT * from posts ORDER BY date DESC");
-    // execute and return as list of Post objects
+    $statement->execute();
+    // return an array consisting of objects from the Post class using build_post_from_pdo function on each of the rows in the query result set
+    return $statement->fetchAll(PDO::FETCH_FUNC, "Post::build_post_from_pdo");
   }
 
-  public function list_posts_for_user($user_id)
+  public function list_single_post($post_id)
   {
     $statement = $this->pdo->prepare("SELECT * from posts WHERE user_id = :user_id ORDER BY date DESC");
     // execute and return as list of Post objects
