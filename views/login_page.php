@@ -28,6 +28,11 @@
 				
 					<h2>Sign In</h2>
 					<!-- Should Sign In form be an include? -->
+					<form class="login" action="../includes/login.php" method="POST">
+          		<input type="text" name="username" id="username" placeholder="username" required>
+          		<input type="text" name="password" id="password" placeholder="password" required>
+          		<input type="submit" name="login" value="Log in">
+          </form>
 				  <?php /* include "../includes/register_form.php"; */ ?>
 					  
 
