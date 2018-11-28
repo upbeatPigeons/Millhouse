@@ -43,7 +43,7 @@
 						<p><?= $latest_post->get_description();?></p>
 
 						<div>
-							<button type="button" class="btn btn-outline-primary">Read More</button>
+							<a href="single_post_page.php?id=<?= $latest_post->get_id();?>" class="btn btn-outline-primary">Read more</a>
 						</div>
 					</div>
 				<!-- Col -->
