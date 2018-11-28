@@ -1,6 +1,8 @@
 <?php
     session_start();
-    include "../includes/head.php";  
+    include "../includes/head.php";
+    require_once "../includes/database_connection.php";
+    require_once "../classes/Posts_access.php";
 ?>
 
 
@@ -19,12 +21,11 @@
 				<h1>Latest Posts</h1>
 				<hr>
 			</div>
-
 			<div class="row latest_post_wrapper justify-content-between">
 				<div class="col-12 col-md-4">
 					<div>
 						<!--here we should fetch latest post title-->
-						<h2></h2>
+						<h2></h2> 
 					</div>
 
 					<div>
@@ -63,14 +64,18 @@
 		<section class="row all_posts">
 			
 			<!-- Here we will include post array, and return image and title -->
+			<?php $access_posts = new Access_posts($pdo);
+			$posts = $access_posts->list_all_posts();
+			?>
+			<?php foreach ($posts as $post) {?>
 			<div class="col-12 col-5 single_post">
-				<div><!-- Post Image--></div>
-				<div><!-- Post Title--></div>
+				<div><img src="<?= $post->get_image();?>"></div>
+				<div><?= $post->get_title();?></div>
 				<div>
 					<button type="button" class="btn btn-outline-primary">Read More</button>
 				</div>
-			<!-- Col -->	
-			</div>
+				<!-- Col -->	
+			</div><?php }?>
 		</section>			
 
 	</main>
