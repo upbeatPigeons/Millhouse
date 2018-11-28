@@ -20,4 +20,14 @@ class CommentMethods {
   	]);
   }
 
+  public function list_all_comments()
+  {
+
+  }
+
+  public function delete_posts($post_id) 
+  {
+
+  }
+
 }

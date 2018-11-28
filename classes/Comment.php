@@ -16,4 +16,5 @@ class Comment
 		return $this->comment_content;
 	}
 
+/* and date stuff */
 }
