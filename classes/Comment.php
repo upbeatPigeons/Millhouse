@@ -1,16 +1,19 @@
 <?php
 
-class CommentDataSetup 
+class Comment
 {
-  private $id;
-  private $content;
-  private $postId;
-  private $createdBy;
-  private $date;
+ 
+  private $comment_content;
 
-  public function __construct($id, $content, $postId, $createdBy, $date)
+
+  public function __construct($comment_content)
   {
-    $this->id = $id;
+    $this->comment_content = $comment_content;
   }
+  
+  public function get_comment() 
+  {
+		return $this->comment_content;
+	}
 
 }

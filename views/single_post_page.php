@@ -10,6 +10,7 @@
 		<?php
     	include "../includes/nav-bar.php";
 			include "../includes/carousel.php";
+			//require_once ("../includes/comment_controller.php");
 		?>
 	</header>
 	
@@ -50,6 +51,10 @@
 		
 		<section class="comments">
 			<!--include comment field-->
+			<form name="comment_form" action="../includes/comment_controller.php" method="POST">
+				<textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+				<input type="submit" name="add_comment" value="Comment Now!">
+			</form>
 			<!--if admin include editing buttons-->
 			<!--list comments-->
 		</section>

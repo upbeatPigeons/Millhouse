@@ -1,8 +1,8 @@
 <?php
-require_once ('CommentDataSetup.php');
+require_once ('Comment.php');
 
 
-class Comment {
+class CommentMethods {
   private $pdo;
 
   /* Inject the pdo connection so it is available inside of the class
@@ -12,8 +12,11 @@ class Comment {
   {
     $this->pdo = $pdo;
   }
-  public function create_comment(CommentDataSetup $new_comment) {
-    $statement = $this->pdo->prepare("INSERT blhaha")
+  public function create_comment(Comment $new_comment) {
+    $statement = $this->pdo->prepare("INSERT INTO comments (content) VALUES (:content)");
+  	$statement->execute ([
+  		":content" => $new_comment->get_comment(),
+  	]);
   }
 
 }

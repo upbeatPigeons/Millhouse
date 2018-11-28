@@ -1,8 +1,8 @@
 <?php
 
-require_once ('RegisterDataSetup.php');
+require_once ('Register.php');
 
-class Register
+class RegisterMethods
 {
   private $pdo;
 
@@ -14,7 +14,7 @@ class Register
     $this->pdo = $pdo;
   }
   
-  public function check_for_user_in_database(RegisterDataSetup $new_user)
+  public function check_for_user_in_database(Register $new_user)
   {  
     //Construct the SQL statement and prepare it.
     $statement = $this->pdo->prepare(
@@ -29,7 +29,7 @@ class Register
 
   }
 
-  public function register_user(RegisterDataSetup $new_user) 
+  public function register_user(Register $new_user) 
   {
     //Prepare our INSERT statement.
     //Remember: We are inserting a new row into our users table.

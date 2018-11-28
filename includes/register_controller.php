@@ -2,8 +2,9 @@
 session_start();
 
 require_once ("database_connection.php");
-require_once ("../classes/RegisterDataSetup.php");
-require_once ("../classes/Register.php");
+//require_once ("../classes/Register.php");
+require_once ("../classes/RegisterMethods.php");
+
 
 /*
 * Controller file and $_POST Globals
@@ -23,7 +24,7 @@ if (strlen($register_password) <= 6)
 }
 
 //Create an instance with the data from the form
-$new_user = new RegisterDataSetup($register_username, $register_password);
+$new_user = new RegisterMethods($register_username, $register_password);
 //Check if register_username is avalible with the new instance of user
 
 $row = $registration_steps->check_for_user_in_database($new_user);

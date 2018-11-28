@@ -1,6 +1,6 @@
 <?php 
 
-class RegisterDataSetup 
+class Register
 {
   private $register_username;
   private $register_password;
