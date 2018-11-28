@@ -1,48 +1,26 @@
-<?php
+<?php 
 
-
-require_once ('RegisterDataSetup.php');
-//Register uses the incoming data from Class RegisterDataSetup and is controlled by register_controller
-
-class Register
+class Register 
 {
-  private $pdo;
+  private $register_username;
+  private $register_password;
 
-  /* Inject the pdo connection so it is available inside of the class
-   * so we can call it with '$this->pdo', always available inside of the class
-   */
-  public function __construct($pdo)
+  public function __construct($register_username, $register_password) 
   {
-    $this->pdo = $pdo;
-  }
-  
-  public function check_for_user_in_database(RegisterDataSetup $new_user)
-  {  
-    //Construct the SQL statement and prepare it.
-    $statement = $this->pdo->prepare(
-      "SELECT COUNT(username) AS num FROM users WHERE username = :username"
-    );
-    //Bind and execute the provided username to our prepared statement.
-    $statement->execute ([
-  		":username" => $new_user->get_username(),
-    ]);
-    //Return the row, to be able to check if the usrname is taken
-    return $statement->fetch(PDO::FETCH_ASSOC);  
-
+    $this->register_username = $register_username;
+    $this->register_password = $register_password;
   }
 
-  public function register_user(RegisterDataSetup $new_user) 
+  public function get_username()
   {
-    //Prepare our INSERT statement.
-    //Remember: We are inserting a new row into our users table.
-    $statement = $this->pdo->prepare(
-      "INSERT INTO users(username, password) VALUES (:username, :password)"
-    );
-    //Bind our variables.
-    $statement->execute([
-      ":username" => $new_user->get_username(),
-      ":password" => $new_user->get_password()
-    ]);   
+    return $this->register_username;
+  }
+
+  public function get_password() 
+  {
+    //Hashing the register_password immiditaly
+    return password_hash($this->register_password, PASSWORD_DEFAULT);  
   }
 
 }
+  
