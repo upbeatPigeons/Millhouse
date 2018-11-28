@@ -65,14 +65,13 @@
 			
 			<!-- Here we will include post array, and return image and title -->
 			<?php $access_posts = new Access_posts($pdo);
-			$posts = $access_posts->list_all_posts();
-			?>
+			$posts = $access_posts->list_all_posts();?>
 			<?php foreach ($posts as $post) {?>
 			<div class="col-12 col-5 single_post">
 				<div><img src="<?= $post->get_image();?>"></div>
 				<div><?= $post->get_title();?></div>
 				<div>
-					<button type="button" class="btn btn-outline-primary">Read More</button>
+					<a href="single_post_page.php?id=<?= $post->get_id();?>" class="btn btn-outline-primary">Read more</a>
 				</div>
 				<!-- Col -->	
 			</div><?php }?>
