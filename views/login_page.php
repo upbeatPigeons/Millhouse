@@ -30,12 +30,14 @@
 				
 					<h2>Sign In</h2>
 					<!-- Should Sign In form be an include? -->
-					<form class="login" action="../includes/login.php" method="POST">
-					
-							<!-- Gets error and formats it -->
-							<?php if(isset($_GET["error"])){ echo str_replace("_", " ", $_GET["error"]); }?>
-
+					<form class="login" action="../includes/login_controller.php" method="POST">
+							<p>Hej <?=$_SESSION["username"]?>!</p>
           		<input type="text" name="username" id="username" placeholder="username" required>
+							<label for="password" style="color:red">
+							<!-- Gets error and formats it -->
+								<?php if(isset($_GET["error"])){ echo str_replace("_", " ", $_GET["error"]); }?>						
+							</label>
+							<br>
           		<input type="password" name="password" id="password" placeholder="password" required>
           		<input type="submit" name="login" value="Log in">
           </form>
