@@ -54,6 +54,19 @@ class Access_posts
     }
   } 
 
+  public function list_latest_post()
+  {
+    try {
+      $statement = $this->pdo->prepare("SELECT * from posts ORDER BY date DESC LIMIT 1");
+      $statement->execute();
+      // return a single post object 
+      $statement->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, "Post");
+      return $statement->fetch();
+    } catch (PDOException $exception) {
+      echo "Connection error" . $exception->getMessage();
+    }
+  }
+
 
   public function delete_posts($id) 
   {
