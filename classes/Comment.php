@@ -18,30 +18,13 @@ class Comment
 	  private $date;
 	
 	
-    public function __construct($content=NULL; $postId=NULL, $createdBy=NULL date=NULL){
-			
+    public function __construct($content, $postId, $createdBy, $date){
 			$this->content = $content;
-			$this->$postId =$postId;
-			$this->createdBy =createdBy;	
+			$this->postId = $postId;
+			 $this->createdBy = $createdBy;
 			$this->date = $date("Y-m-d");
     }
 	
-	
-	//setter functions 
-     public function set_content($content){
-			   $this->content = $content;	 
-		 }
-	  
-		public function set_postId($postId){
-			 	
-			  $this->postId = $postId;
-		}
-
-		public function set_createdBy($createdBy){
-			 	
-			  $this->createdBy = $createdBy;
-		}
-
 	
 	//getter functions
 	   public function get_content(){
@@ -64,6 +47,23 @@ class Comment
 			 return $this->$date;
 		 }
 	
+	
+	/*setter functions 
+     public function set_content($content){
+			   $this->content = $content;	 
+		 }
+	  
+		public function set_postId($postId){
+			 	
+			  $this->postId = $postId;
+		}
+
+		public function set_createdBy($createdBy){
+			 	
+			  $this->createdBy = $createdBy;
+		}
+
+	*/
 	 
 	
 }

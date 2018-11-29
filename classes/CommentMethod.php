@@ -19,7 +19,7 @@ class CommentMethod{
   		":content" => $new_comment->get_content(),
   		":post_id" => $new_comment->get_postId(),
       ":created_by" =>$new_comment->get_createdBy(),
-      ":date" => $new_post->get_date()
+      ":date" => $new_comment->get_date()
     ]);
   }
 		
