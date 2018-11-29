@@ -1,5 +1,10 @@
 <?php
 		session_start();
+
+		if(isset($_GET["error"])){
+			$error = $_GET["error"];
+		}
+
 			require "../includes/head.php"; 
 ?>
 
@@ -31,6 +36,7 @@
 					<form class="login" action="../includes/login.php" method="POST">
           		<input type="text" name="username" id="username" placeholder="username" required>
           		<input type="text" name="password" id="password" placeholder="password" required>
+							<?=$error?>
           		<input type="submit" name="login" value="Log in">
           </form>
 				  <?php /* include "../includes/register_form.php"; */ ?>
