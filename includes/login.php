@@ -16,9 +16,9 @@ if($is_password_correct){
   //Save user globally to session
   $_SESSION["username"] = $fetched_user["username"];
   $_SESSION["id"] = $fetched_user["id"];
-  header('Location: ../index.php');
+  header('Location: ../views/login_page.php');
 
 }else{
   //Handle errors
-  header('Location: ../index.php?error=Wrong_password');
+  header('Location: ../views/login_page.php?error=Wrong_password');
 }
