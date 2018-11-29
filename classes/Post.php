@@ -22,7 +22,7 @@ class Post
 	public function __construct() 
 	{
 		// we only initialize the date in the constructor
-		$this->date = date("Y-m-d"); // Prints SQL friendly date 2018-11-22
+		$this->date = date("Y-m-d H:m"); // Prints SQL friendly date 2018-11-22 18:11:24
 	}
 
 	// Setter methods below
