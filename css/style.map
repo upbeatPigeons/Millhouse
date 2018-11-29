@@ -1,0 +1,30 @@
+{
+	"version": 3,
+	"file": "../sass/style.css",
+	"sources": [
+		"../sass/style.scss",
+		"../sass/helpers/_mixins.scss",
+		"../sass/helpers/_variables.scss",
+		"../sass/_typography.scss",
+		"../sass/components/_button.scss",
+		"../sass/components/_nav.scss",
+		"../sass/components/_footer.scss",
+		"../sass/pages/_index.scss",
+		"../sass/pages/_home.scss",
+		"../sass/pages/_login.scss"
+	],
+	"sourcesContent": [
+		"//**** */helpers\n@import \"helpers/mixins\";\n@import \"helpers/variables\";\n\n//**** */typography\n@import \"typography\";\n\n//**** */components\n@import \"components/button\";\n@import \"components/nav\";\n@import \"components/footer\";\n\n\n//**** */pages\n@import \"pages/index\";\n@import \"pages/home\";\n@import \"pages/login\";",
+		"",
+		"//colors\n$enable-gradients: true;\n\n$white_color: #F0F0F0;\n$darkblue_color: #1C3045;\n$palegreen_color: #A6C9C6;\n$brightpink_color: #FAC8CD;\n$palepink_color: #D7BCC8;\n$paleblue_color: #95B8D1;\n$blacl_color: #252525;\n$purple_color: #60495A;\n\n//bootstrap themes\n\n$brand-primary: $darkblue_color;\n$brand-danger: $palepink_color;\n$brand-inverse: $white_color;",
+		"",
+		"",
+		"",
+		"footer {\n    height: 4rem;\n    background-color: $darkblue_color;\n    color: $white_color;\n    text-align: center;\n}",
+		"\n/*Background image*/\n\n.hero_image{\n    height: 800px;\n    background-image: url(../../images/millhouse_shop.png);\n    background-repeat: no-repeat; \n    background-size: cover;  \n    background-position: center center;\n    z-index: -100;\n}\n\n.logo_container{\n    \n    .logo-image{\n        width: 10rem;\n        //need to align in the center, cheating margin\n        margin-left: 5rem;\n    }\n}\n\n.index_container{\n    background-color: $palepink_color;\n} \n",
+		"//This styles are specific styles for home.php",
+		""
+	],
+	"mappings": ";AMAA,AAAA,MAAM,CAAC;EACH,MAAM,EAAE,IAAK;EACb,gBAAgB,EJEH,OAAO;EIDpB,KAAK,EJAK,OAAO;EICjB,UAAU,EAAE,MAAO;CACtB;;ACJD,oBAAoB;;AAEpB,AAAA,WAAW,CAAA;EACP,MAAM,EAAE,KAAM;EACd,gBAAgB,EAAqC,oCAAC;EACtD,iBAAiB,EAAE,SAAU;EAC7B,eAAe,EAAE,KAAM;EACvB,mBAAmB,EAAE,aAAc;EACnC,OAAO,EAAE,IAAK;CACjB;;;AAED,AAEI,eAFW,CAEX,WAAW,CAAA;EACP,KAAK,EAAE,KAAM;EAEb,WAAW,EAAE,IAAK;CACrB;;;AAGL,AAAA,gBAAgB,CAAA;EACZ,gBAAgB,ELfH,OAAO;CKgBvB",
+	"names": []
+}

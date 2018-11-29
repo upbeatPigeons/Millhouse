@@ -16,18 +16,33 @@ class Post
 	private $image;
 	private $date;
 	private $category;
+	private $id;
 
   // Method to create a new post. 
-	public function __construct($title, $description, $created_by, $category) 
+	public function __construct() 
 	{
-		$this->title = $title;
-		$this->description = $description;
-		$this->date = date("Y-m-d"); // Prints sql friendly date 2018-11-22
-		$this->created_by = $created_by;
-		$this->category = $category; 
+		// we only initialize the date in the constructor
+		$this->date = date("Y-m-d"); // Prints SQL friendly date 2018-11-22
 	}
 
 	// Setter methods below
+
+	public function set_title($title) {
+		$this->title = $title;
+	}
+
+	public function set_description($description) {
+		$this->description = $description;
+	}
+
+	public function set_created_by($created_by) {
+		$this->created_by = $created_by;
+	}
+
+	public function set_category($category) {
+		$this->category = $category;
+	}
+
 	public function set_image($image) {
 		$this->image = $image;
 	}
@@ -56,6 +71,10 @@ class Post
 
 	public function get_category() {
 		return $this->category;
+	}
+
+	public function get_id() {
+		return $this->id;
 	}
 
 }
