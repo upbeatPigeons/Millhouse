@@ -1,6 +1,8 @@
 <?php
 		session_start();
-    	require "../includes/head.php"; 
+
+		
+			require "../includes/head.php"; 
 ?>
 
 <body id="login_page">
@@ -28,6 +30,15 @@
 				
 					<h2>Sign In</h2>
 					<!-- Should Sign In form be an include? -->
+					<form class="login" action="../includes/login.php" method="POST">
+					
+							<!-- Gets error and formats it -->
+							<?php if(isset($_GET["error"])){ echo str_replace("_", " ", $_GET["error"]); }?>
+
+          		<input type="text" name="username" id="username" placeholder="username" required>
+          		<input type="password" name="password" id="password" placeholder="password" required>
+          		<input type="submit" name="login" value="Log in">
+          </form>
 				  <?php /* include "../includes/register_form.php"; */ ?>
 					  
 
@@ -35,9 +46,13 @@
 					<!-- Here we need to include right form -->
 					<form class="reg" action="../includes/register_controller.php" method="POST">
           		<input type="text" name="username" id="username" placeholder="username" required>
-          		<input type="text" name="password" id="password" placeholder="password" required>
+          		<input type="password" name="password" id="password" placeholder="password" required>
           		<input type="submit" name="register" value="Register">
           </form>
+
+					<!-- Error messages for register -->
+					<div>
+					</div>
 					
 					<!-- Col -->
 				</div>

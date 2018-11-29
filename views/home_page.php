@@ -5,6 +5,11 @@
     require_once "../classes/Posts_access.php";
 ?>
 
+<?php 
+			$access_posts = new Access_posts($pdo);
+			$all_posts = $access_posts->list_all_posts();
+			$latest_post = $access_posts->list_latest_post();
+?>
 
 <body id="home_page">
 
@@ -25,20 +30,20 @@
 				<div class="col-12 col-md-4">
 					<div>
 						<!--here we should fetch latest post title-->
-						<h2></h2> 
+						<h2><?= $latest_post->get_title();?></h2> 
 					</div>
 
 					<div>
 						<!--here we should fetch latest post date-->
-						<h3></h3>
+						<h3><?= $latest_post->get_date();?></h3>
 					</div>
 
 					<div>
 						<!--here we should fetch latest post summary or text-->
-						<p></p>
+						<p><?= $latest_post->get_description();?></p>
 
 						<div>
-							<button type="button" class="btn btn-outline-primary">Read More</button>
+							<a href="single_post_page.php?id=<?= $latest_post->get_id();?>" class="btn btn-outline-primary">Read more</a>
 						</div>
 					</div>
 				<!-- Col -->
@@ -64,15 +69,12 @@
 		<section class="row all_posts">
 			
 			<!-- Here we will include post array, and return image and title -->
-			<?php $access_posts = new Access_posts($pdo);
-			$posts = $access_posts->list_all_posts();
-			?>
-			<?php foreach ($posts as $post) {?>
+			<?php foreach ($all_posts as $post) {?>
 			<div class="col-12 col-5 single_post">
 				<div><img src="<?= $post->get_image();?>"></div>
 				<div><?= $post->get_title();?></div>
 				<div>
-					<button type="button" class="btn btn-outline-primary">Read More</button>
+					<a href="single_post_page.php?id=<?= $post->get_id();?>" class="btn btn-outline-primary">Read more</a>
 				</div>
 				<!-- Col -->	
 			</div><?php }?>

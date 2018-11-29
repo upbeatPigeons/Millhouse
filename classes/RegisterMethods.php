@@ -1,6 +1,10 @@
 <?php
 
+
+
 require_once ('Register.php');
+//Register uses the incoming data from Class RegisterDataSetup and is controlled by register_controller
+
 
 class RegisterMethods
 {
@@ -24,9 +28,10 @@ class RegisterMethods
     $statement->execute ([
   		":username" => $new_user->get_username(),
     ]);
-    //Return the row, to be able to check if it's taken
-    return $statement->fetch(PDO::FETCH_ASSOC);  
 
+
+    //Return the row, to be able to check if the usrname is taken
+    return $statement->fetch(PDO::FETCH_ASSOC);  
   }
 
   public function register_user(Register $new_user) 
@@ -34,7 +39,7 @@ class RegisterMethods
     //Prepare our INSERT statement.
     //Remember: We are inserting a new row into our users table.
     $statement = $this->pdo->prepare(
-      "INSERT INTO users(username, password) VALUES (:username, :password)"
+      "INSERT INTO users(username, password, admin) VALUES (:username, :password, admin = 0)"
     );
     //Bind our variables.
     $statement->execute([

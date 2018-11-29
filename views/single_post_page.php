@@ -1,6 +1,8 @@
 <?php
     session_start();
     include "../includes/head.php";  
+    require_once "../includes/database_connection.php";
+    require_once "../classes/Posts_access.php";
 ?>
 
 
@@ -18,13 +20,17 @@
 		<section class="container single_post_container">
 			<div>
 			  <!-- Here we need to fetch title of the post -->
-				<h1></h1>
+			 <?php 
+			 $access_posts = new Access_posts($pdo);
+			 $post = $access_posts->list_single_post($_GET["id"]);
+			 ?>
+				<h1><?= $post->get_title(); ?></h1>
 				<hr>
 			</div>
 			
 			<div class="row">
 				<div class="col-12 md-col-6">
-					<div> <!-- Here we need to fetch image1 of the post --></div>
+					<div><img src="<?= $post->get_image();?>"></div>
 				</div>
 				<div class="col-12 md-col-5">
 					<div> <!-- Here we need to fetch image1 of the post --></div>
@@ -34,9 +40,8 @@
 			
 			<div class="row">
 				<div class="col-12">
-					<h3><!--Here we need to fetch date of the post--></h3>
-					<p><!--Here we need to fetch date of the post--></p>
-					
+					<h3><?= $post->get_date();?></h3>
+					<p><?= $post->get_date();?></p>
 				</div>	
 			</div>
 		</section>

@@ -4,7 +4,7 @@ class Register
 {
   private $register_username;
   private $register_password;
-  
+
   public function __construct($register_username, $register_password) 
   {
     $this->register_username = $register_username;
