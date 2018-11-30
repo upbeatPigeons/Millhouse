@@ -2,19 +2,23 @@
 
 class Comment
 {
- 
+
   private $comment_content;
+  private $date;
 
 
-  public function __construct($comment_content)
-  {
-    $this->comment_content = $comment_content;
+  public function set_comment($comment_content) {
+		$this->comment_content = $comment_content;
   }
   
+
   public function get_comment() 
   {
 		return $this->comment_content;
-	}
-
-/* and date stuff */
+  }
+  
+  public function get_date()
+  {
+    return $this->date = date("Y-m-d");
+  }
 }

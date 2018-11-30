@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 require_once ('Comment.php');
 
 class CommentMethods {
@@ -16,16 +16,25 @@ class CommentMethods {
   public function create_comment(Comment $new_comment) 
   {
     //Use a _$GET to access the correct post.id 
-    $statement = $this->pdo->prepare("INSERT INTO comments (content, post_id, created_by) SELECT :content, posts.id, :created_by FROM posts WHERE posts.id = 4");
+    $statement = $this->pdo->prepare("INSERT INTO comments(content, date) VALUES (:content, :date)");
   	$statement->execute ([
       ":content" => $new_comment->get_comment(),
-      ":created_by" => $_SESSION["id"]
+      //":created_by" => $_SESSION["id"],
+      ":date"=> $new_comment->get_date()
   	]);
   }
 
   public function list_all_comments()
   {
-
+   /*      try {
+      $statement = $this->pdo->prepare("SELECT * from comments ORDER BY date DESC LIMIT 1");
+      $statement->execute();
+      // return a single post object 
+      $statement->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, "Comment");
+      return $statement->fetch();
+    } catch (PDOException $exception) {
+      echo "Connection error" . $exception->getMessage();
+    } */
   }
 
   public function delete_posts($post_id) 
