@@ -2,14 +2,14 @@
 session_start();
 
 require_once ("database_connection.php");
-require_once ("../classes/RegisterMethods.php");
+require_once ("../classes/DatabaseFunctions.php"); 
 
 /* register_controller is the "central" for Register and here is were al the functions in Register are initialized and the instances of both classes RegisterDataSetup and Register are initalized. Register_controller also contains error-handling and $_POST Globals */
 
 $register_username = $_POST['username'];
 $register_password = $_POST['password']; 
 
-$registration_steps = new RegisterMethods($pdo);
+$registration_steps = new UserMethods($pdo);
 /* ***Error handling */
 
 //If the provided password is shorter than 6 chars - display error.
