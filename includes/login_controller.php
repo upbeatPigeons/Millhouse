@@ -7,10 +7,10 @@ require_once ("../classes/DatabaseFunctions.php");
 $login_username = $_POST["username"];
 $login_password = $_POST["password"];
 
-$login_steps = new UserMethods($pdo);
+$login_methods = new UserMethods($pdo);
 $log_user = new Login($login_username, $login_password);
 
-$fetched_user = $login_steps->fetch_user_from_db($log_user);
+$fetched_user = $login_methods->fetch_user_from_db($log_user);
 
 
 $is_password_correct = password_verify($login_password, $fetched_user["password"]);
