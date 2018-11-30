@@ -19,9 +19,6 @@ class Comment
 	
 	
     public function __construct($content, $postId, $createdBy, $date){
-			$this->content = $content;
-			$this->postId = $postId;
-			 $this->createdBy = $createdBy;
 			$this->date = $date("Y-m-d");
     }
 	
