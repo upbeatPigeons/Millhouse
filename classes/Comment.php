@@ -11,19 +11,24 @@ Comment.php
 
 class Comment
 {
+//Include all the properties that a class has
+	
     private $id;
 		private $content;
 	  private $postId;
 		private $createdBy;
 	  private $date;
 	
+
+	// Because we will use FETCH:: CLASS don't need to include parameters in construct
+    public function __construct(){
 	
-    public function __construct($content, $postId, $createdBy, $date){
-			$this->date = $date("Y-m-d");
+ //date() creates a datestamp automatically
+			$this->date = date("Y-m-d H:m");
     }
 	
 	
-	//getter functions
+	//getter functions to access private properties of class Comment
 	   public function get_content(){
 			 
 			 return $this->content;
@@ -41,11 +46,11 @@ class Comment
 	
 	   public function get_date(){
 			 
-			 return $this->$date;
+			 return $this->date;
 		 }
 	
+//setter functions 
 	
-	/*setter functions 
      public function set_content($content){
 			   $this->content = $content;	 
 		 }
@@ -60,7 +65,6 @@ class Comment
 			  $this->createdBy = $createdBy;
 		}
 
-	*/
 	 
 	
 }

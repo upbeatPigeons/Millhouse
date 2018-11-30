@@ -54,10 +54,12 @@
 		</section>
 		
 		<section class="comments">
-			<!--include comment field-->
+			<?php include "../includes/comment_form.php"?>
 			<!--if admin include editing buttons-->
 			<!--list comments-->
 		</section>
+		
+		
 
 	</main>
 	

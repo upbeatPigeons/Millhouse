@@ -3,17 +3,20 @@
 require "Comment.php";
 
 class CommentMethod{
+
+// now when we use class Comment we call with parameter $pdo	
 	
 	private $pdo;
 	
 	public function __construct($pdo){
 		
-	  $this->pdo =$pdo;
+    $this->pdo =$pdo;
 	}
-	
-	public function create_comment(Comment $new_comment){
+
+	// We create $new_comment form class Comment
+	public function save_comment_to_database(Comment $new_comment){
 		
-		$statement = $pdo->prepare("INSERT INTO comments(content, post_id, created_by, date) VALUES(:content, :post_id, :created_by, :date)");
+		$statement =$this->pdo->prepare("INSERT INTO comments(content, post_id, created_by, date) VALUES(:content, :post_id, :created_by, :date)");
 		
 		$statement->execute ([
   		":content" => $new_comment->get_content(),

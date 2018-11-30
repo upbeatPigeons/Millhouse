@@ -1,17 +1,39 @@
 <?php
 
+session_start();
+
 include "database_connection.php";
 include "../classes/CommentMethod.php";
+include "../classes/Post.php";
+
+/*getting values for Mysql
+* we get $content from form input $_POST['comment'];
+*/
 
 
-$content = $_POST['subject'];
+$content = $_POST["comment"];
+$created_by = $_SESSION["username"];
+$post_id = $_GET["id"];
 
-//start Comment Method
-$create_comment = new CommentMethod($pdo);
 
 
-$new_comment= new Comment();
+//screate new instance of class CommentMethods to have access to Class CommentMethods
+$create_method = new CommentMethod($pdo);
 
-$registration_steps->register_user($new_user);
+//create new instance of class Comment to later set properties of Comment
+$new_comment = new Comment();
+
+//sett values for new comment through setter method
+//not setting date, cause we dont have a setter method for it
+$new_comment->set_content($content);
+$new_comment->set_createdBy($created_by);
+$new_comment->set_postId($post_id);
+
+//object $create_method accesse function save_comment_to_database from CommentMethod 
+// saving our object $new_comment
+$create_method->save_comment_to_database($new_comment);
+print_r("thank you for registering");
+
+header("Location: ../views/home_page.php");
 
 ?>
