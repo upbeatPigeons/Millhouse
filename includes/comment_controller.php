@@ -12,7 +12,6 @@ $create_comment = new CommentMethod($pdo);
 
 $new_comment= new Comment();
 
-$
-  $registration_steps->register_user($new_user);
+$registration_steps->register_user($new_user);
 
 ?>
