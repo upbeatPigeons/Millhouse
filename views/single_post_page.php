@@ -55,7 +55,14 @@
 		
 		<section class="comments">
 			<!--include comment field-->
-			<!--if admin include editing buttons-->
+
+			<!-- add admin cta area-->
+			<?php if ($_SESSION["admin"] == 1) {?>
+				<div class="admin-cta-area">
+					<a href="../includes/edit_post.php" class="btn btn-outline-primary">Edit post</a>
+					<a href="../includes/delete_post.php" class="btn btn-outline-primary">Delete post</a>
+				</div>
+			<?php }?>
 			<!--list comments-->
 		</section>
 

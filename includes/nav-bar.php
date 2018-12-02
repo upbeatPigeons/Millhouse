@@ -18,12 +18,21 @@
                     <li class="nav-item">
                         <a class="nav-link" href="../views/home_page.php">Blog</a>
                     </li>
+                    <?php if (isset($_SESSION["username"])) {?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../includes/logout.php">Log out</a>
+                    </li>
+                    <?php } else {?>
                     <li class="nav-item">
                         <a class="nav-link" href="../views/login_page.php">Sign in</a>
                     </li>
+                    <?php }?>
+                    <!-- Check if the user is an admin-->
+                    <?php if ($_SESSION["admin"] == 1){?> 
                     <li class="nav-item">
                         <a class="nav-link" href="../views/create_post_page.php">Create Post</a>
                     </li>
+                    <?php }?>
                     <li class="nav-item">
                         <a class="nav-link" href="../views/about_page.php">About</a>
                     </li>

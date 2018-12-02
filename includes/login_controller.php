@@ -20,6 +20,7 @@ if($is_password_correct){
   //Save user globally to session
   $_SESSION["username"] = $fetched_user["username"];
   $_SESSION["id"] = $fetched_user["id"];
+  $_SESSION["admin"] = $fetched_user["admin"];
   header('Location: ../views/home_page.php');
 
 }else{
