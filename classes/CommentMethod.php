@@ -13,7 +13,10 @@ class CommentMethod{
     $this->pdo =$pdo;
 	}
 
-	// We create $new_comment form class Comment
+	/*We create $new_comment from class Comment
+	* new function to save comment to database
+	*/
+		
 	public function save_comment_to_database(Comment $new_comment){
 		
 		$statement =$this->pdo->prepare("INSERT INTO comments(content, post_id, created_by, date) VALUES(:content, :post_id, :created_by, :date)");
@@ -25,8 +28,7 @@ class CommentMethod{
       ":date" => $new_comment->get_date()
     ]);
   }
-		
-		
+			
 	}
 
 
