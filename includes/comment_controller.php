@@ -4,7 +4,6 @@ session_start();
 
 include "database_connection.php";
 include "../classes/CommentMethod.php";
-include "../classes/Post.php";
 
 /*getting values for Mysql
 * we get $content from form input $_POST['comment'];
@@ -32,8 +31,8 @@ $new_comment->set_postId($post_id);
 //object $create_method accesse function save_comment_to_database from CommentMethod 
 // saving our object $new_comment
 $create_method->save_comment_to_database($new_comment);
-print_r("thank you for registering");
 
-header("Location: ../views/home_page.php");
+header('location: ../views/single_post_page.php?id='.$post_id);
+
 
 ?>
