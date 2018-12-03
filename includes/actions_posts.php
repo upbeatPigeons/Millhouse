@@ -71,7 +71,9 @@ switch ($_GET["action"]) {
 }
 
 if (isset($_POST['btnDelete'])) {
-    var_dump("hello");
+    $id = $_GET["id"];
+    $this_post = New Access_posts($pdo);
+    $this_post->delete_posts($id);
   }
-  
+
 ?>

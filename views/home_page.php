@@ -77,7 +77,7 @@
 					<a href="single_post_page.php?id=<?= $post->get_id();?>" class="btn btn-outline-primary">Read more</a>
 				</div>
 				
-				<form action="../includes/actions_posts.php" method="POST">
+				<form action="../includes/actions_posts.php?id=<?= $post->get_id();?>" method="POST">
 				<input type="submit" name="btnDelete" value="Delete" class="btn btn-outline-primary" />
 				</form>
 				<!-- Col -->	
