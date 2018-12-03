@@ -74,6 +74,7 @@ if (isset($_POST['btnDelete'])) {
     $id = $_GET["id"];
     $this_post = New Access_posts($pdo);
     $this_post->delete_posts($id);
+    header('Location: ../views/home_page.php');
   }
 
 ?>

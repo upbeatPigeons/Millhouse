@@ -77,7 +77,6 @@ class Access_posts
 
   public function delete_posts($id) 
   {
-    var_dump("inside delete_posts");
     $statement = $this->pdo->prepare("DELETE from posts WHERE id = :id");
     $statement->execute([
       "id" => $id
