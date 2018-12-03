@@ -66,7 +66,12 @@ switch ($_GET["action"]) {
 	 // echo to test that it works to create the post
 	 // echo "Created post with title " . $new_post->get_title();
   }
+
   break;
 }
 
+if (isset($_POST['btnDelete'])) {
+    var_dump("hello");
+  }
+  
 ?>
