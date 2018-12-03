@@ -1,6 +1,6 @@
 <nav class="navbar-logo">
        <div class="row justify-content-center">
-            <a class="navbar-brand" href="http://index.php/">
+            <a class="navbar-brand" href="index.php/">
                 <img class="img-fluid" src="../images/blue_logo%20_small.png" alt="Logo">
             </a>
        </div>
@@ -16,19 +16,19 @@
                
                 <ul class="navbar-nav navbar-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="http://../views/home_page.php">Blog</a>
+                        <a class="nav-link" href="../views/home_page.php">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://../views/login_page.php">Sign in</a>
+                        <a class="nav-link" href="../views/login_page.php">Sign in</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://../views/create_post_page.php">Create Post</a>
+                        <a class="nav-link" href="../views/create_post_page.php">Create Post</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://../views/about_page.php">About</a>
+                        <a class="nav-link" href="../views/about_page.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://../views/contact_page.php">Contact</a>
+                        <a class="nav-link" href="../views/contact_page.php">Contact</a>
                     </li>
                 </ul>
                 
