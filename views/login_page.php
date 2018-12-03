@@ -9,7 +9,9 @@
 	<header>
 		<nav class="navbar-logo">
        <div class="row justify-content-center">
-            <a class="navbar-brand" href="http://index.php/">
+
+            <a class="navbar-brand" href="../index.php">
+
                 <img class="img-fluid" src="../images/blue_logo%20_small.png" alt="Logo">
             </a>
        </div>
