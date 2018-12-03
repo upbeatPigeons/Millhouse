@@ -54,6 +54,7 @@
 		</section>
 		
 		<section class="comments">
+      
 			<!--include comment field-->
 
 			<!-- add admin cta area-->
@@ -63,8 +64,13 @@
 					<a href="../includes/delete_post.php" class="btn btn-outline-primary">Delete post</a>
 				</div>
 			<?php }?>
+      
+			<?php include "../includes/comment_form.php"?>
+			
 			<!--list comments-->
 		</section>
+		
+		
 
 	</main>
 	

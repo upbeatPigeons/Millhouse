@@ -1,6 +1,6 @@
 <nav class="navbar-logo">
        <div class="row justify-content-center">
-            <a class="navbar-brand" href="http://localhost:8888/millhouse/Millhouse/">
+            <a class="navbar-brand" href="index.php/">
                 <img class="img-fluid" src="../images/blue_logo%20_small.png" alt="Logo">
             </a>
        </div>
@@ -37,7 +37,7 @@
                         <a class="nav-link" href="../views/about_page.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http:../views/contact_page.php">Contact</a>
+                        <a class="nav-link" href="../views/contact_page.php">Contact</a>
                     </li>
                 </ul>
                 

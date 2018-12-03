@@ -31,8 +31,15 @@ class Access_posts
     try {
     $statement = $this->pdo->prepare("SELECT * from posts ORDER BY date DESC");
     $statement->execute();
-    // return an array consisting of objects from the Post class using FETCH_CLASS
-    return $statement->fetchAll(PDO::FETCH_CLASS, "Post");
+
+    /* 
+    * We will use FETCH_CLASS to return an array consisting of objects from the Post class
+    * FETCH_CLASS fetches database rows into an object
+    * With FETCH_CLASS, data is populated before the constructor is called 
+    * Our constructor initializes the date, so to avoid that the values from the database are being overwritten with the same values every time, we simply add PDO::FETCH_PROPS_LATE when calling fetchAll so the constructor will be called first.
+    */
+
+    return $statement->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, "Post");
    } catch (PDOException $exception) {
     echo "Connection error" . $exception->getMessage();
    }
