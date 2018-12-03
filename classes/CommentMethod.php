@@ -28,9 +28,20 @@ class CommentMethod{
       ":date" => $new_comment->get_date()
     ]);
   }
-			
-	}
-
+	
+ // new function to list all comments
+ public function list_all_comments($postId){
+	 
+	 $statement->$this->pdo("SELECT * FROM comments WHERE post_id = :post_id ORDER BY date DESC" );
+	 
+	 $statement->execute([
+		 ":post_id" => $postId;
+	 ]);
+	 
+   $list_all_comments->$statement->fetchAll(PDO::FETCH CLASS, "Comment")
+ }	 
+	 
+}
 
 
 ?>
