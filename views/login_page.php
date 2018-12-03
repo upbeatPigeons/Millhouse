@@ -1,8 +1,8 @@
 <?php
-		session_start();
+session_start();
 
-		
-			require "../includes/head.php"; 
+
+require "../includes/head.php"; 
 ?>
 
 <body id="login_page">
