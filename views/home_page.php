@@ -78,7 +78,7 @@
 				</div>
 				
 				<form action="../includes/actions_posts.php?id=<?= $post->get_id();?>" method="POST">
-				<input type="submit" name="btnDelete" value="Delete" class="btn btn-outline-primary" />
+				<input type="submit" name="remove_post" value="Delete Post" class="btn btn-outline-primary" />
 				</form>
 				<!-- Col -->	
 			</div><?php }?>

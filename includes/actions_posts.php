@@ -70,7 +70,7 @@ switch ($_GET["action"]) {
   break;
 }
 
-if (isset($_POST['btnDelete'])) {
+if (isset($_POST['remove_post'])) {
     $id = $_GET["id"];
     $this_post = New Access_posts($pdo);
     $this_post->delete_posts($id);
