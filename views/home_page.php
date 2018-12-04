@@ -89,8 +89,8 @@
 
 
 	<?php
-    require "../includes/footer.php"
-    ?>
+  require "../includes/footer.php"
+  ?>
 </body>
 
 </html>
