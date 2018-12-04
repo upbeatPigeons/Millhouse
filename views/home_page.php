@@ -11,7 +11,6 @@ $all_posts = $access_posts->list_all_posts();
 $latest_post = $access_posts->list_latest_post();
 ?>
 
-
 <body id="home_page">
 
 	<header>
@@ -20,6 +19,12 @@ $latest_post = $access_posts->list_latest_post();
 		include "../includes/carousel.php";
 		?>
 	</header>
+
+<?php
+// If there are no posts in the table, show a error message
+if (!$latest_post) : ?>
+<h2>Hm, It seems like there are no blog-posts to show..</h2>
+<?php else: ?>
 
 	<main>
 		<section class="container post_container">
@@ -88,10 +93,12 @@ $latest_post = $access_posts->list_latest_post();
 
 	</main>
 
+<?php endif; ?> <!-- (!$latest_post) -->
 
-	<?php
-  require "../includes/footer.php"
-  ?>
+<?php
+require "../includes/footer.php"
+?>
+
 </body>
 
 </html>
