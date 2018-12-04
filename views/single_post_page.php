@@ -83,9 +83,9 @@
 					<?php foreach ($all_comments as $comment):?>
 						<div class="col-12 col-5 comment">
 						<div><p><?= $comment->get_content(); ?></p></div>
-						<div><p><?= $comment->get_createdBy(); ?></p></div>
+						<div><p><?= $comment->get_created_by();?></p></div>
 						<div><p><?= $comment->get_date(); ?></p></div>
-				
+				 
 					  <hr>
 					
   			 	 </div>

@@ -6,7 +6,6 @@ include "database_connection.php";
 include "../classes/CommentMethod.php";
 
 //getting values $var $content from form input $_POST['comment'];
-
 $content = $_POST["comment"];
 $created_by = $_SESSION["username"];
 $postId = $_GET["id"];
@@ -22,7 +21,7 @@ $new_comment = new Comment();
 * not setting date, cause we dont have a setter method for it
 */
 $new_comment->set_content($content);
-$new_comment->set_createdBy($created_by);
+$new_comment->set_created_by($created_by);
 $new_comment->set_postId($postId);
 
 /* 

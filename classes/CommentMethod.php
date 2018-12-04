@@ -24,7 +24,7 @@ class CommentMethod{
 		$statement->execute ([
   		":content" => $new_comment->get_content(),
   		":post_id" => $new_comment->get_postId(),
-      ":created_by" =>$new_comment->get_createdBy(),
+      ":created_by" =>$new_comment->get_created_by(),
       ":date" => $new_comment->get_date()
     ]);
   }

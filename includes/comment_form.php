@@ -1,6 +1,4 @@
 
-
-
 <!--Sends post id as GET in url with $post->get_id() -->
 <form action="../includes/comment_controller.php?id=<?php echo $post->get_id();?>" method="POST">
 	<div class="form-group">
