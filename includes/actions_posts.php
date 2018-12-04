@@ -15,7 +15,7 @@ switch ($_GET["action"]) {
   $title = $_POST["title"];
   $description = $_POST["description"];
   $category = $_POST["category"];
-  $created_by = $_POST["created_by"];
+  $created_by = $_SESSION["username"];
   $image_url = $_POST["image"];
 
   $do_redirect = true;
@@ -49,7 +49,6 @@ switch ($_GET["action"]) {
     // If all the fields have been filled out, create the post and store it in the db
 
   if ($do_redirect) {
-	 // Replace created_by with $_SESSION["user_id"] when available
     $new_post = new Post();
     $new_post->set_title($title);
     $new_post->set_description($description);
@@ -63,8 +62,7 @@ switch ($_GET["action"]) {
     }
 
     $access_posts->create($new_post);
-	 // echo to test that it works to create the post
-	 // echo "Created post with title " . $new_post->get_title();
+    
   }
 
   break;

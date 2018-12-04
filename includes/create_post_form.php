@@ -10,11 +10,6 @@ require_once "validation_functions.php";
 		<input type="text" class="form-control" name="title" placeholder="Title"><div class="<?php get_class_for_error_message($empty_title)?>"><?php echo $empty_title_error_message;?></div>
 	</div>
 	<div class="form-group">
-		<label for="created_by">Created by</label>
-		<input type="number" class="form-control" name="created_by">
-	</div>
-
-	<div class="form-group">
 		<label for="image">Enter image URL</label>
 		<input type="text" class="form-control" name="image" placeholder="http://example.com/image.jpg">
 	</div>
