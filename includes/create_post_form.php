@@ -1,6 +1,6 @@
 <?php 
 
-require_once "create_posts_functions.php";
+require_once "validation_functions.php";
 
 ?>
 
