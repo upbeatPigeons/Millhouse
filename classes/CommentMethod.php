@@ -50,22 +50,7 @@ class CommentMethod{
 	 
 	 return $statement->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, "Comment");
  }
-	
- //new function to delete a comment
- public function delete_comment($id)
- {
-	 $statement = $this->pdo->prepare("DELETE from comments WHERE id = :id ");
-	
-	 $statement->$execute(
-		 [
-			 ":id" => $id
-     ]
-	 );
-	 
- }
-	
-	
-	
+
 	 
 }
 

@@ -85,21 +85,8 @@
 						<div><p><?= $comment->get_content(); ?></p></div>
 						<div><p><?= $comment->get_createdBy(); ?></p></div>
 						<div><p><?= $comment->get_date(); ?></p></div>
-						
-						<?php if ($_SESSION["admin"] == 1) :?>
-						
-							<div class="admin-cta-area">
-								<form action="../includes/comment_controller.php" method='post'>
-              	 <input type="hidden" value="<?= $comment->get_id();?>" name="delete">
-									<input type="submit" name="delete" value='remove'>
-
-              </form>
-					  </div>
-					  
-						<?php
-							endif; ?>
-	  
-					  	<hr>
+				
+					  <hr>
 					
   			 	 </div>
   			  <?php 
