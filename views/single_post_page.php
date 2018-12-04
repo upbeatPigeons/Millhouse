@@ -40,7 +40,7 @@
 			<div class="row">
 				<div class="col-12">
 					<h3><?= $post->get_date();?></h3>
-					<p><?= $post->get_date();?></p>
+					<p>Created by: <?= $post->get_created_by();?></p>
 				</div>	
 			</div>
 		</section>
