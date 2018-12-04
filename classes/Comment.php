@@ -29,6 +29,11 @@ class Comment
 	
 	
 	//getter functions to access private properties of class Comment
+	   public function get_id(){
+			 
+			 return $this->id;
+		 }
+	
 	   public function get_content(){
 			 
 			 return $this->content;

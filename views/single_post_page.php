@@ -82,19 +82,19 @@
 					
 					<?php foreach ($all_comments as $comment):?>
 						<div class="col-12 col-5 comment">
+						
 						<div><p><?= $comment->get_content(); ?></p></div>
 						<div><p><?= $comment->get_created_by();?></p></div>
 						<div><p><?= $comment->get_date(); ?></p></div>
+	      	  
 		      	
-			      	<?php if ($_SESSION["admin"] == 1) {?>
-				    
-      
-							  <form action="../includes/comment_controller.php" method='post'>
-              	  <input type="hidden" value="<?= $comment->get_id();?>" name="delete">
-		              <input type="submit" name="delete" value='remove'>
+			      	<?php if ($_SESSION["admin"] == 1) :?>
+							  <form action="../includes/comment_controller.php" method="post">
+              <input type="hidden" value="<?= $comment->get_id();?>" name="delete_comment">
+		              <input type="submit" name="remove" value="remove">
 							  </form>
 				    		
-				    	<?php }?>
+				    	<?php endif;?>
 					  <hr>
 					
   			 	 </div>

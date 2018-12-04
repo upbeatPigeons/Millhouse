@@ -33,15 +33,15 @@ $create_method->save_comment_to_database($new_comment);
 
 // Delete comment
 
-if(isset($_POST)){
-    //var_dump($_POST['delete']);
-    
-    $id = $_POST["delete"]; 
+if(isset($_POST["delete_comment"])) {
+    //var_dump($_POST["delete_comment"]);
+    $id = $_POST["delete_comment"]; 
+	  echo $id;
     
 		$delete_comment_method = new CommentMethod($pdo);
 		$delete_comment_method->delete_comment($id);
 	
-		header('Location: ../views/single_post_page.php?id='.$postId);
+		//header('Location: ../views/single_post_page.php?id='.$postId);
 }
 
 
