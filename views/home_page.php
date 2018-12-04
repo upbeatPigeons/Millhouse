@@ -1,22 +1,25 @@
 <?php
-    session_start();
-    include "../includes/head.php";
-    require_once "../includes/database_connection.php";
-    require_once "../classes/Posts_access.php";
+session_start();
+include "../includes/head.php";
+require_once "../includes/database_connection.php";
+require_once "../classes/Posts_access.php";
 ?>
 
 <?php 
-			$access_posts = new Access_posts($pdo);
-			$all_posts = $access_posts->list_all_posts();
-			$latest_post = $access_posts->list_latest_post();
-?>
+$access_posts = new Access_posts($pdo);
+$all_posts = $access_posts->list_all_posts();
+$latest_post = $access_posts->list_latest_post();
+if (!$latest_post) : ?>
+
+<?php endif; ?>
+
 
 <body id="home_page">
 
 	<header>
 		<?php
-    	include "../includes/nav-bar.php";
-			include "../includes/carousel.php";
+    include "../includes/nav-bar.php";
+		include "../includes/carousel.php";
 		?>
 	</header>
 
