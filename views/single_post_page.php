@@ -3,6 +3,7 @@
     include "../includes/head.php";  
     require_once "../includes/database_connection.php";
     require_once "../classes/Posts_access.php";
+    require_once "../classes/CommentMethod.php";
 ?>
 
 
@@ -70,8 +71,29 @@
 			<!--list comments-->
 		</section>
 		
-		
+			<?php		
+				/*New instance og class CommentMethods 
+ 				 *Access function list_all_comments in CommentMethod
+ 				 */
+				$comment_method = new CommentMethod($pdo);			
+				$all_comments = $comment_method->list_all_comments($_GET["id"]);
+			
+				?>		
+					
+					<?php foreach ($all_comments as $comment):?>
+						<div class="col-12 col-5 comment">
+						<div><p><?= $comment->get_content(); ?></p></div>
+						<div><p><?= $comment->get_created_by();?></p></div>
+						<div><p><?= $comment->get_date(); ?></p></div>
+				 
+					  <hr>
+					
+  			 	 </div>
+  			  <?php 
+						endforeach; ?>
+	
 
+			
 	</main>
 	
 	

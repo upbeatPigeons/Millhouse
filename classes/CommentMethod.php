@@ -24,22 +24,33 @@ class CommentMethod{
 		$statement->execute ([
   		":content" => $new_comment->get_content(),
   		":post_id" => $new_comment->get_postId(),
-      ":created_by" =>$new_comment->get_createdBy(),
+      ":created_by" =>$new_comment->get_created_by(),
       ":date" => $new_comment->get_date()
     ]);
   }
 	
- // new function to list all comments
- public function list_all_comments($postId){
-	 
-	 $statement->$this->pdo("SELECT * FROM comments WHERE post_id = :post_id ORDER BY date DESC" );
+  // new function to list all comments
+ public function list_all_comments($postId)
+ {
+	 $statement= $this->pdo->prepare("SELECT * FROM comments WHERE post_id = :post_id ORDER BY date DESC");
 	 
 	 $statement->execute([
-		 ":post_id" => $postId;
+		 ":post_id" => $postId
 	 ]);
 	 
-   $list_all_comments->$statement->fetchAll(PDO::FETCH CLASS, "Comment")
- }	 
+	 /* 
+    * We will use FETCH_CLASS to return an array consisting of       * objects from the Comment class
+    * FETCH_CLASS fetches database rows into an object
+    * With FETCH_CLASS, data is populated before the constructor is * called 
+    * Our constructor initializes the date, so to avoid that the 
+		* values from the database are being overwritten with the same 
+		* values every time, we simply add PDO::FETCH_PROPS_LATE when 
+		* calling fetchAll so the constructor will be called first.
+    */
+	 
+	 return $statement->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, "Comment");
+ }
+
 	 
 }
 

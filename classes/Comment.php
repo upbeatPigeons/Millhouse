@@ -16,7 +16,7 @@ class Comment
     private $id;
 		private $content;
 	  private $postId;
-		private $createdBy;
+		private $created_by;
 	  private $date;
 	
 
@@ -24,7 +24,7 @@ class Comment
     public function __construct(){
 	
  //date() creates a datestamp automatically
-			$this->date = date("Y-m-d H:m");
+			$this->date = date("Y-m-d H:i:s");
     }
 	
 	
@@ -39,9 +39,9 @@ class Comment
 			 return $this->postId;
 		 }
 	
-	   public function get_createdBy(){
+	   public function get_created_by(){
 			 
-			 return $this->createdBy;
+			 return $this->created_by;
 		 }
 	
 	   public function get_date(){
@@ -60,9 +60,9 @@ class Comment
 			  $this->postId = $postId;
 		}
 
-		public function set_createdBy($createdBy){
+		public function set_created_by($created_by){
 			 	
-			  $this->createdBy = $createdBy;
+			  $this->created_by = $created_by;
 		}
 
 	 
