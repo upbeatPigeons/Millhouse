@@ -69,7 +69,7 @@
 		<section class="row all_posts">
 			
 			<!-- Here we will include post array, and return image and title -->
-			<?php foreach ($all_posts as $post) {?>
+			<?php foreach ($all_posts as $post): ?>
 			<div class="col-12 col-5 single_post">
 				<div><img src="<?= $post->get_image();?>"></div>
 				<div><?= $post->get_title();?></div>
@@ -81,7 +81,8 @@
 				<input type="submit" name="remove_post" value="Delete Post" class="btn btn-outline-primary" />
 				</form>
 				<!-- Col -->	
-			</div><?php }?>
+			</div>
+			<?php endforeach; ?>
 		</section>			
 
 	</main>
