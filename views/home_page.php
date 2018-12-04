@@ -9,9 +9,7 @@ require_once "../classes/Posts_access.php";
 $access_posts = new Access_posts($pdo);
 $all_posts = $access_posts->list_all_posts();
 $latest_post = $access_posts->list_latest_post();
-if (!$latest_post) : ?>
-
-<?php endif; ?>
+?>
 
 
 <body id="home_page">
