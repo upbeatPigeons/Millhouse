@@ -66,7 +66,15 @@ switch ($_GET["action"]) {
 	 // echo to test that it works to create the post
 	 // echo "Created post with title " . $new_post->get_title();
   }
+
   break;
 }
+
+if (isset($_POST['remove_post'])) {
+    $id = $_GET["id"];
+    $this_post = New Access_posts($pdo);
+    $this_post->delete_posts($id);
+    header('Location: ../views/home_page.php');
+  }
 
 ?>
