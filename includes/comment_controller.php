@@ -5,10 +5,26 @@ session_start();
 include "database_connection.php";
 include "../classes/CommentMethod.php";
 
-//getting values $var $content from form input $_POST['comment'];
-$content = $_POST["comment"];
-$created_by = $_SESSION["username"];
-$postId = $_GET["id"];
+
+	$content = $_POST["comment"];
+	$created_by = $_SESSION["username"];
+	$postId = $_GET["id"];
+	$id = $_POST["delete_comment"];
+
+// Delete comment
+
+if(isset($_POST["delete_comment"])) {
+     
+	  //echo $id;
+    
+		$delete_comment_method = new CommentMethod($pdo);
+		$delete_comment_method->delete_comment($id);
+	
+header('Location: ../views/single_post_page.php?id='.$postId);
+}
+
+
+
 
 //Create new instance of class CommentMethods to have access to Class CommentMethods
 $create_method = new CommentMethod($pdo);
@@ -31,18 +47,7 @@ $new_comment->set_postId($postId);
 */
 $create_method->save_comment_to_database($new_comment);
 
-// Delete comment
 
-if(isset($_POST["delete_comment"])) {
-    //var_dump($_POST["delete_comment"]);
-    $id = $_POST["delete_comment"]; 
-	  echo $id;
-    
-		$delete_comment_method = new CommentMethod($pdo);
-		$delete_comment_method->delete_comment($id);
-	
-		//header('Location: ../views/single_post_page.php?id='.$postId);
-}
 
 
 header('location: ../views/single_post_page.php?id='.$postId);

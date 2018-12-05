@@ -89,7 +89,7 @@
 	      	  
 		      	
 			      	<?php if ($_SESSION["admin"] == 1) :?>
-							  <form action="../includes/comment_controller.php" method="post">
+							  <form action="../includes/comment_controller.php?id=<?php echo $post->get_id();?>"method="post">
               <input type="hidden" value="<?= $comment->get_id();?>" name="delete_comment">
 		              <input type="submit" name="remove" value="remove">
 							  </form>

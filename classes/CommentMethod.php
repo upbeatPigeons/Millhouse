@@ -57,7 +57,7 @@ class CommentMethod{
   {
 	 $statement = $this->pdo->prepare("DELETE from comments WHERE id = :id ");
 	
-	 $statement->$execute([
+	 $statement->execute([
 			 ":id" => $id
      ]); 
  }
