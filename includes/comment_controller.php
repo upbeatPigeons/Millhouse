@@ -13,6 +13,8 @@ include "../classes/CommentMethod.php";
 
 // Delete comment
 
+/*This function must be at the top, to see if it should be executed first, otherwise it wil lstart with create method every time */
+
 if(isset($_POST["delete_comment"])) {
      
 	  //echo $id;
