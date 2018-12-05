@@ -12,9 +12,7 @@
             <!--Navbar Logo-->
             <nav class="navbar fixed-top scrolling-navbar">
                 <div class="container logo_container">
-                    <a class="navbar-brand" href="http://localhost:8888/millhouse/Millhouse/">
-                        <img class="logo-image" src="images/logo_dark.png" alt="Logo">
-                    </a>
+                    <img class="logo-image" src="images/logo_dark.png" alt="Logo">
                 </div>
             </nav>
 
