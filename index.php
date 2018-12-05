@@ -21,12 +21,12 @@
             <!--Log in & Register Buttons Mobile-->
             <div class="row index_button_container justify-content-center">
                 <div class="col-4">
-                    <button type="button" class="btn btn-outline-primary">
-                        <a href="views/login_page.php">Log in</a>
+                    <button type="button" onclick="location.href='views/login_page.php';"  class="btn btn-outline-primary">
+                    Log in
                     </button>
 
-                    <button type="button" class="btn btn-outline-primary">
-                        <a href="views/login_page.php">Register</a>
+                    <button type="button" onclick="location.href='views/login_page.php';"  class="btn btn-outline-primary">
+                    Register
                     </button>
                 </div>
             </div>
@@ -47,14 +47,14 @@
 
                     <div class="row index_button_container">
                         <div class="col-4">
-                            <button type="button" class="btn btn-outline-primary">
-                                <a href="views/login_page.php">Log in</a>
+                            <button type="button" onclick="location.href='views/login_page.php';" class="btn btn-outline-primary">
+                            Log in
                             </button>
                         </div>
 
                         <div class="col-4">
-                            <button type="button" class="btn btn-outline-primary">
-                                <a href="views/login_page.php">Register</a>
+                            <button type="button" onclick="location.href='views/login_page.php';" class="btn btn-outline-primary">
+                            Register
                             </button>
                         </div>
                     </div>
