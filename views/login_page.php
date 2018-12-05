@@ -25,37 +25,22 @@ require "../includes/validation_functions.php";
 </header>
 
 <main>
-  <section class="container login_container">
-   <h1>Sign In</h1>
+  <section class="container login-container">
+   <h1>Log in</h1>
    <hr>
 
-   <div class="row signin_wrapper justify-content-between">
-    <div class="col-12 col-md-4">
+   <div class="row signin-wrapper justify-content-between">
+    <div class="col-sm-12 col-md-6">
+      <!-- Include the login form-->
+      <?php include "../includes/login_form.php"; ?>
+      <!-- Include the register form-->
+      <?php include "../includes/register_form.php"; ?>
+    </div> <!-- End of col -->
 
-     <h2>Sign In</h2>
-     <!-- Should Sign In form be an include? -->
-     <form class="login" action="../includes/login_controller.php" method="POST">
-       <p>Hej <?=$_SESSION["username"]?>!</p>
-       <input type="text" name="username" id="username" placeholder="username" required>
-       <label for="password" style="color:red">
-         <!-- Gets error and formats it -->
-         <?php show_error_messages($_GET["error"]); ?>					
-       </label>
-       <br>
-       <input type="password" name="password" id="password" placeholder="password" required>
-       <input type="submit" name="login" value="Log in">
-     </form>
-     <!-- Include the register form-->
-     <?php include "../includes/register_form.php"; ?>
-</div> <!-- End of col -->
-
-<div class="d-none d-md-block col-md-6">
- <img class="login_side_image w-100" src="../images/details.jpg" alt="Scented candle">
- <!-- Col -->
-</div>
-
-<!-- Row -->
-</div>
+    <div class="d-none d-md-block col-md-6">
+     <img class="login_side_image w-100" src="../images/details.jpg" alt="Scented candle">
+   </div> <!-- end of col -->
+</div> <!-- End of row -->
 
 </section>
 
