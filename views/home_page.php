@@ -1,17 +1,18 @@
 <?php
-session_start();
-include "../includes/head.php";
-require_once "../includes/database_connection.php";
-require_once "../classes/Posts_access.php";
+ 
+ session_start();
+ include "../includes/head.php";
+ require_once "../includes/database_connection.php";
+ require_once "../classes/PostMethods.php";
 ?>
 
 <?php 
 // First have to create a new instance post to access functions in Class
-$access_posts = new Access_posts($pdo);
-// Using $access_posts to actually set of the functions we want and storing them
+$post_methods = new PostMethods($pdo);
+// Using $post_methods to actually set of the functions we want and storing them
 // in variables
-$all_posts = $access_posts->list_all_posts();
-$latest_post = $access_posts->list_latest_post();
+$all_posts = $post_methods->list_all_posts();
+$latest_post = $post_methods->list_latest_post();
 ?>
 
 <body id="home_page">
@@ -26,7 +27,7 @@ $latest_post = $access_posts->list_latest_post();
 <?php
 // If there are no posts in the table, show a error message
 if (!$latest_post) : ?>
-<h2>Hm, It seems like there are no blog-posts to show..</h2>
+<h2>Hm, it seems like there are no blog posts to show..</h2>
 <?php else: ?>
 
 	<main>

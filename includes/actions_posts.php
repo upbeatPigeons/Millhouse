@@ -2,7 +2,7 @@
 session_start();
 
 require_once "../classes/Post.php";
-require_once "../classes/Posts_access.php";
+require_once "../classes/PostMethods.php";
 require_once "database_connection.php";
 
 /*
@@ -20,7 +20,7 @@ switch ($_GET["action"]) {
 
   $do_redirect = true;
 
-  $access_posts = new Access_posts($pdo);
+  $post_methods = new PostMethods($pdo);
 
     // Title validation: Cannot be empty
 
@@ -61,8 +61,8 @@ switch ($_GET["action"]) {
        $new_post->set_image($image_url);
     }
 
-    $access_posts->create($new_post);
-    
+    $post_methods->create($new_post);
+
   }
 
   break;
@@ -70,7 +70,7 @@ switch ($_GET["action"]) {
 
 if (isset($_POST['remove_post'])) {
     $id = $_GET["id"];
-    $this_post = New Access_posts($pdo);
+    $this_post = New PostMethods($pdo);
     $this_post->delete_posts($id);
     header('Location: ../views/home_page.php');
   }

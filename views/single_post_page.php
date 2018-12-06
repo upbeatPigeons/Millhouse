@@ -2,7 +2,7 @@
     session_start();
     include "../includes/head.php";  
     require_once "../includes/database_connection.php";
-    require_once "../classes/Posts_access.php";
+    require_once "../classes/PostMethods.php";
     require_once "../classes/CommentMethod.php";
 ?>
 
@@ -21,8 +21,8 @@
 			<div>
 			  <!-- Here we need to fetch title of the post -->
 			 <?php 
-			 $access_posts = new Access_posts($pdo);
-			 $post = $access_posts->list_single_post($_GET["id"]);
+			 $post_methods = new PostMethods($pdo);
+			 $post = $post_methods->list_single_post($_GET["id"]);
 			 ?>
 				<h1><?= $post->get_title(); ?></h1>
 				<hr>
