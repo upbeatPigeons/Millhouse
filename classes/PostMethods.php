@@ -83,6 +83,14 @@ class PostMethods
     ]);
   }
 
+  public function edit_post($id)
+  {
+    $statement = $this->pdo->prepare("");
+    $statement->execute([
+      "id" => $id
+    ]);
+  }
+
 }
 
 ?>
