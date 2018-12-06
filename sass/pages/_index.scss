@@ -1,22 +1,27 @@
 /*Background image*/
+.header_container {
+  background-color: black;
+  height: 80px;
+}
+.background_image {
+  height: 800px;
+  background-image: url(../../images/Eske_01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center -10%;
+  z-index: -100;
+}
 
-// .hero_image{
-//     height: 800px;
-//     background-image: url(../../images/millhouse_shop.png);
-//     background-repeat: no-repeat; 
-//     background-size: cover;  
-//     background-position: center center;
-//     z-index: -100;
-// }
+.logo_container {
 
-// .logo_container{
-
-//     .logo-image{
-//         width: 10rem;
-//         //need to align in the center, cheating margin
-//         margin-left: 5rem;
-//     }
-// }
+  .logo-image {
+    max-width: 10rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1.7rem;
+  }
+}
 
 // .index_container{
 //     background-color: $palepink_color;
