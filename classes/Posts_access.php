@@ -77,7 +77,7 @@ class Access_posts
 
   public function delete_posts($id) 
   {
-    $statement = $this->pdo->prepare("DELETE from posts WHERE id = :id");
+    $statement = $this->pdo->prepare("DELETE from posts WHERE id = :id; DELETE from comments WHERE post_id = :id;");
     $statement->execute([
       "id" => $id
     ]);
