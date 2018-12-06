@@ -87,10 +87,12 @@ if (!$latest_post) : ?>
 					<!-- The exact same "read more" btn as above on line 56 -->
 					<a href="single_post_page.php?id=<?= $post->get_id();?>" class="btn btn-outline-primary">Read more</a>
 				</div>
+
 				<!-- If remove btn is pressed, then $_POST is used to set of the if-statement which executes the remove function. Also the id is sent through the url so it can be added to the parameter as argument to the remove function-->
 				<form action="../includes/actions_posts.php?id=<?= $post->get_id();?>" method="POST">
 				<input type="submit" name="remove_post" value="Delete Post" class="btn btn-outline-primary" />
 				</form>
+
 				<!-- Col -->	
 			</div>
 			<?php endforeach; ?>

@@ -62,7 +62,9 @@
 			<?php if ($_SESSION["admin"] == 1) {?>
 				<div class="admin-cta-area">
 					<a href="../includes/edit_post.php" class="btn btn-outline-primary">Edit post</a>
-					<a href="../includes/delete_post.php" class="btn btn-outline-primary">Delete post</a>
+					<form action="../includes/actions_posts.php?id=<?= $post->get_id();?>" method="POST">
+					<input type="submit" name="remove_post" value="Delete Post" class="btn btn-outline-primary"/>
+					</form>
 				</div>
 			<?php }?>
       
