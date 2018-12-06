@@ -17,21 +17,8 @@
       </div>
     </nav>
   </header>
-
-  <!--Log in & Register Buttons Mobile-->
-  <div class="row index_button_container justify-content-center">
-    <div class="col-4">
-      <button type="button" onclick="location.href='views/login_page.php';" class="btn   btn-outline-primary">
-        Log in
-      </button>
-
-      <button type="button" onclick="location.href='views/login_page.php';" class="btn   btn-outline-primary">
-        Register
-      </button>
-    </div>
-  </div>
       
-
+      
   <main class="index_container">
   <!--Desktop Version -->
     <section class="container index_desktop">
