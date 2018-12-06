@@ -2,34 +2,38 @@
     require "includes/head.php"
 ?>
 
-<!--Background Image-->
+
 
 <body id="index_page">
 
   <header class="row d-block d-md-none index_header">
-    <div class="hero_image" style="background-image: url('images/millhouse_shop.png');">
+    <!--Background Image on smaller screens-->
+    <div class="hero_image" style="background-image: url('images/Eske_01.jpg');">
     </div>
 
-    <!--Navbar Logo-->
+    
     <nav class="navbar fixed-top scrolling-navbar">
       <div class="container logo_container">
+        <!--Navbar Logo-->
         <img class="logo-image" src="images/logo_dark.png" alt="Logo">
       </div>
     </nav>
   </header>
       
-      
+
   <main class="index_container">
-  <!--Desktop Version -->
+ 
     <section class="container index_desktop">
 
       <div class="row justify-content-around">
+        <!--Image with interior for bigger screens-->
         <div class="d-none d-md-block col-md-5 index_image">
           <img class="w-100" src="images/Eske_01.jpg" alt="Millhouse Store">
         </div>
       </div>
 
       <div class="d-none d-md-block col-md-5 index_content">
+        <!--Logo for bigger screens-->
         <div class="index_logo">
           <img class="w-100" src="images/logo_dark.png" alt="Millhouse Logo">
         </div>

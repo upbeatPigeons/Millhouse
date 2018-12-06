@@ -6,22 +6,5 @@ footer {
 }
 
 /*Background image*/
-.hero_image {
-  height: 800px;
-  background-image: url(../../images/millhouse_shop.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  z-index: -100;
-}
-
-.logo_container .logo-image {
-  width: 10rem;
-  margin-left: 5rem;
-}
-
-.index_container {
-  background-color: #D7BCC8;
-}
 
 /*# sourceMappingURL=style.css.map */
