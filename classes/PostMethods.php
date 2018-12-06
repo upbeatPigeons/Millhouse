@@ -2,7 +2,7 @@
 
 require_once "Post.php";
 
-class Access_posts
+class PostMethods
 {
   private $pdo;
   /* Inject the pdo connection so it is available inside of the class

@@ -21,8 +21,8 @@
 			<div>
 			  <!-- Here we need to fetch title of the post -->
 			 <?php 
-			 $access_posts = new Access_posts($pdo);
-			 $post = $access_posts->list_single_post($_GET["id"]);
+			 $post_methods = new Post_methods($pdo);
+			 $post = $post_methods->list_single_post($_GET["id"]);
 			 ?>
 				<h1><?= $post->get_title(); ?></h1>
 				<hr>
