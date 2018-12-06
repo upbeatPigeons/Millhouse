@@ -1,8 +1,12 @@
 /*Background image*/
+div {
+    border: solid 1px red;
+}
 .header_container {
   background-color: black;
   height: 80px;
 }
+
 .background_image {
   height: 800px;
   background-image: url(../../images/Eske_01.jpg);
@@ -23,6 +27,19 @@
   }
 }
 
+.flex_bottom_container {
+  display: flex;
+  height: 70%;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.index_button_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 // .index_container{
 //     background-color: $palepink_color;
 // }

@@ -6,6 +6,10 @@ footer {
 }
 
 /*Background image*/
+div {
+  border: solid 1px red;
+}
+
 .header_container {
   background-color: black;
   height: 80px;
@@ -26,6 +30,20 @@ footer {
   margin-left: auto;
   margin-right: auto;
   padding-top: 1.7rem;
+}
+
+.flex_bottom_container {
+  display: flex;
+  height: 70%;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.index_button_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

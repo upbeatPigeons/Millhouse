@@ -18,20 +18,29 @@
         <img class="logo-image" src="images/logo_dark.png" alt="Logo">
       </div>
 
-      <!-- Container for buttons on small screen  -->
-      <div class="row index_button_container">
-        <div class="col-4">
-          <button type="button" onclick="location.href='views/login_page.php';" class="btn    btn-outline-primary">
-            Log in
-          </button>
+      <!-- Container for elements we want to flex-end -->
+      <div class="flex_bottom_container">
+        <!-- Container for buttons on small screen  -->
+        <div class="index_button_container justify-content-center">
+         
+            <button type="button" onclick="location.href='views/login_page.php';" class="btn    btn-outline-primary ">
+              Log in
+            </button>
+          
+            <button type="button" onclick="location.href='views/login_page.php';" class="btn btn-outline-primary">
+              Register
+            </button>
         
-          <button type="button" onclick="location.href='views/login_page.php';" class="btn btn-outline-primary">
-            Register
-          </button>
+        </div> <!-- Container for buttons on small screen  -->
+
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat magni necessitatibus at optio, quod adipisci modi veritatis impedit vero. Reprehenderit?
         </div>
-      </div> <!-- Container for buttons on small screen  -->
+      </div> <!-- Container for elements we want to flex-end -->
 
     </div> <!-- Background-image for smaller screens -->
+
+
 
     <div class="row justify-content-around">
       <!--Image with interior for bigger screens-->
