@@ -1,6 +1,6 @@
 /*Background image*/
 div {
-    border: solid 1px red;
+  border: solid 1px red;
 }
 .header_container {
   background-color: black;
@@ -39,6 +39,20 @@ div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.hero {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .hr_imitaion {
+  height: 5px;
+  width: 40%;
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  }
 }
 // .index_container{
 //     background-color: $palepink_color;

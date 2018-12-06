@@ -33,9 +33,12 @@
         
         </div> <!-- Container for buttons on small screen  -->
 
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat magni necessitatibus at optio, quod adipisci modi veritatis impedit vero. Reprehenderit?
+        <div class="hero">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat magni necessitatibus at optio, quod adipisci modi veritatis impedit vero. Reprehenderit? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, aperiam.
+
+          <div class="hr_imitaion"></div>
         </div>
+
       </div> <!-- Container for elements we want to flex-end -->
 
     </div> <!-- Background-image for smaller screens -->
