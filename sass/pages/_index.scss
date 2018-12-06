@@ -1,59 +1,71 @@
-/*Background image*/
 div {
   border: solid 1px red;
 }
+
 .header_container {
-  background-color: black;
-  height: 80px;
+  background-color: $brand-inverse;
+  height: 40px;
 }
 
+/* Everything that is contained inside the same element as the background-img is
+nested for clarity. Represents the same way the html is nested */
 .background_image {
   height: 800px;
-  background-image: url(../../images/Eske_01.jpg);
+  background-image: 
+    linear-gradient(
+      transparent 80%,
+      $brand-danger
+      ),
+    linear-gradient(
+      $brand-inverse 15%,
+      transparent 35%    
+    ),
+    url(../../images/Eske_01.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center -10%;
   z-index: -100;
-}
-
-.logo_container {
 
   .logo-image {
     max-width: 10rem;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    @include sides_auto_margin;
     padding-top: 1.7rem;
   }
-}
 
-.flex_bottom_container {
-  display: flex;
-  height: 70%;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.index_button_container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero {
-  max-width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-
-  .hr_imitaion {
-  height: 5px;
-  width: 40%;
-  background-color: black;
-  margin-left: auto;
-  margin-right: auto;
+  .flex_bottom_container {
+    display: flex;
+    height: 85%;
+    flex-direction: column;
+    justify-content: flex-end;
+  
+    .index_button_container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }     
   }
 }
-// .index_container{
-//     background-color: $palepink_color;
-// }
+
+// /* This element is located underneath the actual background-img and has it's
+// own elements nested in it. */
+.cube_color {
+  height: 180px;
+  width: 100%;
+  background-color: $brand-danger;
+  padding: 40px 0 40px 0;
+  
+  .hero {
+    max-width: 300px;
+    margin-bottom: 2rem;
+    @include sides_auto_margin;                       
+  }
+
+  .hr_imitaion {
+      height: 5px;
+      width: 20%;
+      background-color: black;
+      @include sides_auto_margin;
+    }  
+}

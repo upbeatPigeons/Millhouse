@@ -5,55 +5,60 @@ footer {
   text-align: center;
 }
 
-/*Background image*/
 div {
   border: solid 1px red;
 }
 
 .header_container {
-  background-color: black;
-  height: 80px;
+  background-color: #F0F0F0;
+  height: 40px;
 }
 
+/* Everything that is contained inside the same element as the background-img is
+nested for clarity. Represents the same way the html is nested */
 .background_image {
   height: 800px;
-  background-image: url(../../images/Eske_01.jpg);
+  background-image: linear-gradient(transparent 80%, #D7BCC8), linear-gradient(#F0F0F0 15%, transparent 35%), url(../../images/Eske_01.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center -10%;
   z-index: -100;
 }
-
-.logo_container .logo-image {
+.background_image .logo-image {
   max-width: 10rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
   padding-top: 1.7rem;
 }
-
-.flex_bottom_container {
+.background_image .flex_bottom_container {
   display: flex;
-  height: 70%;
+  height: 85%;
   flex-direction: column;
   justify-content: flex-end;
 }
-
-.index_button_container {
+.background_image .flex_bottom_container .index_button_container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.hero {
+.cube_color {
+  height: 180px;
+  width: 100%;
+  background-color: #D7BCC8;
+  padding: 40px 0 40px 0;
+}
+.cube_color .hero {
   max-width: 300px;
+  margin-bottom: 2rem;
   margin-left: auto;
   margin-right: auto;
 }
-.hero .hr_imitaion {
+.cube_color .hr_imitaion {
   height: 5px;
-  width: 40%;
+  width: 20%;
   background-color: black;
   margin-left: auto;
   margin-right: auto;
