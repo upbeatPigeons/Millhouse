@@ -13,7 +13,7 @@ $post_methods = new PostMethods($pdo);
 // in variables
 $all_posts = $post_methods->list_all_posts();
 $latest_post = $post_methods->list_latest_post();
-
+?>
 
 <body id="home_page">
 
