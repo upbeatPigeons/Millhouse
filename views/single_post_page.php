@@ -81,18 +81,32 @@
 				$all_comments = $comment_method->list_all_comments($_GET["id"]);
 			
 				?>		
-					
+					<!--Here we loop through and show all individual comments. Use getters infor from class Comment.php  -->
 					<?php foreach ($all_comments as $comment):?>
 						<div class="col-12 col-5 comment">
+						
 						<div><p><?= $comment->get_content(); ?></p></div>
 						<div><p><?= $comment->get_created_by();?></p></div>
 						<div><p><?= $comment->get_date(); ?></p></div>
-				 
+	      	  
+		      	  <!-- If is user is an admin you see a remove comment button. If the button is pressed the, then $_POST["delete_comment"] is used to set of the if statement.  
+		      	  Post Id is sent in the url to know which single post one has to be redirected back to. 
+		      	  We use getter for comment id to know which commment to delete -->
+		      	  
+			      	<?php if ($_SESSION["admin"] == 1) :?>
+			      	
+							  <form action="../includes/comment_controller.php?id=<?php echo $post->get_id();?>"method="post">
+              <input type="hidden" value="<?= $comment->get_id();?>" name="delete_comment">
+		              <input type="submit" name="remove" value="remove">
+							  </form>
+				    		
+				    	<?php endif;?>
 					  <hr>
 					
   			 	 </div>
+  			 	 
   			  <?php 
-						endforeach; ?>
+		        endforeach; ?>
 	
 
 			
