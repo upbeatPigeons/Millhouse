@@ -14,17 +14,33 @@
     <!-- Background-image for smaller screens -->
     <div class="d-block d-md-none background_image">
       <div class="container logo_container">
-      <!--Smallscreens Logo-->
-      <img class="logo-image" src="images/logo_dark.png" alt="Logo">
-    </div>
-    </div>
+        <!--Smallscreens Logo-->
+        <img class="logo-image" src="images/logo_dark.png" alt="Logo">
+      </div>
+
+      <!-- Container for buttons on small screen  -->
+      <div class="row index_button_container">
+        <div class="col-4">
+          <button type="button" onclick="location.href='views/login_page.php';" class="btn    btn-outline-primary">
+            Log in
+          </button>
+        
+          <button type="button" onclick="location.href='views/login_page.php';" class="btn btn-outline-primary">
+            Register
+          </button>
+        </div>
+      </div> <!-- Container for buttons on small screen  -->
+
+    </div> <!-- Background-image for smaller screens -->
 
     <div class="row justify-content-around">
       <!--Image with interior for bigger screens-->
       <div class="d-none d-md-block col-md-5 index_image">
         <img class="w-100" src="images/Eske_01.jpg" alt="Millhouse Store">
       </div>
+
     </div>
+
 
     <section class="container">
 
@@ -35,19 +51,7 @@
         </div>
       </div>
 
-      <div class="row index_button_container">
-        <div class="col-4">
-          <button type="button" onclick="location.href='views/login_page.php';" class="btn    btn-outline-primary">
-            Log in
-          </button>
-        </div>
-      </div>
 
-      <div class="col-4">
-        <button type="button" onclick="location.href='views/login_page.php';" class="btn btn-outline-primary">
-          Register
-        </button>
-      </div>
     
     </section>
 
