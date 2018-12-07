@@ -66,7 +66,7 @@ switch ($_GET["action"]) {
 
     if(isset($_POST["title"])){
       $post_methods->edit_post();
-      header('Location: ../views/single_post_page.php?id=' . $_GET["id"]);
+      header('Location: ../views/home_page.php');
     }
 
     break;
