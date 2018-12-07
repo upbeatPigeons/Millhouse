@@ -4,7 +4,7 @@ require_once "validation_functions.php";
 
 ?>
 
-<form action="edit_post_page.php?action=edit" method="POST">
+<form action="../includes/actions_posts.php?action=edit&id=<?=$post->get_id()?>" method="POST">
 	<div class="form-group">
 		<label for="title">Edit blog title</label> 
 		<input type="text" value="<?=$post->get_title()?>" class="form-control" name="title" placeholder="Title"><div class="<?php get_class_for_error_message($empty_title)?>"><?php echo $empty_title_error_message;?></div>

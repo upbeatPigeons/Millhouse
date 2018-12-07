@@ -43,6 +43,7 @@ switch ($_GET["action"]) {
       // If all the fields have been filled out, create the post and store it in the db
     if ($do_redirect) {
       $new_post = new Post();
+
       $new_post->set_title($title);
       $new_post->set_description($description);
       $new_post->set_created_by($created_by);
@@ -55,7 +56,7 @@ switch ($_GET["action"]) {
 
       $post_methods->create($new_post);
     }
-    
+
     break;
 
   case 'edit':
@@ -63,8 +64,12 @@ switch ($_GET["action"]) {
     $post_methods = new PostMethods($pdo);
     $post = $post_methods->list_single_post($_GET["id"]);
 
-    break;
+    if(isset($_POST["title"])){
+      $post_methods->edit_post();
+      header('Location: ../views/single_post_page.php?id=' . $_GET["id"]);
+    }
 
+    break;
 
 }
 if (isset($_POST['remove_post'])) {
