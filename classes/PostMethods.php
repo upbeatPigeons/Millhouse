@@ -83,11 +83,17 @@ class PostMethods
     ]);
   }
 
-  public function edit_post($id)
+  public function edit_post(Post $new_post)
   {
-    $statement = $this->pdo->prepare("");
-    $statement->execute([
-      "id" => $id
+    $statement = $this->pdo->prepare("UPDATE `posts` SET `title` = ':title', `description` = ':description', `image` = ':image', `category` = ':category' WHERE `posts`.`id` = ':id';");
+    $statement->execute ([
+  		":title" => $new_post->get_title(),
+  		":description" => $new_post->get_description(),
+      ":image" => $new_post->get_image(),
+      ":created_by" => $new_post->get_created_by(),
+      ":date" => $new_post->get_date(),
+      ":category" => $new_post->get_category(),
+      ":id" => $new_post->get_id()
     ]);
   }
 
