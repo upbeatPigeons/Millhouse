@@ -14,7 +14,7 @@ footer {
 nested for clarity. Represents the same way the html is nested */
 .small_screen_background_image {
   height: 800px;
-  background-image: linear-gradient(transparent 70%, #D7BCC8), linear-gradient(#F0F0F0 15%, transparent 35%), url(../../images/Eske_01.jpg);
+  background-image: linear-gradient(transparent 70%, #FAC8CD), linear-gradient(#F0F0F0 15%, transparent 35%), url(../../images/Eske_01.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center -10%;
@@ -43,7 +43,7 @@ nested for clarity. Represents the same way the html is nested */
 .small_screen_cube_color {
   height: 300px;
   width: 100%;
-  background-color: #D7BCC8;
+  background-color: #FAC8CD;
   padding: 40px 0 40px 0;
 }
 .small_screen_cube_color .hero {
@@ -61,30 +61,27 @@ nested for clarity. Represents the same way the html is nested */
   margin-bottom: 50px;
 }
 
-@media screen and (min-width: 768px) {
-  .index_page {
-    background-image: linear-gradient(to bottom right, #D7BCC8, #F0F0F0);
-  }
+.desktop_background_gradient {
+  background-image: linear-gradient(to bottom right, #FAC8CD, #F0F0F0);
 }
-
-.desktop_container {
+.desktop_background_gradient .desktop_container {
   height: 100vh;
 }
-.desktop_container .big_screen_image {
+.desktop_background_gradient .desktop_container .big_screen_image {
   align-items: center;
 }
-.desktop_container .big_screen_image img {
+.desktop_background_gradient .desktop_container .big_screen_image img {
   max-height: 85vh;
   box-shadow: 17px 25px #1C3045;
 }
-.desktop_container .big_screen_logo_btn_container {
+.desktop_background_gradient .desktop_container .big_screen_logo_btn_container {
   align-items: center;
 }
-.desktop_container .big_screen_logo_btn_container .big_screen_logo {
+.desktop_background_gradient .desktop_container .big_screen_logo_btn_container .big_screen_logo {
   padding-bottom: 8px;
   border-bottom: 6px solid #1C3045;
 }
-.desktop_container .big_screen_logo_btn_container .big_screen_button_container {
+.desktop_background_gradient .desktop_container .big_screen_logo_btn_container .big_screen_button_container {
   padding: 15px;
   display: flex;
   justify-content: space-around;

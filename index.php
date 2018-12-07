@@ -47,44 +47,44 @@ require "includes/head.php"
 
     </div>
 
-
+  <div class="desktop_background_gradient">
     <section class="container desktop_container d-none d-md-flex">
       
-      <div class="row justify-content-around">
+        <div class="row justify-content-around">
 
-        <!-- Container for image on bigger screens -->
-        <div class="d-none d-md-flex col-md-8 col-lg-5 justify-content-center big_screen_image">
-            <img class="img-fluid" src="images/Eske_01.jpg" alt="Millhouse Store Responsive image">
+          <!-- Container for image on bigger screens -->
+          <div class="d-none d-md-flex col-md-8 col-lg-5 justify-content-center big_screen_image">
+              <img class="img-fluid" src="images/Eske_01.jpg" alt="Millhouse Store Responsive image">
+          </div>
+
+          <!-- Wrapper for logo and buttons on bigger screens -->
+          <div class="d-none d-md-flex col-md-4 col-lg-5 big_screen_logo_btn_container">
+
+            <div>
+              <!--Logo for bigger screens-->
+              <div class="big_screen_logo">
+                <img class="img-fluid" src="images/logo_dark.png" alt="Millhouse Logo">
+              </div> <!--Logo for bigger screens-->
+
+              <!-- Container for buttons  -->
+              <div class="big_screen_button_container">
+              
+                <button type="button" onclick="location.href='views/login_page.php';" class="btn    btn-outline-primary ">
+                  Log in
+                </button>
+              
+                <button type="button" onclick="location.href='views/login_page.php';" class="btn btn-outline-primary">
+                  Register
+                </button>
+
+              </div> <!-- Container for buttons  -->
+            </div> 
+
+          </div> <!-- Wrapper for logo and buttons on bigger screens -->
         </div>
-
-        <!-- Wrapper for logo and buttons on bigger screens -->
-        <div class="d-none d-md-flex col-md-4 col-lg-5 big_screen_logo_btn_container">
-
-          <div>
-            <!--Logo for bigger screens-->
-            <div class="big_screen_logo">
-              <img class="img-fluid" src="images/logo_dark.png" alt="Millhouse Logo">
-            </div> <!--Logo for bigger screens-->
-
-            <!-- Container for buttons  -->
-            <div class="big_screen_button_container">
-            
-              <button type="button" onclick="location.href='views/login_page.php';" class="btn    btn-outline-primary ">
-                Log in
-              </button>
-            
-              <button type="button" onclick="location.href='views/login_page.php';" class="btn btn-outline-primary">
-                Register
-              </button>
-
-            </div> <!-- Container for buttons  -->
-          </div> 
-
-        </div> <!-- Wrapper for logo and buttons on bigger screens -->
-      </div>
+      
     </section>
-
-  
+  </div>
 
 </body>
 
