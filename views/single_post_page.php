@@ -61,7 +61,7 @@
 			<!-- add admin cta area-->
 			<?php if ($_SESSION["admin"] == 1) {?>
 				<div class="admin-cta-area">
-					<a href="../includes/edit_post.php" class="btn btn-outline-primary">Edit post</a>
+					<a href="../views/edit_post_page.php?action=edit&id=<?=$post->get_id();?>" class="btn btn-outline-primary">Edit post</a>
 					<form action="../includes/actions_posts.php?id=<?= $post->get_id();?>" method="POST">
 					<input type="submit" name="remove_post" value="Delete Post" class="btn btn-outline-primary"/>
 					</form>
@@ -115,7 +115,7 @@
 	
   <?php
     require "../includes/footer.php"
-    ?>
+  ?>
 </body>
 
 </html>
