@@ -1,72 +1,92 @@
 <?php
-    require "includes/head.php"
+require "includes/head.php"
 ?>
 
-<!--Background Image-->
-
 <body id="index_page">
-    <header class="row d-block d-md-none index_header">
-            <div class="hero_image" style="background-image: url('images/millhouse_shop.png');">
-            </div>
 
-            <!--Navbar Logo-->
-            <nav class="navbar fixed-top scrolling-navbar">
-                <div class="container logo_container">
-                    <img class="logo-image" src="images/logo_dark.png" alt="Logo">
-                </div>
-            </nav>
+  <header class="row d-block d-md-none index_header">
+    <div class="small_screen_header_container"></div>
+  </header>
+  
+    <!-- Background-image for smaller screens -->
+    <div class="d-block d-md-none small_screen_background_image">
 
-            <!--Log in & Register Buttons Mobile-->
-            <div class="row index_button_container justify-content-center">
-                <div class="col-4">
-                    <button type="button" onclick="location.href='views/login_page.php';"  class="btn btn-outline-primary">
-                    Log in
-                    </button>
+      <!--Smallscreens Logo-->
+      <div class="container logo_container">
+        <img class="small_screen_logo_image" src="images/logo_dark.png" alt="Logo">
+      </div>
 
-                    <button type="button" onclick="location.href='views/login_page.php';"  class="btn btn-outline-primary">
-                    Register
-                    </button>
-                </div>
-            </div>
-      </header>
+      <!-- Container for elements we want to flex-end -->
+      <div class="flex_bottom_container">
+        <!-- Container for buttons on small screen  -->
+        <div class="small_screen_button_container justify-content-center">
+         
+          <button type="button" onclick="location.href='views/login_page.php';" class="btn    btn-outline-primary ">
+            Log in
+          </button>
+        
+          <button type="button" onclick="location.href='views/login_page.php';" class="btn btn-outline-primary">
+            Register
+          </button>
+        
+        </div> <!-- Container for buttons on small screen  -->
+      </div> <!-- Container for elements we want to flex-end -->
 
-      <main class="index_container">
-        <!--Desktop Version -->
-        <section class="container index_desktop">
-            <div class="row justify-content-around">
-                <div class="d-none d-md-block col-md-5 index_image">
-                    <img class="w-100" src="images/Eske_01.jpg" alt="Millhouse Store">
-                </div>
+    </div> <!-- Background-image for smaller screens -->
 
-                <div class="d-none d-md-block col-md-5 index_content">
-                    <div class="index_logo">
-                        <img class="w-100" src="images/logo_dark.png" alt="Millhouse Logo">
-                    </div>
+    <div class="small_screen_cube_color d-md-none">
+      <div class="hero">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat magni necessitatibus at optio, quod adipisci modi veritatis impedit vero. Reprehenderit? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, aperiam.
 
-                    <div class="row index_button_container">
-                        <div class="col-4">
-                            <button type="button" onclick="location.href='views/login_page.php';" class="btn btn-outline-primary">
-                            Log in
-                            </button>
-                        </div>
+      </div>
+      <div class="hr_imitation"></div>
 
-                        <div class="col-4">
-                            <button type="button" onclick="location.href='views/login_page.php';" class="btn btn-outline-primary">
-                            Register
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <?php
+      require "includes/footer.php"
+      ?>
 
-    </main>
+    </div>
 
-    <?php
-    require "includes/footer.php"
-    ?>
+  <div class="desktop_background_gradient">
+    <section class="container desktop_container d-none d-md-flex">
+      
+        <div class="row justify-content-around">
+
+          <!-- Container for image on bigger screens -->
+          <div class="d-none d-md-flex col-md-8 col-lg-5 justify-content-center big_screen_image">
+              <img class="img-fluid" src="images/Eske_01.jpg" alt="Millhouse Store Responsive image">
+          </div>
+
+          <!-- Wrapper for logo and buttons on bigger screens -->
+          <div class="d-none d-md-flex col-md-4 col-lg-5 big_screen_logo_btn_container">
+
+            <div>
+              <!--Logo for bigger screens-->
+              <div class="big_screen_logo">
+                <img class="img-fluid" src="images/logo_dark.png" alt="Millhouse Logo">
+              </div> <!--Logo for bigger screens-->
+
+              <!-- Container for buttons  -->
+              <div class="big_screen_button_container">
+              
+                <button type="button" onclick="location.href='views/login_page.php';" class="btn    btn-outline-primary ">
+                  Log in
+                </button>
+              
+                <button type="button" onclick="location.href='views/login_page.php';" class="btn btn-outline-primary">
+                  Register
+                </button>
+
+              </div> <!-- Container for buttons  -->
+            </div> 
+
+          </div> <!-- Wrapper for logo and buttons on bigger screens -->
+        </div>
+      
+    </section>
+  </div>
+
 </body>
-
 
 </html>
 
