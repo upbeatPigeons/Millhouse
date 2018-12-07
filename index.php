@@ -8,9 +8,6 @@ require "includes/head.php"
     <div class="header_container"></div>
   </header>
   
-
-  <main class="index_container">
-    
     <!-- Background-image for smaller screens -->
     <div class="d-block d-md-none background_image">
 
@@ -36,42 +33,58 @@ require "includes/head.php"
       </div> <!-- Container for elements we want to flex-end -->
 
     </div> <!-- Background-image for smaller screens -->
-    <div class="cube_color">
+
+    <div class="cube_color d-md-none">
       <div class="hero">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat magni necessitatibus at optio, quod adipisci modi veritatis impedit vero. Reprehenderit? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, aperiam.
 
       </div>
       <div class="hr_imitaion"></div>
-    </div>
 
-
-    <div class="row justify-content-around">
-      <!--Image with interior for bigger screens-->
-      <div class="d-none d-md-block col-md-5 index_image">
-        <img class="w-100" src="images/Eske_01.jpg" alt="Millhouse Store">
-      </div>
+      <?php
+      require "includes/footer.php"
+      ?>
 
     </div>
 
 
-    <section class="container">
+    <section class="container desktop_container d-none d-md-flex">
+      
+      <div class="row justify-content-around">
 
-      <div class="d-none d-md-block col-md-5 index_content">
-        <!--Logo for bigger screens-->
-        <div class="index_logo">
-          <img class="w-100" src="images/logo_dark.png" alt="Millhouse Logo">
+        <!-- Container for image on bigger screens -->
+        <div class="d-none d-md-flex col-md-8 col-lg-5 justify-content-center index_image">
+            <img class="img-fluid" src="images/Eske_01.jpg" alt="Millhouse Store Responsive image">
         </div>
+
+        <!-- Wrapper for logo and buttons on bigger screens -->
+        <div class="d-none d-md-flex col-md-4 col-lg-5 index_logo_btn_container">
+
+          <div>
+            <!--Logo for bigger screens-->
+            <div class="index_logo">
+              <img class="img-fluid" src="images/logo_dark.png" alt="Millhouse Logo">
+            </div> <!--Logo for bigger screens-->
+
+            <!-- Container for buttons  -->
+            <div class="index_button_container">
+            
+              <button type="button" onclick="location.href='views/login_page.php';" class="btn    btn-outline-primary ">
+                Log in
+              </button>
+            
+              <button type="button" onclick="location.href='views/login_page.php';" class="btn btn-outline-primary">
+                Register
+              </button>
+
+            </div> <!-- Container for buttons  -->
+          </div> 
+
+        </div> <!-- Wrapper for logo and buttons on bigger screens -->
       </div>
-
-
-    
     </section>
 
-  </main>
-
-  <?php
-  require "includes/footer.php"
-  ?>
+  
 
 </body>
 
