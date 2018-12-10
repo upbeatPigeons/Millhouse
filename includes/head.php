@@ -18,7 +18,7 @@
     <?php $path = getcwd();
     if(strpos($path, "views") == false){ ?>
         <link rel="stylesheet" href="css/style.css">
-    <?php var_dump($path); } else { ?>
+    <?php } else { ?>
         <link rel="stylesheet" href="../css/style.css">    
     <?php } ?>
 
