@@ -1,6 +1,33 @@
-/* line 7, C:/MAMP/htdocs/Millhouse/sass/components/_nav.scss */
-header .navbar .collapse .navbar-nav .nav-item a {
-  color: red;
+/* line 1, C:/MAMP/htdocs/Millhouse/sass/components/_nav.scss */
+.entire_navbar {
+  background-image: linear-gradient(transparent 70%, #FAC8CD), linear-gradient(#F0F0F0 15%, transparent 35%);
+  border-bottom: 0.5rem solid #1C3045;
+}
+
+/* line 13, C:/MAMP/htdocs/Millhouse/sass/components/_nav.scss */
+.entire_navbar .navbar-logo {
+  background-color: transparent;
+}
+
+/* line 16, C:/MAMP/htdocs/Millhouse/sass/components/_nav.scss */
+.entire_navbar .navbar-logo .row .navbar-brand {
+  margin-right: 0;
+}
+
+/* line 22, C:/MAMP/htdocs/Millhouse/sass/components/_nav.scss */
+.entire_navbar .navbar-toggler {
+  border-color: transparent;
+}
+
+/* line 26, C:/MAMP/htdocs/Millhouse/sass/components/_nav.scss */
+.entire_navbar .navbar {
+  background-color: transparent;
+  justify-content: space-around;
+}
+
+/* line 32, C:/MAMP/htdocs/Millhouse/sass/components/_nav.scss */
+.entire_navbar .navbar .collapse .navbar-nav .nav-item a {
+  color: #1C3045;
 }
 
 /* line 1, C:/MAMP/htdocs/Millhouse/sass/components/_footer.scss */
