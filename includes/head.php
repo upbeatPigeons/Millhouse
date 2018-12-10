@@ -6,7 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Millhouse</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <!--checks if file location is within 
+    views folder using getcwd which returns path-->
+    <?php $path = getcwd();
+    if(substr($path, "views") == false){ ?>
+        <link rel="stylesheet" href="css/style.css">
+    <?php } else { ?>
+        <link rel="stylesheet" href="../css/style.css">        
+    <?php } ?>
+
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
