@@ -21,11 +21,11 @@ require "includes/head.php"
         <!-- Container for buttons on small screen  -->
         <div class="small_screen_button_container justify-content-center">
          
-          <button type="button" onclick="location.href='views/login_page.php';" class="btn    btn-outline-primary ">
+          <button type="button" onclick="location.href='views/login_page.php?action=login';" class="btn btn-outline-primary ">
             Log in
           </button>
-        
-          <button type="button" onclick="location.href='views/login_page.php';" class="btn btn-outline-primary">
+
+          <button type="button" onclick="location.href='views/login_page.php?action=register';" class="btn btn-outline-primary">
             Register
           </button>
         
@@ -69,11 +69,11 @@ require "includes/head.php"
               <!-- Container for buttons  -->
               <div class="big_screen_button_container">
               
-                <button type="button" onclick="location.href='views/login_page.php';" class="btn    btn-outline-primary ">
+                <button type="button" onclick="location.href='views/login_page.php?action=login';" class="btn btn-outline-primary ">
                   Log in
                 </button>
               
-                <button type="button" onclick="location.href='views/login_page.php';" class="btn btn-outline-primary">
+                <button type="button" onclick="location.href='views/login_page.php?action=register';" class="btn btn-outline-primary">
                   Register
                 </button>
 
