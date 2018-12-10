@@ -1,4 +1,5 @@
 .entire_navbar{
+  
   background-image: 
     linear-gradient(
       transparent 70%,
@@ -8,33 +9,27 @@
       $white_color 15%,
       transparent 35%    
     );
-  border-bottom: 0.5rem solid $darkblue_color;
+    
+    .navbar-logo{
+      background-color: transparent;
 
-  .navbar-logo{
-    background-color: transparent;
-    .row{
       .navbar-brand{
         margin-right: 0;
       }
     }
-  }
-
-  .navbar-toggler{
-    border-color: transparent;
-  }
-
-  .navbar {
-    background-color: transparent;
-    justify-content: space-around;
-    .collapse{
-      .navbar-nav{
-        .nav-item{
-          a{
-            color: $darkblue_color;
-          }
-        }
+    
+    .navbar-toggler{
+      border-color: transparent;
+    }
+    
+    .navbar {
+      background-color: transparent;
+      justify-content: space-around;
+      .nav-link{
+        color: $darkblue_color;
       }
     }
-  }
+
+  border-bottom: 0.5rem solid $darkblue_color;
 }
 
