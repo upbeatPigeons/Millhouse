@@ -1,3 +1,4 @@
+/* line 1, /Users/viktorijavalso/Documents/Millhouse/sass/components/_footer.scss */
 footer {
   height: 4rem;
   background-color: #1C3045;
@@ -5,6 +6,7 @@ footer {
   text-align: center;
 }
 
+/* line 1, /Users/viktorijavalso/Documents/Millhouse/sass/pages/_index.scss */
 .small_screen_header_container {
   background-color: #F0F0F0;
   height: 40px;
@@ -12,6 +14,7 @@ footer {
 
 /* Everything that is contained inside the same element as the background-img is
 nested for clarity. Represents the same way the html is nested */
+/* line 8, /Users/viktorijavalso/Documents/Millhouse/sass/pages/_index.scss */
 .small_screen_background_image {
   height: 800px;
   background-image: linear-gradient(transparent 70%, #FAC8CD), linear-gradient(#F0F0F0 15%, transparent 35%), url(../../images/Eske_01.jpg);
@@ -20,6 +23,8 @@ nested for clarity. Represents the same way the html is nested */
   background-position: center -10%;
   z-index: -100;
 }
+
+/* line 25, /Users/viktorijavalso/Documents/Millhouse/sass/pages/_index.scss */
 .small_screen_background_image .small_screen_logo_image {
   max-width: 10rem;
   display: block;
@@ -27,12 +32,16 @@ nested for clarity. Represents the same way the html is nested */
   margin-right: auto;
   padding-top: 1.7rem;
 }
+
+/* line 32, /Users/viktorijavalso/Documents/Millhouse/sass/pages/_index.scss */
 .small_screen_background_image .flex_bottom_container {
   display: flex;
   height: 85%;
   flex-direction: column;
   justify-content: flex-end;
 }
+
+/* line 38, /Users/viktorijavalso/Documents/Millhouse/sass/pages/_index.scss */
 .small_screen_background_image .flex_bottom_container .small_screen_button_container {
   display: flex;
   flex-direction: column;
@@ -40,18 +49,23 @@ nested for clarity. Represents the same way the html is nested */
   align-items: center;
 }
 
+/* line 49, /Users/viktorijavalso/Documents/Millhouse/sass/pages/_index.scss */
 .small_screen_cube_color {
   height: 300px;
   width: 100%;
   background-color: #FAC8CD;
   padding: 40px 0 40px 0;
 }
+
+/* line 55, /Users/viktorijavalso/Documents/Millhouse/sass/pages/_index.scss */
 .small_screen_cube_color .hero {
   max-width: 300px;
   margin-bottom: 2rem;
   margin-left: auto;
   margin-right: auto;
 }
+
+/* line 61, /Users/viktorijavalso/Documents/Millhouse/sass/pages/_index.scss */
 .small_screen_cube_color .hr_imitation {
   height: 5px;
   width: 20%;
@@ -61,30 +75,43 @@ nested for clarity. Represents the same way the html is nested */
   margin-bottom: 50px;
 }
 
+/* line 71, /Users/viktorijavalso/Documents/Millhouse/sass/pages/_index.scss */
 .desktop_background_gradient {
   background-image: linear-gradient(to bottom right, #FAC8CD, #F0F0F0);
 }
-.desktop_background_gradient .desktop_container {
+
+/* line 75, /Users/viktorijavalso/Documents/Millhouse/sass/pages/_index.scss */
+.desktop_container {
   height: 100vh;
 }
-.desktop_background_gradient .desktop_container .big_screen_image {
+
+/* line 78, /Users/viktorijavalso/Documents/Millhouse/sass/pages/_index.scss */
+.desktop_container .big_screen_image {
   align-items: center;
 }
-.desktop_background_gradient .desktop_container .big_screen_image img {
+
+/* line 81, /Users/viktorijavalso/Documents/Millhouse/sass/pages/_index.scss */
+.desktop_container .big_screen_image img {
   max-height: 85vh;
   box-shadow: 17px 25px #1C3045;
 }
-.desktop_background_gradient .desktop_container .big_screen_logo_btn_container {
+
+/* line 87, /Users/viktorijavalso/Documents/Millhouse/sass/pages/_index.scss */
+.desktop_container .big_screen_logo_btn_container {
   align-items: center;
 }
-.desktop_background_gradient .desktop_container .big_screen_logo_btn_container .big_screen_logo {
+
+/* line 90, /Users/viktorijavalso/Documents/Millhouse/sass/pages/_index.scss */
+.desktop_container .big_screen_logo_btn_container .big_screen_logo {
   padding-bottom: 8px;
   border-bottom: 6px solid #1C3045;
 }
-.desktop_background_gradient .desktop_container .big_screen_logo_btn_container .big_screen_button_container {
+
+/* line 95, /Users/viktorijavalso/Documents/Millhouse/sass/pages/_index.scss */
+.desktop_container .big_screen_logo_btn_container .big_screen_button_container {
   padding: 15px;
   display: flex;
   justify-content: space-around;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=../css/style.map */
