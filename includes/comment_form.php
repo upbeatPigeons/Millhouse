@@ -10,7 +10,7 @@ require_once "validation_functions.php";
 	<div class="form-group">
 		<label for="content">Write a comment</label>
     <p>You are commenting as <?php echo $_SESSION["username"]?></p>
-		<textarea type="text-area" class="form-control" name="comment" rows="7" cols="20"></textarea>
+		<textarea type="text-area" class="form-control squared-border" name="comment" rows="7" cols="20"></textarea>
 		<!-- Gets error and formats it -->
 		<div><?php show_error_messages($_GET["error"]); ?></div>
 	  <button type="submit" class="btn btn-outline-primary btn-m btn-block">Submit comment</button>	
