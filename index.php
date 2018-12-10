@@ -24,7 +24,7 @@ require "includes/head.php"
           <button type="button" onclick="location.href='views/login_page.php?action=login';" class="btn btn-outline-primary ">
             Log in
           </button>
-        
+
           <button type="button" onclick="location.href='views/login_page.php?action=register';" class="btn btn-outline-primary">
             Register
           </button>

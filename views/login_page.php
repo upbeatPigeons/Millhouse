@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-
 require "../includes/head.php"; 
 require "../includes/validation_functions.php";
 
@@ -19,9 +18,9 @@ require "../includes/validation_functions.php";
 			</div>
 		</nav>
 
-		<?php 
-  include "../includes/carousel.php";
-  ?>
+	  <?php 
+      include "../includes/carousel.php";
+    ?>
 	</header>
 
 	<main>
@@ -33,13 +32,12 @@ require "../includes/validation_functions.php";
 				<div class="col-sm-12 col-md-6">
 
 					<?php if ($_GET['action'] == "login"){
-          /* Include the login form */
+            /* Include the login form */
           	include "../includes/login_form.php"; 
-     
-            }else{
-          /* Include the register form */
-    					include "../includes/register_form.php";
-            }?>
+          }else{
+            /* Include the register form */
+    				include "../includes/register_form.php";
+          }?>
 				</div> <!-- End of col -->
 
 				<div class="d-none d-md-block col-md-6">
