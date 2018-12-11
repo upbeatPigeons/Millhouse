@@ -1,20 +1,17 @@
   //background-color: rgba(28, 48, 69, 0.1);
 .primory_btn {
-  background-color: rgba(240, 240, 240, 0.5);
+  background-color: rgba(240, 240, 240, 0.6);
   color: $darkblue_color;
   border: $darkblue_color solid 1.5px;
   border-radius: 1.5px;
   min-width: 9rem;
 
-  &:hover, &:focus{
+  &:hover, &:focus, &:active{
     background-color: $darkblue_color;
     color: $white_color;
     border: black solid 1.5px;
     outline: none; 
     cursor: pointer;
-  }
-  &:active {
-    background-color: black;
   }
 }
 
