@@ -4,7 +4,7 @@
   color: $darkblue_color;
   border: $darkblue_color solid 1.5px;
   border-radius: 1.5px;
-  width: 9rem; 
+  min-width: 9rem;
 
   &:hover, &:focus, &:active{
     background-color: $darkblue_color;
@@ -19,7 +19,7 @@
   color: $white_color;
   border: $darkblue_color solid 1.5px;
   border-radius: 1.5px;
-  width: 9rem; 
+  min-width: 9rem;
 
   &:hover, &:focus, &:active{
     background-color: $white_color;
