@@ -1,0 +1,56 @@
+  //background-color: rgba(28, 48, 69, 0.1);
+.primory_btn {
+  background-color: rgba(240, 240, 240, 0.5);
+  color: $darkblue_color;
+  border: $darkblue_color solid 1.5px;
+  border-radius: 1.5px;
+  min-width: 9rem;
+
+  &:hover, &:focus, &:active{
+    background-color: $darkblue_color;
+    color: $white_color;
+    border: black solid 1.5px;
+    outline: none; 
+    cursor: pointer;
+  }
+}
+
+.primory_btn_inverse {
+  background-color: $darkblue_color;
+  color: $white_color;
+  border: $darkblue_color solid 1.5px;
+  border-radius: 1.5px;
+  min-width: 9rem;
+
+  &:hover, &:focus, &:active{
+    background-color: $white_color;
+    color: $darkblue_color;
+    border: $purple_color solid 1.5px;
+    outline: none; 
+    cursor: pointer;
+  }
+}
+
+.secondary_btn {
+  border-radius: 50px;
+  background-color: $darkblue_color;
+  color: $white_color;
+  height: 44px;
+  width: 44px;
+  border: none;
+  i {
+    color: $white_color;
+  }
+  &:hover, &:focus {
+    background-color: $white_color;
+    border: solid 1px $darkblue_color;
+    cursor: pointer;
+    outline: none;
+    i {
+      color: black;
+    }
+  }
+  &:active {
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+  }
+}

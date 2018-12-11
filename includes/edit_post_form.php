@@ -33,5 +33,5 @@ $post = $post_methods->list_single_post($_GET["id"]);
 		<textarea class="form-control" name="description" rows="10"cols="30"> <?=$post->get_description()?> </textarea>
 		<div class="<?php get_class_for_error_message($empty_description)?>"><?php echo $empty_description_error_message;?></div>
 	</div>
-	<button type="submit" class="create-post-button">Edit post</button>
+	<button type="submit" class="btn create-post-button primory_btn">Edit post</button>
 </form>

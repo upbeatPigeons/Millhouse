@@ -55,7 +55,7 @@
 								</div>
 			 			<div class="col=4 delete_post_button">
 							<form action="../includes/actions_posts.php?id=<?= $post->get_id();?>" method="POST">
-								<button type="submit" name="remove_post" value="Delete Post" class="btn"><i class="fas fa-trash-alt"></i></button>
+								<button type="submit" name="remove_post" value="Delete Post" class="secondary_btn"><i class="fas fa-trash-alt"></i></button>
 							</form>
 						</div>
 					</div>
@@ -103,7 +103,7 @@
 								
 									<form action="../includes/comment_controller.php?id=<?= $post->get_id();?>"method="post">
               			<input type="hidden" value="<?= $comment->get_id();?>" name="delete_comment">
-		              	<button type="submit" name="remove" value="remove"><i class="fas fa-trash-alt"></i></button>
+		              	<button type="submit" name="remove" value="remove" class="secondary_btn"><i class="fas fa-trash-alt"></i></button>
 									</form>
 				    		
 				    		<?php endif;?>
