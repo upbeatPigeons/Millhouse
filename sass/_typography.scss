@@ -4,7 +4,7 @@
   font-family: $serif;
 
 }
-.date, .autor, .content{
+.date, .autor, .content, .footer_title, .footer_text{
     font-family: $sans_serif;
 }
 .date{
@@ -33,6 +33,19 @@
   font-family: $serif;
   margin-left: 0;
   margin-left: 0;
+}
+
+.footer_title{
+  color: $palepink_color;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.footer_text{
+  color: $white_color;
+  font-size: 1rem;
+  font-weight: 500;
+
 }
 
 
