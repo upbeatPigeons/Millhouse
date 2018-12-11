@@ -1,0 +1,40 @@
+.entire_navbar{
+  
+  background-image: 
+    linear-gradient(
+      transparent 70%,
+      $brightpink_color
+      ),
+    linear-gradient(
+      $white_color 15%,
+      transparent 35%    
+    );
+    
+    .navbar-logo{
+      background-color: transparent;
+      .navbar-brand{
+        margin-right: 0;
+        .collapsed_logo{
+          height: 65px;
+          img{
+            height: 100%;
+          }
+        }
+      }
+    }
+    
+    .navbar-toggler{
+      border-color: transparent;
+    }
+    
+    .navbar {
+      background-color: transparent;
+      justify-content: space-around;
+      .nav-link{
+        color: $darkblue_color;
+      }
+    }
+
+  border-bottom: 0.5rem solid $darkblue_color;
+}
+
