@@ -1,7 +1,20 @@
-<footer>
-    <div class="footer">
-        
-    </div>
+<footer class="container-fluid footer_container">
+  <div class="row footer justify-content-center">
+      <div class="col-5 text-center text-md-left footer_text_container">
+        <h3 class="footer_title">Contact Us</h3>
+        <p class="footer_text">Regjeringsgata 38</p>
+        <p class="footer_text" >113 40 Stockholm</p>
+        <p class="footer_text" >0735644999</p>
+        <p class="footer_text" >wwww.millhouse.com</p>
+      </div> 
+
+      <div class="col-md-4 text-center text-md-left footer_text_container">
+        <h3 class="footer_title">Follow us</h3>  
+        <a class="social_media_links" href="#"><i class="fab fa-instagram fa-2x"></i></a>
+        <a class="social_media_links" href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+        <a class="social_media_links" href="#"> <i class="fab fa-twitter-square fa-2x social_media_links"></i></a>
+      </div> 
+    </div>    
 </footer>
 
 <!-- Bootstrap core JavaScript -->
