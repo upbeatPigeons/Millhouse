@@ -1,6 +1,19 @@
 footer {
-    height: 4rem;
-    background-color: $darkblue_color;
-    color: $white_color;
-    text-align: center;
-}
+  background-color: $darkblue_color;
+  color: $white_color;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  }
+
+  .footer_title{
+      padding-top: 1.5rem;
+  }
+    
+  .social_media_links{
+      color: $white_color;
+      margin:5px;
+      &:hover{
+        color: $palepink_color;
+
+      }
+  }
