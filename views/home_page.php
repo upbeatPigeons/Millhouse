@@ -33,7 +33,7 @@ if (!$latest_post) : ?>
 	<main>
 		<section class="container post_container">
 			<div>
-				<h1>Latest Posts</h1>
+				<h1 class="page_title">Latest Posts</h1>
 				<hr>
 			</div>
 			<div class="row latest_post_wrapper justify-content-between">
@@ -63,7 +63,7 @@ if (!$latest_post) : ?>
 				<div class="col-12 col-md-6">
 					<div class="container latest_post_image">
 						<!--here we should fetch latest post image-->
-						<p></p>
+						<img class="img-fluid" src="<?= $latest_post->get_image();?>">
 					</div>
 				<!-- Col -->	
 				</div>	
