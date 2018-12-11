@@ -50,7 +50,7 @@
 					<div class="row admin-cta-area justify-content-center">
 						<div class="col=4 edit_button">
 							<form action="../views/edit_post_page.php?id=<?=$post->get_id();?>" method="POST">
-								<button type="submit" name="edit_post" class="btn"><i class="fas fa-edit"></i></button>
+								<button type="submit" name="edit_post" class="secondary_btn"><i class="fas fa-edit"></i></button>
 			            </form>
 								</div>
 			 			<div class="col=4 delete_post_button">
