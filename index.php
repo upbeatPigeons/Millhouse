@@ -69,11 +69,11 @@ require "includes/head.php"
               <!-- Container for buttons  -->
               <div class="big_screen_button_container">
               
-                <button type="button" onclick="location.href='views/login_page.php?action=login';" class="btn btn-outline-primary ">
+                <button type="button" onclick="location.href='views/login_page.php?action=login';" class="btn primory_btn_inverse">
                   Log in
                 </button>
               
-                <button type="button" onclick="location.href='views/login_page.php?action=register';" class="btn btn-outline-primary">
+                <button type="button" onclick="location.href='views/login_page.php?action=register';" class="btn primory_btn">
                   Register
                 </button>
 
