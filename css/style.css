@@ -1,4 +1,9 @@
 /* line 1, /Users/viktorijavalso/Documents/Millhouse/sass/_typography.scss */
+p {
+  color: #1C3045;
+}
+
+/* line 6, /Users/viktorijavalso/Documents/Millhouse/sass/_typography.scss */
 .page_title {
   font-family: "Open Sans", sans-serif;
   color: #1C3045;
@@ -6,18 +11,30 @@
   margin-top: 0.5em;
 }
 
-/* line 8, /Users/viktorijavalso/Documents/Millhouse/sass/_typography.scss */
+/* line 13, /Users/viktorijavalso/Documents/Millhouse/sass/_typography.scss */
 .date {
   font-family: "Open Sans", sans-serif;
   color: #1C3045;
   font-style: bold;
 }
 
-/* line 14, /Users/viktorijavalso/Documents/Millhouse/sass/_typography.scss */
+/* line 19, /Users/viktorijavalso/Documents/Millhouse/sass/_typography.scss */
 .author {
   font-family: "Open Sans", sans-serif;
   color: #D7BCC8;
   font-style: italic;
+}
+
+/* line 1, /Users/viktorijavalso/Documents/Millhouse/sass/components/_button.scss */
+.comment_button {
+  margin-top: 2rem;
+  background-color: #F0F0F0;
+  border: 2px solid black;
+  color: #1C3045;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
 /* line 1, /Users/viktorijavalso/Documents/Millhouse/sass/components/_footer.scss */
@@ -39,7 +56,7 @@ nested for clarity. Represents the same way the html is nested */
 /* line 8, /Users/viktorijavalso/Documents/Millhouse/sass/pages/_index.scss */
 .small_screen_background_image {
   height: 800px;
-  background-image: linear-gradient(transparent 70%, #FAC8CD), linear-gradient(#F0F0F0 15%, transparent 35%), url(../../images/Eske_01.jpg);
+  background-image: linear-gradient(transparent 70%, #D7BCC8), linear-gradient(#F0F0F0 15%, transparent 35%), url(../../images/Eske_01.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center -10%;
@@ -75,7 +92,7 @@ nested for clarity. Represents the same way the html is nested */
 .small_screen_cube_color {
   height: 300px;
   width: 100%;
-  background-color: #FAC8CD;
+  background-color: #D7BCC8;
   padding: 40px 0 40px 0;
 }
 
@@ -91,7 +108,7 @@ nested for clarity. Represents the same way the html is nested */
 .small_screen_cube_color .hr_imitation {
   height: 5px;
   width: 20%;
-  background-color: #1C3045;
+  background-color: black;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
@@ -99,7 +116,7 @@ nested for clarity. Represents the same way the html is nested */
 
 /* line 71, /Users/viktorijavalso/Documents/Millhouse/sass/pages/_index.scss */
 .desktop_background_gradient {
-  background-image: linear-gradient(to bottom right, #FAC8CD, #F0F0F0);
+  background-image: linear-gradient(to bottom right, #D7BCC8, #F0F0F0);
 }
 
 /* line 75, /Users/viktorijavalso/Documents/Millhouse/sass/pages/_index.scss */

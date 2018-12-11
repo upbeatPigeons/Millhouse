@@ -10,7 +10,7 @@ nested for clarity. Represents the same way the html is nested */
   background-image: 
     linear-gradient(
       transparent 70%,
-      $brightpink_color
+      $palepink_color
       ),
     linear-gradient(
       $white_color 15%,
@@ -49,7 +49,7 @@ nested for clarity. Represents the same way the html is nested */
 .small_screen_cube_color {
   height: 300px;
   width: 100%;
-  background-color: $brightpink_color;
+  background-color: $palepink_color;
   padding: 40px 0 40px 0;
   
   .hero {
@@ -61,7 +61,7 @@ nested for clarity. Represents the same way the html is nested */
   .hr_imitation {
     height: 5px;
     width: 20%;
-    background-color: $darkblue_color;
+    background-color: black;
     @include sides_auto_margin;
     margin-bottom: 50px;
   }  
@@ -69,7 +69,7 @@ nested for clarity. Represents the same way the html is nested */
 
 //Desktop styling
 .desktop_background_gradient {
-  background-image: linear-gradient(to bottom right, $brightpink_color, $white_color);
+  background-image: linear-gradient(to bottom right, $palepink_color, $white_color);
 }
 
 .desktop_container {
