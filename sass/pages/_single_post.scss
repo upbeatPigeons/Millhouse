@@ -1,0 +1,48 @@
+//Single post container
+.single_post{
+
+  @include pink_background_gradient;
+
+    .single_post_wrapper{
+      
+      padding: 3rem 1rem 1rem 0.5rem;
+    }
+
+    .single_post_content{
+        
+      padding-top: 1rem;
+    }
+}
+
+.title_underline{
+  height: 5px;
+  width: 100%;
+  background-color: $darkblue_color;
+  margin-bottom: 2rem;
+
+}
+
+.comment_container{
+  background-color: $white_color;
+}
+
+.divider_bar{
+  margin: 0;
+  padding: 0;
+
+  .divider{
+    height: 70px;
+    background-color: $darkblue_color;
+  }
+}
+
+.comment_form{
+  padding: 3rem 1rem 3rem 1rem;
+
+  .text-area{
+      height: 100px;
+      margin-bottom: 1rem;
+  }
+  
+}
+

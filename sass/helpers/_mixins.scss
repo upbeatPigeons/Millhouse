@@ -6,3 +6,7 @@
 @mixin image_box_shadow {
   box-shadow: 17px 25px $darkblue_color;
 }
+
+@mixin pink_background_gradient {
+  background: linear-gradient(to left, $palepink_color, 5%, white);
+}
