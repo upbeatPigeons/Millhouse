@@ -1,0 +1,30 @@
+.primory_btn {
+  background-color: $white-color;
+  color: $darkblue_color;
+
+  &:hover {
+    background-color: $darkblue_color;
+    color: $white_color;
+  }
+}
+
+.primory_btn_inverse {
+  background-color: $darkblue_color;
+  color: $white_color;
+
+  &:hover {
+    background-color: $white_color;
+    color: $darkblue_color;
+  }
+}
+
+.secondary_btn {
+  border-radius: 50px;
+  background-color: $darkblue_color;
+  color: $white_color;
+
+  &:hover {
+    background-color: $white_color;
+    color: $darkblue_color;
+  }
+}
