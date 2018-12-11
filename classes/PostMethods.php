@@ -83,16 +83,16 @@ class PostMethods
     ]);
   }
 
-  public function edit_post()
+  public function edit_post(Post $edited_post)
   {
     try{
       $statement = $this->pdo->prepare("UPDATE posts SET title = :title, description = :description, image = :image, category = :category WHERE posts.id = :id;");
       $statement->execute ([
-        ":title" => $_POST["title"],
-        ":description" => $_POST["description"],
-        ":image" => $_POST["image"],
-        ":category" => $_POST["category"],
-        ":id" => $_GET["id"]
+        ":title" => $edited_post->get_title(),
+        ":description" => $edited_post->get_description(),
+        ":image" => $edited_post->get_image(),
+        ":category" => $edited_post->get_category(),
+        ":id" => $edited_post->get_id()
       ]);
     }catch (PDOException $exception) {
       echo "Connection error" . $exception->getMessage();
