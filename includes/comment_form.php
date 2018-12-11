@@ -12,6 +12,6 @@ require_once "validation_functions.php";
 			</div>
 			<label for="comment" class="sr-only">Leave a comment</label>
 			<textarea type="text-area" class="col-12 col-md-9 text-area" name="comment" placeholder="Leave your Comment" required></textarea>
-	  	<button class="btn comment_button primory_btn col-12 col-md-9" type="submit">Submit</button>	
+	  	<button class="comment_button primory_btn col-12 col-md-9" type="submit">Submit</button>	
 		</div>
 	</form>	 

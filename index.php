@@ -21,11 +21,11 @@ require "includes/head.php"
         <!-- Container for buttons on small screen  -->
         <div class="small_screen_button_container justify-content-center">
          
-          <button type="button" onclick="location.href='views/login_page.php?action=login';" class="btn primory_btn_inverse">
+          <button type="button" onclick="location.href='views/login_page.php?action=login';" class="primory_btn_inverse">
             Log in
           </button>
 
-          <button type="button" onclick="location.href='views/login_page.php?action=register';" class="btn primory_btn">
+          <button type="button" onclick="location.href='views/login_page.php?action=register';" class="primory_btn">
             Register
           </button>
         
