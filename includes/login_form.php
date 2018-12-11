@@ -12,5 +12,5 @@
      <!-- Gets error and formats it -->
      <?php show_error_messages($_GET["error"]); ?> 
   </div>
-  <button type="submit" name="login" value="Log in" class="btn btn-outline-primary btn-m btn-block">Sign in</button>
+  <button type="submit" name="login" value="Log in" class="btn primory_btn btn-block">Sign in</button>
 </form>
