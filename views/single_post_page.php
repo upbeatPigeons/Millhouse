@@ -18,21 +18,22 @@
 	
 	<main>
 		<section class="container single_post_container">
-			<div>
+			<div class="row single_post_container">
 			  <!-- Here we need to fetch title of the post -->
 			 <?php 
 			 $post_methods = new PostMethods($pdo);
 			 $post = $post_methods->list_single_post($_GET["id"]);
 			 ?>
-				<h1><?= $post->get_title(); ?></h1>
-				<hr>
+				<h1 class="col-12 page_title"><?= $post->get_title(); ?></h1>
+				<div class=" col-12 title_underline"> </div>
 			</div>
+			
 			
 			<div class="row">
 				<div class="col-12 md-col-6">
-					<div><img src="<?= $post->get_image();?>"></div>
+					<div><img class="img-fluid" src="<?= $post->get_image();?>"></div>
 				</div>
-				<div class="col-12 md-col-5">
+				<div class="col-12 md-col-6">
 					<div> <!-- Here we need to fetch image1 of the post --></div>
 				</div>
 			<!-- Row-->	
@@ -40,8 +41,9 @@
 			
 			<div class="row">
 				<div class="col-12">
-					<h3><?= $post->get_date();?></h3>
-					<p>Created by: <?= $post->get_created_by();?></p>
+					<p class="date"><?= $post->get_date();?></h3>
+					<p class="author">Created by: <?= $post->get_created_by();?></p>
+					<p>Created by: <?= $post->get_description();?></p>
 				</div>	
 			</div>
 		</section>
@@ -54,20 +56,28 @@
 			<!--Here insert products from Mysql with relevan categories-->
 		</section>
 		
-		<section class="comments">
+		
       
 			<!--include comment field-->
-
+		<section class="edit_post_buttons_container">
 			<!-- add admin cta area-->
 			<?php if ($_SESSION["admin"] == 1) {?>
-				<div class="admin-cta-area">
-					<a href="../views/edit_post_page.php?action=edit&id=<?=$post->get_id();?>" class="btn btn-outline-primary">Edit post</a>
-					<form action="../includes/actions_posts.php?id=<?= $post->get_id();?>" method="POST">
-					<input type="submit" name="remove_post" value="Delete Post" class="btn btn-outline-primary"/>
-					</form>
+				<div class="admin-cta-area row">
+					<div class="col=4 edit_button">
+						<a href="../views/edit_post_page.php?action=edit&id=<?=$post->get_id();?>" class="btn btn-outline-primary">Edit post</a>
+					</div>
+			 		<div class="col=4 delete_post_button">
+						<form action="../includes/actions_posts.php?id=<?= $post->get_id();?>" method="POST">
+							<input type="submit" name="remove_post" value="Delete Post" class="btn btn-outline-primary"/>
+						</form>
+					</div>
 				</div>
 			<?php }?>
-      
+	
+		</section>
+
+		<section class="comments">
+        <div class= "class">
 			<?php include "../includes/comment_form.php"?>
 			
 			<!--list comments-->

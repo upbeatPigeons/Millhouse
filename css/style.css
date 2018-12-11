@@ -1,3 +1,25 @@
+/* line 1, /Users/viktorijavalso/Documents/Millhouse/sass/_typography.scss */
+.page_title {
+  font-family: "Open Sans", sans-serif;
+  color: #1C3045;
+  font-size: 2rem;
+  margin-top: 0.5em;
+}
+
+/* line 8, /Users/viktorijavalso/Documents/Millhouse/sass/_typography.scss */
+.date {
+  font-family: "Open Sans", sans-serif;
+  color: #1C3045;
+  font-style: bold;
+}
+
+/* line 14, /Users/viktorijavalso/Documents/Millhouse/sass/_typography.scss */
+.author {
+  font-family: "Open Sans", sans-serif;
+  color: #D7BCC8;
+  font-style: italic;
+}
+
 /* line 1, /Users/viktorijavalso/Documents/Millhouse/sass/components/_footer.scss */
 footer {
   height: 4rem;
@@ -69,7 +91,7 @@ nested for clarity. Represents the same way the html is nested */
 .small_screen_cube_color .hr_imitation {
   height: 5px;
   width: 20%;
-  background-color: black;
+  background-color: #1C3045;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;

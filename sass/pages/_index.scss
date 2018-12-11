@@ -61,7 +61,7 @@ nested for clarity. Represents the same way the html is nested */
   .hr_imitation {
     height: 5px;
     width: 20%;
-    background-color: black;
+    background-color: $darkblue_color;
     @include sides_auto_margin;
     margin-bottom: 50px;
   }  
