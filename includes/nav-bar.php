@@ -3,8 +3,13 @@
   <nav class="navbar-logo">
     <div class="row justify-content-center">
       <a class="navbar-brand" href="../views/home_page.php">
+      
         <img class="img-fluid d-none d-lg-block" src="../images/blue_logo%20_small.png" alt="Logo">
-        <img class="img-fluid d-block d-lg-none" src="../images/blue_logo%20_notext.png" alt="Logo">
+
+        <div class="collapsed_logo img-fluid d-block d-lg-none">
+          <img src="../images/Logo%20Shape.svg" alt="Logo">
+        </div>
+
       </a>
     </div>
   </nav>

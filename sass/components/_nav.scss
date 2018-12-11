@@ -12,9 +12,14 @@
     
     .navbar-logo{
       background-color: transparent;
-
       .navbar-brand{
         margin-right: 0;
+        .collapsed_logo{
+          height: 65px;
+          img{
+            height: 100%;
+          }
+        }
       }
     }
     
