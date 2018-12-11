@@ -49,7 +49,7 @@ if ($row["num"] > 0) {
 
 if (empty($validation_vars)) {
   $registration_steps->register_user($new_user);
-  header("Location: ../views/login_page.php?user_registered=User_succesfully_registered");
+  header("Location: ../views/login_page.php?user_registered=User_succesfully_registered&action=login");
 } else {
   header("Location: ../views/login_page.php?" . $validation_vars);
 }
