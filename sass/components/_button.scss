@@ -1,5 +1,4 @@
   //background-color: rgba(28, 48, 69, 0.1);
-
 .primory_btn {
   background-color: rgba(240, 240, 240, 0.6);
   color: $darkblue_color;
@@ -10,19 +9,23 @@
   &:hover, &:focus, &:active{
     background-color: $darkblue_color;
     color: $white_color;
-    border: $white_color solid 5px !important;
+    border: none;
     outline: none; 
   }
-
 }
 
 .primory_btn_inverse {
   background-color: $darkblue_color;
   color: $white_color;
+  //border: $white_color solid 1.5px;
+  border-radius: 1.5px;
+  width: 9rem; 
 
-  &:hover {
+  &:hover, &:focus, &:active{
     background-color: $white_color;
     color: $darkblue_color;
+    border: $purple_color solid 1.5px;
+    outline: none; 
   }
 }
 
