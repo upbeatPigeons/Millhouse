@@ -21,7 +21,7 @@ require "includes/head.php"
         <!-- Container for buttons on small screen  -->
         <div class="small_screen_button_container justify-content-center">
          
-          <button type="button" onclick="location.href='views/login_page.php?action=login';" class="btn btn-outline-primary ">
+          <button type="button" onclick="location.href='views/login_page.php?action=login';" class="btn primory_btn">
             Log in
           </button>
 
