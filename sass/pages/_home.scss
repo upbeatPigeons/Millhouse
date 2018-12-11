@@ -1,1 +1,63 @@
 //This styles are specific styles for home.php
+.latest_post{
+
+  @include pink_background_gradient;
+
+    .latest_post_wrapper{
+      padding: 3rem 1rem 1rem 0.5rem;
+    }
+  }
+
+  .post_content{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .all_posts{
+    background: linear-gradient(to right, $palepink_color, 5%, white);
+  }
+  
+  .post_image_cotainer{
+    position: relative;
+    width: 100%;
+      .post_image{
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+
+      }
+     
+      .title_container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: $white_color;
+      }  
+
+  } 
+  
+  .post_image_cotainer:hover .title_container {
+    opacity: 1;
+  }
+  
+  .smaller_title{
+    color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center
+
+  }

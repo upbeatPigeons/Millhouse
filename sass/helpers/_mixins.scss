@@ -10,3 +10,8 @@
 @mixin pink_background_gradient {
   background: linear-gradient(to left, $palepink_color, 5%, white);
 }
+
+@mixin text_divider{
+  height: 70px;
+  background-color: $darkblue_color;
+}
