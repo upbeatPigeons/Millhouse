@@ -55,6 +55,7 @@ switch ($_GET["action"]) {
       }
 
       $post_methods->create($new_post);
+      header("Location: ../views/home_page.php");
     }
 
     break;
