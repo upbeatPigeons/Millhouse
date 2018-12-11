@@ -29,5 +29,5 @@ require_once "validation_functions.php";
 		<div class="<?php get_class_for_error_message($empty_description)?>"><?php echo $empty_description_error_message;?></div>
 	</div>
 	<p>Text here</p>
-	<button type="submit" class="create-post-button primory_btn">Create post</button>
+	<button type="submit" class="btn create-post-button primory_btn">Create post</button>
 </form>

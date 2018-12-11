@@ -54,7 +54,7 @@ if (!$latest_post) : ?>
 
 						<div>
 							<!-- If "read more" btn is clicked we send a $_GET variable with the id so we know which post to show on next page  -->
-							<a href="single_post_page.php?id=<?= $latest_post->get_id();?>" class="btn btn-outline-primary">Read more</a>
+							<a href="single_post_page.php?id=<?= $latest_post->get_id();?>" class="btn primory_btn">Read more</a>
 						</div>
 					</div>
 				<!-- Col -->
@@ -86,7 +86,7 @@ if (!$latest_post) : ?>
 				<div><?= $post->get_title();?></div>
 				<div>
 					<!-- The exact same "read more" btn as above on line 56 -->
-					<a href="single_post_page.php?id=<?= $post->get_id();?>" class="btn btn-outline-primary">Read more</a>
+					<a href="single_post_page.php?id=<?= $post->get_id();?>" class="btn primory_btn">Read more</a>
 				</div>
 
 				<!-- If remove btn is pressed, then $_POST is used to set of the if-statement which executes the remove function. Also the id is sent through the url so it can be added to the parameter as argument to the remove function-->
