@@ -36,9 +36,14 @@
   }
 }
 
+// Commentform layout
 .comment_form{
   padding: 3rem 1rem 3rem 1rem;
   margin-bottom: 0;
+
+  .comment_field_title{
+    padding: 0.5rem 0 0.5rem 0;
+  }
 
   .text-area{
       height: 100px;
