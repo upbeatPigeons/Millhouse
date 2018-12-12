@@ -1,17 +1,21 @@
-.login_form_wrapper {
-  padding: 2rem;
-}
-
-.login-heading {
-  padding-bottom: 2rem;
-  margin-bottom: 2rem;
-  border-bottom: solid 5px $darkblue_color;
-}
-
 .signin-wrapper {
   padding: 3rem;
-}
+  
+  .login_form_wrapper {
+    padding: 2rem;
+    
+    @media screen and (min-width: 768px) {
+      padding: 0rem 5rem 0rem 0rem;
+    }
+  }
 
-.login_side_image {
-  @include image_box_shadow;
+  .login-heading {
+    padding-bottom: 1.2rem;
+    margin-bottom: 2rem;
+    border-bottom: solid 5px $darkblue_color;
+  }
+
+  .login_side_image {
+    @include image_box_shadow;
+  }
 }
