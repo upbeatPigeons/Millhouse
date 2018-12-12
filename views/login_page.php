@@ -25,11 +25,9 @@ require "../includes/validation_functions.php";
 
 	<main>
 		<section class="container login-container">
-			<h1>Log in</h1>
-			<hr>
 
 			<div class="row signin-wrapper justify-content-between">
-				<div class="col-sm-12 col-md-6">
+				<div class="col-sm-12 col-md-6 login_form_wrapper">
 
 					<?php if ($_GET['action'] == "login"){
             /* Include the login form */

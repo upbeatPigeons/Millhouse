@@ -7,10 +7,17 @@ $palegreen_color: #A6C9C6;
 $brightpink_color: #FAC8CD;
 $palepink_color: #D7BCC8;
 $paleblue_color: #95B8D1;
-$blacl_color: #252525;
+$black_color: #252525;
 $purple_color: #60495A;
 
 //fonts
 
 $sans_serif:'Open Sans', sans-serif;
-$serif:'Merriweather', serif;;
+$serif:'Merriweather', serif;
+
+//break-points
+
+$mobile: 576px;
+$tablet: 768px;
+$desktop-small: 992px;
+$desktop-large: 1200px;
