@@ -55,7 +55,6 @@
     font-size: 1.5rem;
     font-family: $serif;
     color: white;
-    padding: 2px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -95,17 +94,11 @@
   .post_content{
     padding-top: 0;
     padding-bottom: 1rem;
-  }
+
 
   // Large devices (desktops, 992px and up)
     @media (min-width: 992px) {
-      
-      .post_content{
-        padding-bottom: 10rem;
-      } 
-      
-      .text_link {
-        top: 70%;
-        
-      }
+  
+      padding-bottom: 10rem;
+      }  
   }

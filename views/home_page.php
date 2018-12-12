@@ -82,7 +82,7 @@ if (!$latest_post) : ?>
 					<div class="col-12 col-md-5 blog_post">
           	<div class="container">
 						
-							<img class="img-fluid post_image" src="<?= $post->get_image();?>">
+							<img class="img-fluid" src="<?= $post->get_image();?>">
 							<div class="overlay">
 								<h2 class="smaller_title text"><?= $post->get_title();?></h2>	
 								<a class="text_link" href="single_post_page.php?id=<?= $post->get_id();?>" class="btn primory_btn">Read more</a>
