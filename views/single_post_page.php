@@ -28,7 +28,9 @@
 					<div class="col-12 col-md-9">	
 						<h1 class="page_title "><?= $post->get_title(); ?></h1>
 						<div class="title_underline"></div>
+					<!-- Col-->
 					</div>
+				<!--Row-->
 				</div>
 			
 				<div class="row justify-content-center">

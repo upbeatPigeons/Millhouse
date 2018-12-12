@@ -31,13 +31,13 @@
   padding: 0;
 
   .divider{
-    height: 70px;
-    background-color: $darkblue_color;
+    @include text_divider
   }
 }
 
 .comment_form{
   padding: 3rem 1rem 3rem 1rem;
+  margin: 0;
 
   .text-area{
       height: 100px;

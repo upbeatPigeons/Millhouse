@@ -1,9 +1,17 @@
 .page_title {
   font-size: 2rem;
   color: $darkblue_color;
-  font-family: $serif;
+  font-family: $sans-serif;
 
 }
+.smaller_title{
+    font-size: 1.5rem;
+    color: $darkblue_color;
+    font-family: $serif;
+    margin-left: 0;
+    margin-left: 0;
+  }
+  
 .date, .autor, .content, .footer_title, .footer_text{
     font-family: $sans_serif;
 }
@@ -25,14 +33,6 @@
   color: $darkblue_color;
   font-size: 1.125rem; 
 
-}
-
-.smaller_title{
-  font-size: 1.5rem;
-  color: $darkblue_color;
-  font-family: $serif;
-  margin-left: 0;
-  margin-left: 0;
 }
 
 .footer_title{

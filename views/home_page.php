@@ -31,72 +31,73 @@ if (!$latest_post) : ?>
 <?php else: ?>
 
 	<main>
-		<section class="container post_container">
-			<div>
-				<h1>Latest Posts</h1>
-				<hr>
-			</div>
-			<div class="row latest_post_wrapper justify-content-between">
-				<div class="col-12 col-md-4">
-					<div>
-						<!--here we should fetch latest post title from Post.php-->
-						<h2><?= $latest_post->get_title();?></h2> 
-					</div>
+		<section class="container-fluid latest_post">
+			<div class="latest_post_wrapper">
 
-					<div>
-						<!--here we should fetch latest post date from Post.php-->
-						<h3><?= $latest_post->get_date();?></h3>
-					</div>
+			  <div class="row justify-content-center">
+			  	<div class="col-12 col-md-10">	
+						<h1 class="page_title">Latest Posts</h1>
+					<div class="title_underline"></div>
+				</div>	
+				<!-- Row-->	
+			  </div>
 
-					<div>
-						<!--here we should fetch latest post summary or text from Post.php-->
-						<p><?= $latest_post->get_description();?></p>
+			<div class="row single_post_content justify-content-center">
 
-						<div>
-							<!-- If "read more" btn is clicked we send a $_GET variable with the id so we know which post to show on next page  -->
-							<a href="single_post_page.php?id=<?= $latest_post->get_id();?>" class="btn primory_btn">Read more</a>
-						</div>
-					</div>
-				<!-- Col -->
+			<div class="col-12 col-md-5 order-md-12">
+				  <img class="img-fluid latest_post_image" src="<?= $latest_post->get_image();?>">	
 				</div>
 
-				<div class="col-12 col-md-6">
-					<div class="container latest_post_image">
-						<!--here we should fetch latest post image-->
-						<p></p>
-					</div>
-				<!-- Col -->	
+				<div class="col-12 col-md-5 order-md-1 my-auto post_content">
+					<!--here we should fetch latest post title from Post.php-->
+					<h2 class="smaller_title"><?= $latest_post->get_title();?></h2>
+					<!--here we should fetch latest post date from Post.php-->
+					<p class=date><?= $latest_post->get_date();?></p>
+					<!--here we should fetch latest post summary or text from Post.php-->
+					<p class="content"><?= $latest_post->get_description();?></p>
+					<!-- If "read more" btn is clicked we send a $_GET variable with the id so we know which post to show on next page  -->
+					<a href="single_post_page.php?id=<?= $latest_post->get_id();?>" class="btn primory_btn">Read more</a>
+
+				<!--Col-->	
 				</div>	
 
-				<!-- Row -->
-				</div>
+			<!-- Single Post Content End -->
+			</div>
 
+			<!--Latest Post Wrapper-->	
+			</div>
+		<!--Latest Post-->	
 		</section>
    
-		<aside>
+		<aside class="container-fluid divider_bar">
 			<div class="divider"></div>
 		</aside>
 		
-		<section class="row all_posts">
+		<section class="container-fluid all_posts">
 			
-			<!-- Here we loop through and show every individual post in database. And use the getter info from the class Post.php so we can loop out the correct data where we want it -->
-			<?php foreach ($all_posts as $post): ?>
-			<div class="col-12 col-5 single_post">
-				<div><img src="<?= $post->get_image();?>"></div>
-				<div><?= $post->get_title();?></div>
-				<div>
-					<!-- The exact same "read more" btn as above on line 56 -->
-					<a href="single_post_page.php?id=<?= $post->get_id();?>" class="btn primory_btn">Read more</a>
-				</div>
+				<!-- Here we loop through and show every individual post in database. And use the getter info from the class Post.php so we can loop out the correct data where we want it -->
+				<div class="row justify-content-center text-center">
+				<?php foreach ($all_posts as $post): ?>
+			
+					<div class="col-12 col-md-5 blog_post">
+          	<div class="container">
+						
+							<img class="img-fluid" src="<?= $post->get_image();?>">
+							<div class="overlay">
+								<h2 class="text_overlay text "><?= $post->get_title();?></h2>	
+								<a class="text_link" href="single_post_page.php?id=<?= $post->get_id();?>" class="btn primory_btn">Read more</a>
+							</div>
+							
+						<!--Container-->
+						</div>
 
-				<!-- If remove btn is pressed, then $_POST is used to set of the if-statement which executes the remove function. Also the id is sent through the url so it can be added to the parameter as argument to the remove function-->
-				<form action="../includes/actions_posts.php?id=<?= $post->get_id();?>" method="POST">
-				<input type="submit" name="remove_post" value="Delete Post" class="btn primory_btn" />
-				</form>
+          <!--Col-->
+					</div>	
 
-				<!-- Col -->	
-			</div>
-			<?php endforeach; ?>
+				<?php endforeach; ?>
+				</div>	
+
+				
 		</section>			
 
 	</main>
