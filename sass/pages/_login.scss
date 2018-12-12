@@ -1,6 +1,9 @@
 .signin-wrapper {
   padding: 3rem;
-  
+  @media screen and (min-width: 992px) {
+    padding: 6rem;
+  }
+
   .login_form_wrapper {
     padding: 2rem;
     
