@@ -27,12 +27,6 @@
     margin: 1rem;
   }
   //Overlay effect on post images
-
-  .image {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
   
   .overlay {
     position: absolute;
@@ -82,10 +76,7 @@
   .text_link:hover {
     color: $darkblue_color;
     text-decoration: none;
-    background-color: $palepink_color;
-    
-
-    
+    background-color: $palepink_color;    
   }
   
 
