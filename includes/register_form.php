@@ -1,4 +1,4 @@
-<h2 class="register-heading">Register</h2>
+<h2 class="login-heading">Register</h2>
 <form class="register" action="../includes/register_controller.php" method="POST">
 
   <div class="form-group">
