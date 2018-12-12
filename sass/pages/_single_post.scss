@@ -35,14 +35,22 @@
   }
 }
 
+// Commentform layout
 .comment_form{
   padding: 3rem 1rem 3rem 1rem;
-  margin: 0;
+  margin-bottom: 0;
+
+  .comment_field_title{
+    padding: 0.5rem 0 0.5rem 0;
+  }
 
   .text-area{
       height: 100px;
       margin-bottom: 1rem;
-  }
-  
+  } 
+}
+
+.edit_button, .delete_button{
+  margin: 1rem 1rem 2rem 1rem;
 }
 
