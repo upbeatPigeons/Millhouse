@@ -8,17 +8,8 @@ require "../includes/validation_functions.php";
 
 <body id="login_page">
 	<header>
-		<nav class="navbar-logo">
-			<div class="row justify-content-center">
-
-				<a class="navbar-brand" href="../index.php">
-
-					<img class="img-fluid" src="../images/blue_logo%20_small.png" alt="Logo">
-				</a>
-			</div>
-		</nav>
-
-	  <?php 
+		<?php 
+			include "../includes/nav-bar.php";
       include "../includes/carousel.php";
     ?>
 	</header>
