@@ -1,0 +1,11 @@
+
+.main_content {
+    @include pink_background_gradient;
+}
+
+.form_container {
+
+  .form_wrapper {
+    padding: 3rem 1rem 1rem 0.5rem;
+  }
+}
