@@ -9,7 +9,7 @@
       <img class="d-block w-100" src="../images/kitchen.jpg" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="../images/living_room.jpg" alt="Second slide">
+      <img class="d-block w-100" src="../images/living_room_opt.jpg" alt="Second slide">
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="../images/pink_sofa.jpg" alt="Third slide">
