@@ -2,39 +2,66 @@
   
   background-image: 
     linear-gradient(
-      transparent 70%,
-      $brightpink_color
+      transparent 60%,
+      $palepink_color
       ),
     linear-gradient(
       $white_color 15%,
       transparent 35%    
     );
     
-    .navbar-logo{
-      background-color: transparent;
-      .navbar-brand{
-        margin-right: 0;
-        .collapsed_logo{
-          height: 65px;
-          img{
-            height: 100%;
-          }
+  .navbar-logo{
+    background-color: transparent;
+    padding-top: 0.5rem;
+    .navbar-brand{
+      margin-right: 0;
+      padding: 0;
+      .collapsed_logo{
+        height: 65px;
+        img{
+          height: 100%;
         }
       }
     }
-    
-    .navbar-toggler{
-      border-color: transparent;
-    }
-    
+  }
+  
+  .navbar-toggler{
+    border-color: transparent;
+  }
+  
+  @media (min-width: 992px) {
     .navbar {
-      background-color: transparent;
-      justify-content: space-around;
-      .nav-link{
-        color: $darkblue_color;
+      justify-content: flex-end;
+    }
+  }
+
+  .navbar {
+    background-color: transparent;
+    justify-content: center;
+    padding: 0 1rem;
+
+    .collapse{
+      justify-content: space-between;
+    }
+
+    .nav-link{
+      color: $darkblue_color;
+      margin: 0 1rem;
+      i{
+        margin: 0.2rem 0.2rem 0 0;
       }
     }
+    .logged_in_text{
+      margin-bottom: 0.5rem;
+    }
 
-  border-bottom: 0.5rem solid $darkblue_color;
+    .navbar-nav{
+      margin-bottom: 0.5rem;
+      width: 100%;
+    }
+  }
+
+  .spacing{
+    height: 1rem;
+  }
 }
-
