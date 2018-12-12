@@ -45,7 +45,7 @@ if (!$latest_post) : ?>
 			<div class="row single_post_content justify-content-center">
 
 			<div class="col-12 col-md-5 order-md-12">
-				  <img class="img-fluid" src="<?= $latest_post->get_image();?>">	
+				  <img class="img-fluid latest_post_image" src="<?= $latest_post->get_image();?>">	
 				</div>
 
 				<div class="col-12 col-md-5 order-md-1 my-auto post_content">
@@ -79,15 +79,19 @@ if (!$latest_post) : ?>
 				<div class="row justify-content-center text-center">
 				<?php foreach ($all_posts as $post): ?>
 			
-					<div class="col-12 col-md-5">
-<div class="post_image_cotainer">
-						<img class="img-fluid post_image" src="<?= $post->get_image();?>">
+					<div class="col-12 col-md-5 blog_post">
+          	<div class="container">
+						
+							<img class="img-fluid post_image" src="<?= $post->get_image();?>">
+							<div class="overlay">
+								<h2 class="smaller_title text"><?= $post->get_title();?></h2>	
+								<a class="text_link" href="single_post_page.php?id=<?= $post->get_id();?>" class="btn primory_btn">Read more</a>
+							</div>
+							
+						<!--Container-->
 						</div>
-						<div class="title_container">
-						<h2 class="smaller_title"><?= $post->get_title();?></h2>
-						</div>
-						<a href="single_post_page.php?id=<?= $post->get_id();?>" class="btn primory_btn">Read more</a>
 
+          <!--Col-->
 					</div>	
 
 				<?php endforeach; ?>
