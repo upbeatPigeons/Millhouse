@@ -4,17 +4,29 @@
   font-family: $sans-serif;
 
 }
-.smaller_title{
+.smaller_title, .carousel_title{
     font-size: 1.5rem;
     color: $darkblue_color;
     font-family: $serif;
     margin-left: 0;
     margin-left: 0;
   }
+
+  .carousel_title{
+    color: $white_color;
+    
+  }
+
+
   
-.date, .autor, .content, .footer_title, .footer_text{
+.date, .autor, .content, .footer_title, .footer_text, .carousel_content{
     font-family: $sans_serif;
 }
+.carousel_content{
+  font-size: 1.125rem;
+  color: $white_color;
+}
+
 .date{
   color: $palepink_color;
   font-size:1rem; 
