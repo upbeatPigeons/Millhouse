@@ -29,9 +29,15 @@
     border-color: transparent;
   }
   
+  @media (min-width: 992px) {
+    .navbar {
+      justify-content: flex-end;
+    }
+  }
+
   .navbar {
     background-color: transparent;
-    justify-content: flex-end;
+    justify-content: center;
     padding: 0 1rem;
 
     .collapse{
@@ -48,20 +54,11 @@
     .logged_in_text{
       margin-bottom: 0.5rem;
     }
-    .navbar_list{
-    }
 
-    ul{
+    .navbar-nav{
       margin-bottom: 0.5rem;
       width: 100%;
-      :first-child{
-        float: left;
-      }
-      li{
-
-      }
     }
-
   }
 
 }
