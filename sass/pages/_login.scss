@@ -1,6 +1,6 @@
 .signin-wrapper {
   padding: 3rem;
-  
+
   @media screen and (min-width: $desktop-small) {
     padding: 6rem;
   }
@@ -9,6 +9,10 @@
     padding: 2rem;
     
     @media screen and (min-width: $tablet) {
+      padding: 0rem 2rem 0rem 0rem;
+    }
+
+    @media screen and (min-width: $desktop-small) {
       padding: 0rem 5rem 0rem 0rem;
     }
   }
