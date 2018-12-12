@@ -11,3 +11,7 @@
 .signin-wrapper {
   padding: 3rem;
 }
+
+.login_side_image {
+  @include image_box_shadow;
+}
