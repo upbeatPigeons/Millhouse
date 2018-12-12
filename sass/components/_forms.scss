@@ -1,0 +1,36 @@
+.borders {
+  border-radius: 0;
+  border-color: $darkblue_color;
+  -webkit-appearance: none;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: $darkblue_color;
+  color: $darkblue_color;
+}
+
+.form-group {
+   font-family: $sans-serif;
+}
+
+.cta_area {
+  margin-top: 3.225rem;
+  .btn {
+    text-transform: uppercase;
+    margin: 1.25rem 0 1.25rem 0;
+  }
+}
+
+.invalid-feedback {
+  font-family: $sans-serif;
+}
+
+
+// Specific for login and register forms
+
+.white_background {
+  background-color: white;
+  padding: 1rem;
+}
+

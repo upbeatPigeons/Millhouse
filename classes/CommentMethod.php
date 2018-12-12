@@ -39,7 +39,8 @@ class CommentMethod{
 	 ]);
 	 
 	 /* 
-    * We will use FETCH_CLASS to return an array consisting of       * objects from the Comment class
+		* We will use FETCH_CLASS to return an array consisting of       
+		* objects from the Comment class
     * FETCH_CLASS fetches database rows into an object
     * With FETCH_CLASS, data is populated before the constructor is * called 
     * Our constructor initializes the date, so to avoid that the 

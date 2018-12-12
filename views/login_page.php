@@ -23,7 +23,7 @@ require "../includes/validation_functions.php";
     ?>
 	</header>
 
-	<main>
+	<main class="main_content">
 		<section class="container login-container">
 
 			<div class="row signin-wrapper justify-content-between">

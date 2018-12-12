@@ -57,10 +57,7 @@ $create_method->save_comment_to_database($new_comment);
 
 header('location: ../views/single_post_page.php?id='.$postId);
 	
-} else {
-//error handling redirects to same page with error message as $_GET    
-header('location: ../views/single_post_page.php?error=comment_missing&id='.$postId);
-}
+} 
 
 
 ?>

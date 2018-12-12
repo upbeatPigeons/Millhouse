@@ -4,9 +4,8 @@ require "includes/head.php"
 
 <body id="index_page">
 
-  <header class="row d-block d-md-none index_header">
-    <div class="small_screen_header_container"></div>
-  </header>
+  <!-- This is a really bad name, sry. To create the layout there's a "block" that functions purely as a container that pushes the background-image down and retains the color and look for the gradient. Otherwise the gradient would eat up to much of the actual picture -->
+  <div class="row d-block d-md-none index_top_cube"></div>
   
     <!-- Background-image for smaller screens -->
     <div class="d-block d-md-none small_screen_background_image">

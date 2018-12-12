@@ -1,3 +1,7 @@
+.main_content {
+  @include pink_background_gradient;
+}
+
 .signin-wrapper {
   padding: 3rem;
 

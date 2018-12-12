@@ -31,8 +31,7 @@
   padding: 0;
 
   .divider{
-    height: 70px;
-    background-color: $darkblue_color;
+    @include text_divider
   }
 }
 

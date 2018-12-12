@@ -1,4 +1,4 @@
-.small_screen_header_container {
+.index_top_cube {
   background-color: $white_color;
   height: 40px;
 }
@@ -11,12 +11,12 @@ nested for clarity. Represents the same way the html is nested */
     linear-gradient(
       transparent 70%,
       $palepink_color
-      ),
+    ),
     linear-gradient(
       $white_color 15%,
       transparent 35%    
     ),
-    url(../../images/Eske_01.jpg);
+    url(../images/Eske_01.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center -10%;
