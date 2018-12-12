@@ -3,7 +3,8 @@
     include "../includes/head.php";  
     require_once "../includes/database_connection.php";
     require_once "../classes/PostMethods.php";
-    require_once "../classes/CommentMethod.php";
+		require_once "../classes/CommentMethod.php";
+		require_once "../classes/ProductMethod.php";
 ?>
 
 
@@ -23,7 +24,11 @@
 			  	<!-- Here we need to fetch title of the post -->
 			 		<?php 
 			 			$post_methods = new PostMethods($pdo);
-			 			$post = $post_methods->list_single_post($_GET["id"]);
+						 $post = $post_methods->list_single_post($_GET["id"]);
+						 // storing category as a $_SESSION to use it as FK in list_relevant_products function
+						 $_SESSION['category'] = $post->get_category();
+						 $category = $_SESSION['category'];
+						 //var_dump($_SESSION['category']);
 			 		?>
 					<div class="col-12 col-md-9">	
 						<h1 class="page_title "><?= $post->get_title(); ?></h1>
@@ -70,9 +75,25 @@
 			<div class="divider"></div>
 		</aside>
 		
-		<section class="container product_suggestions">
-			<!--Here insert products from Mysql with relevan categories-->
-		</section>
+		<section class="container-fluid product_suggestions">
+			<?php
+			  //Acces function ist_relevant_products to lsit the products 
+				$list_products_method = new ProductMethod($pdo);
+				$relevant_products = $list_products_method->list_relevant_products($category);
+				?>
+          <div class="row justify-content-center">
+						<?php foreach ($relevant_products as $product):?>
+							<div class="col-5 col-md-3 product">
+
+								<img class='product img-fluid' src='../images/<?= $product->get_image(); ?>'>
+								<p class="author"><?= $product->get_title();?></p>
+								<p class="date"><?= $product->get_price(); ?></p>
+								
+							</div><!-- Col Comment-->
+  		  		<?php 
+						endforeach; ?>
+        </div><!-- Row -->
+			</section>
 		
 		<section class="comment_container container-fluid">
 			
