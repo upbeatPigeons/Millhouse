@@ -25,8 +25,6 @@ require "../includes/validation_functions.php";
 
 	<main>
 		<section class="container login-container">
-			<h1>Log in</h1>
-			<hr>
 
 			<div class="row signin-wrapper justify-content-between">
 				<div class="col-sm-12 col-md-6">
