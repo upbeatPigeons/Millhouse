@@ -48,18 +48,19 @@
 
 				<?php if ($_SESSION["admin"] == 1) :?>
 					<div class="row admin-cta-area justify-content-center">
-						<div class="col=4 edit_button">
+						<div class="col=4">
 							<form action="../views/edit_post_page.php?id=<?=$post->get_id();?>" method="POST">
-								<button type="submit" name="edit_post" class="secondary_btn"><i class="fas fa-edit"></i></button>
+								<button type="submit" name="edit_post" class="secondary_btn delete_button"><i class="fas fa-edit"></i></button>
 			            </form>
 								</div>
-			 			<div class="col=4 delete_post_button">
+			 			<div class="col=4">
 							<form action="../includes/actions_posts.php?id=<?= $post->get_id();?>" method="POST">
-								<button type="submit" name="remove_post" value="Delete Post" class="secondary_btn"><i class="fas fa-trash-alt"></i></button>
+								<button type="submit" name="remove_post" value="Delete Post" class="secondary_btn edit_button"><i class="fas fa-trash-alt"></i></button>
 							</form>
 						</div>
 					</div>
-        <?php endif;?>
+				<?php endif;?>
+				
       </div><!-- Single Post Wrapper-->	
 		 </section>
 		
