@@ -8,11 +8,13 @@
         <p class="footer_text" >wwww.millhouse.com</p>
       </div> 
 
-      <div class="col-md-4 text-center text-md-left footer_text_container">
-        <h3 class="footer_title">Follow us</h3>  
-        <a class="social_media_links" href="#"><i class="fab fa-instagram fa-2x"></i></a>
-        <a class="social_media_links" href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
-        <a class="social_media_links" href="#"> <i class="fab fa-twitter-square fa-2x social_media_links"></i></a>
+      <div class="col-md-5 d-md-flex justify-content-end text-center text-md-left footer_text_container">
+        <div>
+          <h3 class="footer_title">Follow us</h3>  
+          <a class="social_media_links" href="#"><i class="fab fa-instagram fa-2x"></i></a>
+          <a class="social_media_links" href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+          <a class="social_media_links" href="#"> <i class="fab fa-twitter-square fa-2x social_media_links"></i></a>
+        </div>
       </div> 
     </div>    
 </footer>
