@@ -1,11 +1,23 @@
 .page_title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: $darkblue_color;
   font-family: $sans-serif;
+  text-transform: uppercase;
 
 }
-.smaller_title, .carousel_title, .product_title{
-    font-size: 1.5rem;
+
+.main_title{
+    padding-top: 15px;
+    font-size: 1.8rem;
+    color: $white_color;
+    font-family: $serif;
+    margin-left: 0;
+    margin-left: 0;
+
+}
+
+.carousel_title, .product_title{
+    font-size: 2rem;
     color: $darkblue_color;
     font-family: $serif;
     margin-left: 0;
@@ -34,8 +46,8 @@
 
 .date{
   color: $palepink_color;
-  font-size:1rem; 
-  font-weight: 500;
+  font-size: 1rem; 
+  font-weight: 600;
 }
 
 .author{
@@ -47,7 +59,8 @@
 }
 
 .content{
-  color: $darkblue_color;
+  //color: $darkblue_color;
+  color: $white_color;
   font-size: 1.125rem; 
 
 }
@@ -70,9 +83,5 @@
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) { 
   
-  .page_title{
-    font-size: 3rem;
-   
-  }
       
 }

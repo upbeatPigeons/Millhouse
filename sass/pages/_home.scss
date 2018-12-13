@@ -3,18 +3,34 @@
 
   @include pink_background_gradient;
 
-    .latest_post_wrapper{
-      padding: 3rem 1rem 2rem 1rem;
+    .text_wrapper{
+      @include wrapper;
 
       .latest_post_image{
         @include image_box_shadow;
       }
     }
   }
+  
+  // Page title tnderline
+  .underline{
+    @include thin_line;
+  }
+
+  //Single post 
+
+  .latest_post_image_wrapper{
+
+    margin-bottom: 2rem;
+  }
+
+  
 
   .post_content{
     padding-top: 3rem;
     padding-bottom: 1rem;
+    background-color: $darkblue_color;
+    color: $white_color;
   }
 
   .all_posts{
