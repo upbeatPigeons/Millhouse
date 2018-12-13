@@ -3,11 +3,11 @@
   padding: 0.6rem 0;
   
   background-image: 
-    linear-gradient(
-      transparent 60%,
-      $palepink_color
-      );
-    
+  linear-gradient(
+    transparent 60%,
+    $palepink_color
+    );
+
   .navbar_logo{
     background-color: transparent;
     text-align: center;
@@ -17,6 +17,7 @@
 
       img{
         height: 65px;
+        max-width: 100%;
       }
 
       .collapsed_logo{
@@ -30,12 +31,12 @@
   
   .navbar-toggler{
     border-color: transparent;
+    position: absolute;
+    right: 50px;
   }
-  
-  @media (min-width: 992px) {
-    .navbar {
-      justify-content: flex-end;
-    }
+
+  .nav-link {
+    font-size: 1rem;
   }
 
   .navbar {
@@ -44,7 +45,7 @@
     padding: 0 1rem;
 
     .collapse{
-      justify-content: space-between;
+      justify-content: center;
     }
 
     .nav-link{
@@ -61,8 +62,20 @@
     }
   }
 
-  .spacing{
-    height: 1rem;
+  // Desktop styles 
+
+  @media (min-width: 992px) {
+
+    .logged_in_text {
+      position: absolute;
+      right: 50px;
+    }
+
+    .navbar_list {
+      position: absolute;
+      left: 50px;
+    }
+
   }
 
 }
