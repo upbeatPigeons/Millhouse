@@ -3,22 +3,19 @@ require "includes/head.php"
 ?>
 
 <body id="index_page">
-
-  <!-- This is a really bad name, sry. To create the layout there's a "block" that functions purely as a container that pushes the background-image down and retains the color and look for the gradient. Otherwise the gradient would eat up to much of the actual picture -->
-  <div class="row d-block d-md-none index_top_cube"></div>
   
-    <!-- Background-image for smaller screens -->
+    <!-- Background & main-container for smaller screens -->
     <div class="d-block d-md-none small_screen_background_image">
 
-      <!--Smallscreens Logo-->
+      <!--Logo-->
       <div class="container logo_container">
         <img class="small_screen_logo_image" src="images/logo_dark.png" alt="Logo">
       </div>
 
       <!-- Container for elements we want to flex-end -->
       <div class="flex_bottom_container">
-        <!-- Container for buttons on small screen  -->
-        <div class="small_screen_button_container justify-content-center">
+        <!-- Container for buttons  -->
+        <div class="small_screen_button_container justify-content-between">
          
           <button type="button" onclick="location.href='views/login_page.php?action=login';" class="btn primory_btn_inverse">
             Log in
@@ -28,12 +25,13 @@ require "includes/head.php"
             Register
           </button>
         
-        </div> <!-- Container for buttons on small screen  -->
+        </div> <!-- Container for buttons  -->
+
       </div> <!-- Container for elements we want to flex-end -->
 
     </div> <!-- Background-image for smaller screens -->
 
-    <div class="small_screen_cube_color d-md-none">
+    <div class="hero_container d-md-none">
       <div class="hero">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat magni necessitatibus at optio, quod adipisci modi veritatis impedit vero. Reprehenderit? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, aperiam.
 
@@ -52,8 +50,8 @@ require "includes/head.php"
         <div class="row justify-content-around">
 
           <!-- Container for image on bigger screens -->
-          <div class="d-none d-md-flex col-md-8 col-lg-5 justify-content-center big_screen_image">
-              <img class="img-fluid" src="images/Eske_01.jpg" alt="Millhouse Store Responsive image">
+          <div class="d-none d-md-flex col-md-7 col-lg-5 justify-content-center big_screen_image">
+            <img class="img-fluid" src="images/Eske_01.jpg" alt="Millhouse Store Responsive image">
           </div>
 
           <!-- Wrapper for logo and buttons on bigger screens -->
