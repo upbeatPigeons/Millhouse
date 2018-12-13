@@ -23,10 +23,14 @@ require "../includes/validation_functions.php";
 					<?php if ($_GET['action'] == "login"){
             /* Include the login form */
           	include "../includes/login_form.php"; 
-          }else{
+          }elseif ($_GET['action'] == "register"){
             /* Include the register form */
     				include "../includes/register_form.php";
-          }?>
+          } else { 
+						/* Show both if no */
+          	include "../includes/login_form.php"; 
+    				include "../includes/register_form.php";
+					}?>
 				</div> <!-- End of col -->
 
 				<div class="d-none d-md-block col-md-6">
