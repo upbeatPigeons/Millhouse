@@ -3,12 +3,23 @@
   margin-right: auto;
 }
 
+@mixin wrapper{
+  padding: 3rem 1rem 2rem 1rem;
+}
+
+@mixin thin_line{
+  height: 2px;
+  width: 100%;
+  background-color: $darkblue_color;
+  margin-bottom: 2rem;
+}
+
 @mixin image_box_shadow {
-  box-shadow: 17px 25px $darkblue_color;
+  box-shadow: 17px 17px $darkblue_color;
 }
 
 @mixin pink_background_gradient {
-  background: linear-gradient(to left, $palepink_color, 5%, white);
+  background: linear-gradient(to left, $palepink_color, 10%, white);
 }
 
 @mixin text_divider{

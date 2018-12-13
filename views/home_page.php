@@ -32,64 +32,67 @@ $latest_post = $post_methods->list_latest_post();
 
 	<main>
 		<section class="container-fluid latest_post">
-			<div class="latest_post_wrapper">
+			<div class="text_wrapper">
 
 			  <div class="row justify-content-center">
 					<?php
 					// If there are no posts in the table, show a error message
 						if (!$latest_post) : ?>
-							<h2 class="smaller_title">Hm, it seems like there are no blog posts to show..</h2>
+							<h2 class="page_title">Hm, it seems like there are no blog posts to show..</h2>
 						<?php else: ?>
-			      <div class="col-12 col-md-10">	
-							<h1 class="page_title">Latest Posts</h1>
-						<div class="title_underline"></div>
+			      <div class="col-11 col-md-10 text_header">	
+							<h2 class="page_title">Latest Posts</h2>
+						<div class="underline"></div>
 					</div>	
 				<!-- Row-->	
 			  </div>
 
-			<div class="row single_post_content justify-content-center">
-				<div class="col-12 col-md-5 order-md-12">
+			<div class="row justify-content-center latest_post_content">
+				<div class="col-11 col-md-6 order-md-12 latest_post_image_wrapper">
 				  <img class="img-fluid latest_post_image" src="<?= $latest_post->get_image();?>">	
 				</div>
 
-				<div class="col-12 col-md-5 order-md-1 my-auto post_content">
-					<!--here we should fetch latest post title from Post.php-->
-					<h2 class="smaller_title"><?= $latest_post->get_title();?></h2>
-					<!--here we should fetch latest post date from Post.php-->
-					<p class=date><?= $latest_post->get_date();?></p>
-					<!--here we should fetch latest post summary or text from Post.php-->
-					<p class="content"><?= $latest_post->get_description();?></p>
+				<div class="col-11 col-md-4 order-md-1 latest_post_text">
+					<!--latest post title from Post.php-->
+					<h1 class="main_title latest_blogpost_title"><?= $latest_post->get_title();?></h1>
+					<!--latest post summary or text from Post.php-->
+					<p class="latest_post_content">
+						<?php 
+							// Print only the summary of the latest post content
+							$text = $latest_post->get_description();
+							preg_match('/^([^.!?]*[\.!?]+){0,2}/', strip_tags($text), $abstract);
+							echo $abstract[0]."...";
+						?>
+					</p>
 					<!-- If "read more" btn is clicked we send a $_GET variable with the id so we know which post to show on next page  -->
-					<a href="single_post_page.php?id=<?= $latest_post->get_id();?>" class="btn primory_btn">READ MORE</a>
-
+					<div class="read_more_button">
+						<a href="single_post_page.php?id=<?= $latest_post->get_id();?>" class="btn primory_btn">READ MORE</a>
+          </div>
 				<!--Col-->	
-				</div>	
-
-			<!-- Single Post Content End -->
+				</div>
+			<!-- Row -->
 			</div>
 
-			<!--Latest Post Wrapper-->	
+			<div class="row justify-content-center"> 
+				<div class="col-11 col-md-10 blog_section">	
+					<h2 class="page_title">Blog</h2>		
 			</div>
-		<!--Latest Post-->	
-		</section>
-   
-		<aside class="container-fluid divider_bar">
-			<div class="divider"></div>
-		</aside>
-		
-		<section class="container-fluid all_posts">
-			
-				<!-- Here we loop through and show every individual post in database. And use the getter info from the class Post.php so we can loop out the correct data where we want it -->
-				<div class="row justify-content-center text-center">
+
+				<div class="col-11 col-md-10 text_header">
+					<div class="underline"></div>
+				</div>
+			</div>
+
+			<!-- Here we loop through and show every individual post in database. And use the getter info from the class Post.php so we can loop out the correct data where we want it -->
+			<div class="row justify-content-center text-center">
 				<?php foreach ($all_posts as $post): ?>
-			
-					<div class="col-12 col-md-5 blog_post">
+
+					<div class="col-11 col-md-5 blog_post">
           	<div class="container">
-						
 							<img class="img-fluid" src="<?= $post->get_image();?>">
 							<div class="overlay">
-								<h2 class="text_overlay text "><?= $post->get_title();?></h2>	
-								<a class="text_link" href="single_post_page.php?id=<?= $post->get_id();?>" class="btn primory_btn">READ MORE</a>
+								<h2 class="text_overlay"><?= $post->get_title();?></h2>	
+								<a href="single_post_page.php?id=<?= $post->get_id();?>" class="btn primory_btn text_link">READ MORE</a>
 							</div>
 							
 						<!--Container-->
@@ -101,7 +104,10 @@ $latest_post = $post_methods->list_latest_post();
 				<?php endforeach; ?>
 				</div>	
 
-				
+			<!-- text wrapper div -->	
+			</div>
+		<!--Latest Post-->	
+		
 		</section>			
 
 	</main>
