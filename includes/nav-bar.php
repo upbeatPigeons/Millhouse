@@ -15,7 +15,7 @@
           <img src="../images/Logo%20Shape.svg" alt="Logo">
         </div>
 
-      </a>`
+      </a>
 
     </div>
   </nav>
