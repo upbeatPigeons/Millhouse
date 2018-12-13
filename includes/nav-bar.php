@@ -14,7 +14,7 @@
     </div>
   </nav>
 
-  <?php if(strpos($path, "login_page") !== false) { ?>
+  <?php if(strpos($path, "login_page") === false) { ?>
     
     <nav class="navbar navbar-expand-lg navbar-light">
   
