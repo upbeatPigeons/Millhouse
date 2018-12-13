@@ -1,74 +1,78 @@
-.page_title {
-  font-size: 1.5rem;
-  color: $darkblue_color;
+.page_title, .footer_title {
+  font-size: 1.2rem;
   font-family: $sans-serif;
   text-transform: uppercase;
 
 }
 
-.main_title{
-    padding-top: 15px;
-    font-size: 1.8rem;
-    color: $white_color;
-    font-family: $serif;
-    margin-left: 0;
-    margin-left: 0;
+.page_title{
+  color: $darkblue_color;
 
 }
 
-.carousel_title, .product_title{
-    font-size: 2rem;
-    color: $darkblue_color;
-    font-family: $serif;
-    margin-left: 0;
-    margin-left: 0;
-  }
-
-  .carousel_title{
-    color: $white_color;
-    
-  }
-
-  .product_title, .product_price{
-    font-size: 1.125rem;
-    text-align: center;
-  }
-
-
-  
-.date, .autor, .content, .footer_title, .footer_text, .carousel_content .product_price{
-    font-family: $sans_serif;
-}
-.carousel_content{
-  font-size: 1.125rem;
+.main_title {
+  font-size: 1.5rem;
   color: $white_color;
+  font-family: $serif;
+
+}
+
+.carousel_title {
+  font-size: 2rem;
+  color: $white_color;
+  font-family: $serif;
+  margin-left: 0;
+  margin-left: 0;
+
+}
+
+.product_title, .product_price {
+  font-size: 1.125rem;
+  text-align: center;
+  font-family: $serif;
+  color: white;
+
+  }
+ 
+.date, .autor, .content, 
+.footer_title, .footer_text, 
+.carousel_content .product_price {
+  font-family: $sans_serif;
+
 }
 
 .date{
   color: $palepink_color;
   font-size: 1rem; 
   font-weight: 600;
+
 }
 
 .author{
   color: $darkblue_color;
   font-style: italic;
   font-weight: 500;
-  font-size:1rem;
+  font-size: 1rem;
   margin-bottom: -2px; 
+
 }
 
 .content{
   //color: $darkblue_color;
   color: $white_color;
-  font-size: 1.125rem; 
+  font-size: 1rem; 
+
+}
+
+.carousel_content, .latest_post_content{
+  font-size: 1rem;
+  color: $white_color;
 
 }
 
 .footer_title{
   color: $palepink_color;
-  font-size: 1.125rem;
-  font-weight: 500;
+
 }
 
 .footer_text{

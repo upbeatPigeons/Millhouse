@@ -19,7 +19,7 @@
 }
 
 @mixin pink_background_gradient {
-  background: linear-gradient(to left, $palepink_color, 5%, white);
+  background: linear-gradient(to left, $palepink_color, 10%, white);
 }
 
 @mixin text_divider{

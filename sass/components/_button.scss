@@ -1,5 +1,5 @@
   //background-color: rgba(28, 48, 69, 0.1);
-.primory_btn {
+/*.primory_btn {
   background-color: rgba(240, 240, 240, 0.5);
   color: $darkblue_color;
   border: $darkblue_color solid 1.5px;
@@ -14,6 +14,23 @@
     cursor: pointer;
   }
 }
+*/
+
+.primory_btn {
+  background-color: $darkblue_color;
+  color: $white_color;
+  border: $palepink_color solid 1.5px;
+  border-radius: 1.5px;
+  min-width: 8rem;
+
+  &:hover, &:focus, &:active{
+    background-color: $palepink_color;
+    color: $darkblue_color;
+    border: $palepink_color solid 1.5px;
+    outline: none; 
+    cursor: pointer;
+  }
+}
 
 .primory_btn_inverse {
   background-color: $darkblue_color;
@@ -21,6 +38,7 @@
   border: $darkblue_color solid 1.5px;
   border-radius: 1.5px;
   min-width: 9rem;
+
 
   &:hover, &:focus, &:active{
     background-color: $white_color;

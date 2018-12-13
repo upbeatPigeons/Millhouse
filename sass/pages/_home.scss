@@ -1,4 +1,10 @@
 //This styles are specific styles for home.php
+
+
+.text_header{
+
+  padding: 0;
+}
 .latest_post{
 
   @include pink_background_gradient;
@@ -8,6 +14,7 @@
 
       .latest_post_image{
         @include image_box_shadow;
+        margin-bottom: $dividing_margin;
       }
     }
   }
@@ -18,33 +25,26 @@
   }
 
   //Single post 
-
-  .latest_post_image_wrapper{
-
-    margin-bottom: 2rem;
-  }
-
   
+  .latest_post_content{
+    margin-bottom: $dividing_margin;
 
-  .post_content{
-    padding-top: 3rem;
-    padding-bottom: 1rem;
-    background-color: $darkblue_color;
-    color: $white_color;
-  }
-
-  .all_posts{
-    background: linear-gradient(to right, $palepink_color, 5%, white);
-    padding-top: 2rem; 
-    padding-bottom: 2rem;
-
-    .blog_post{
-      margin: 1rem 1rem 2rem 1rem;
+    .latest_post_text{
+      padding-top: $dividing_margin;
+      padding-bottom: $dividing_margin;
+      background-color: $darkblue_color;
+      
+      .read_more_button{
+        margin-top: 1rem;
+      }
     }
   }
-
+  
   //Overlay effect on post images
   
+  .container{
+    padding: 0;
+  }
   .overlay {
     position: absolute;
     top: 0;
@@ -61,12 +61,12 @@
   .container:hover & {
     opacity: 0.9;
   }
- 
  }
-  
+
   // Text for overlay effect 
-   .text {
-    font-size: 1.5rem;
+   .text_overlay {
+    font-size: 1.2rem;
+    text-align: center;
     font-family: $serif;
     color: white;
     position: absolute;
@@ -75,15 +75,11 @@
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    text-align: center;
   }
 
   .text_link {
-    font-family: $sans-serif;
-    padding: 5px;
-    font-size:1rem;
-    color: $white_color;
-    background-color: $darkblue_color;
+    outline: none; 
+    cursor: pointer;
     position: absolute;
     top: 80%;
     left: 50%;
@@ -91,25 +87,30 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
-      
-      &:hover {
-        color: $darkblue_color;
-        text-decoration: none;
-        background-color: $palepink_color;    
-    }
   }
-
-  // Small devices (tablets, 768px and up) 
-
-  .post_content{
-    padding-top: 0;
-    padding-bottom: 1rem;
-
 
   // Large devices (desktops, 992px and up)
     @media (min-width: 992px) {
+
+      .latest_post_image {
+        margin-bottom: 0;
+
+      }
+
+      .latest_post_text{
+        padding: 0;
+
+        .latest_blogpost_title, .latest_post_content, .read_more_button  {
+          padding-left: 3rem;
+          padding-right: 3rem;
+        }
   
-      padding-bottom: 10rem;
+        .latest_blogpost_title {
+          padding-top: 6rem;
+        }
+
       } 
 
-  }
+    } 
+
+
