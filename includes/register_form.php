@@ -1,5 +1,5 @@
 <h2 class="login-heading">Register</h2>
-<div class="white_background">
+<div>
 <form class="register" action="../includes/register_controller.php" method="POST">
 
   <div class="form-group">

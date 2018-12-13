@@ -1,5 +1,5 @@
 <h2 class="login-heading">Sign in</h2>
-<div class="white_background">
+<div>
 <form class="login" action="../includes/login_controller.php" method="POST">
   <div class="form-group">
      <label for="username">Enter your username</label>
