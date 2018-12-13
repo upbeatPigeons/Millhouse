@@ -34,7 +34,7 @@ $post = $post_methods->list_single_post($_GET["id"]);
 		<div class="<?php get_class_for_error_message($empty_description)?>"><?php echo $empty_description_error_message;?></div>
 	</div>
 	<div class="cta_area">
-		<button type="submit" class="btn create-post-button primory_btn btn-block">Edit post</button>
-		<a class="btn cancel-action-button primory_btn btn-block" href="../views/home_page.php" role="button">Cancel</a>
+		<button type="submit" class="btn create-post-button primory_btn btn-block">EDIT POST</button>
+		<a class="btn cancel-action-button primory_btn btn-block" href="../views/home_page.php" role="button">CANCEL</a>
 	</div>
 </form>

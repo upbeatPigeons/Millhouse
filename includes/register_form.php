@@ -19,7 +19,7 @@
   <input type="password" class="form-control borders" id="confirm_password" name="confirm_password" placeholder="Confirm password" required>
   <?php show_error_messages($_GET["confirm_password_error"]); ?>  
 </div>
-<button type="submit" name="register" class="primory_btn_inverse btn btn-m btn-block" value="Register">Register</button>
+<button type="submit" name="register" class="primory_btn_inverse btn btn-m btn-block" value="Register">REGISTER</button>
 </form>
 <?php show_error_messages($_GET["user_registered"]); ?> 
 </div>

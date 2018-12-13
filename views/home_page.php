@@ -62,7 +62,7 @@ if (!$latest_post) : ?>
 					<!--here we should fetch latest post summary or text from Post.php-->
 					<p class="content"><?= $latest_post->get_description();?></p>
 					<!-- If "read more" btn is clicked we send a $_GET variable with the id so we know which post to show on next page  -->
-					<a href="single_post_page.php?id=<?= $latest_post->get_id();?>" class="btn primory_btn">Read more</a>
+					<a href="single_post_page.php?id=<?= $latest_post->get_id();?>" class="btn primory_btn">READ MORE</a>
 
 				<!--Col-->	
 				</div>	
@@ -91,7 +91,7 @@ if (!$latest_post) : ?>
 							<img class="img-fluid" src="<?= $post->get_image();?>">
 							<div class="overlay">
 								<h2 class="text_overlay text "><?= $post->get_title();?></h2>	
-								<a class="text_link" href="single_post_page.php?id=<?= $post->get_id();?>" class="btn primory_btn">Read more</a>
+								<a class="text_link" href="single_post_page.php?id=<?= $post->get_id();?>" class="btn primory_btn">READ MORE</a>
 							</div>
 							
 						<!--Container-->

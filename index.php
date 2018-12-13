@@ -18,11 +18,11 @@ require "includes/head.php"
         <div class="small_screen_button_container justify-content-between">
          
           <button type="button" onclick="location.href='views/login_page.php?action=login';" class="btn primory_btn_inverse">
-            Log in
+            LOG IN
           </button>
 
           <button type="button" onclick="location.href='views/login_page.php?action=register';" class="btn primory_btn">
-            Register
+            REGISTER
           </button>
         
         </div> <!-- Container for buttons  -->
@@ -67,11 +67,11 @@ require "includes/head.php"
               <div class="big_screen_button_container">
               
                 <button type="button" onclick="location.href='views/login_page.php?action=login';" class="btn primory_btn_inverse">
-                  Log in
+                  LOG IN
                 </button>
               
                 <button type="button" onclick="location.href='views/login_page.php?action=register';" class="btn primory_btn">
-                  Register
+                  REGISTER
                 </button>
 
               </div> <!-- Container for buttons  -->
