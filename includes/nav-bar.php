@@ -1,25 +1,5 @@
 <div class="entire_navbar">
 
-  <nav class="navbar-logo">
-    <div class="row justify-content-center">
-
-    <?php if (isset($_SESSION["username"])) { ?>
-      <a class="navbar-brand" href="../views/home_page.php">
-    <?php } else { ?>
-      <a class="navbar-brand" href="../views/login_page.php">
-    <?php } ?>
-
-        <img class="img-fluid d-none d-lg-block" src="../images/logo_dark.png" alt="Logo">
-
-        <div class="collapsed_logo img-fluid d-block d-lg-none">
-          <img src="../images/Logo%20Shape.svg" alt="Logo">
-        </div>
-
-      </a>
-
-    </div>
-  </nav>
-
   <?php if(strpos($path, "login_page") === false) { ?>
     
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -56,7 +36,21 @@
             </li>
           </ul>
         </div>
+        <div class="navbar_logo">
+        <?php if (isset($_SESSION["username"])) { ?>
+          <a class="navbar-brand" href="../views/home_page.php">
+        <?php } else { ?>
+          <a class="navbar-brand" href="../views/login_page.php">
+        <?php } ?>
 
+            <img class="img-fluid d-none d-lg-block" src="../images/logo_dark.png" alt="Logo">
+
+            <div class="collapsed_logo img-fluid d-block d-lg-none">
+              <img src="../images/Logo%20Shape.svg" alt="Logo">
+            </div>
+
+          </a>
+        </div>
         <div class="navbar_list">
 
           <ul class="navbar-nav navbar-center">
