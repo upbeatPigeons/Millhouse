@@ -30,27 +30,25 @@ $latest_post = $post_methods->list_latest_post();
 		?>
 	</header>
 
-<?php
-// If there are no posts in the table, show a error message
-if (!$latest_post) : ?>
-<h2>Hm, it seems like there are no blog posts to show..</h2>
-<?php else: ?>
-
 	<main>
 		<section class="container-fluid latest_post">
 			<div class="latest_post_wrapper">
 
 			  <div class="row justify-content-center">
-			  	<div class="col-12 col-md-10">	
-						<h1 class="page_title">Latest Posts</h1>
-					<div class="title_underline"></div>
-				</div>	
+					<?php
+					// If there are no posts in the table, show a error message
+						if (!$latest_post) : ?>
+							<h2 class="smaller_title">Hm, it seems like there are no blog posts to show..</h2>
+						<?php else: ?>
+			      <div class="col-12 col-md-10">	
+							<h1 class="page_title">Latest Posts</h1>
+						<div class="title_underline"></div>
+					</div>	
 				<!-- Row-->	
 			  </div>
 
 			<div class="row single_post_content justify-content-center">
-
-			<div class="col-12 col-md-5 order-md-12">
+				<div class="col-12 col-md-5 order-md-12">
 				  <img class="img-fluid latest_post_image" src="<?= $latest_post->get_image();?>">	
 				</div>
 

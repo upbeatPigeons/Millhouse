@@ -1,45 +1,65 @@
 <?php
-    session_start();
-    include "../includes/head.php";  
+ 
+ session_start();
+ include "../includes/head.php";
 ?>
-
 
 <body id="about_page">
 
 	<header>
 		<?php
-    	include "../includes/nav-bar.php";
-			include "../includes/carousel.php";
+    include "../includes/nav-bar.php";
+		include "../includes/carousel.php";
 		?>
 	</header>
-	
+
 	<main>
-		<section class="container about_container">
-			<div>
-				<h1>Our Story</h1>
-				<hr>
+		<section class="container-fluid about_container">
+			<div class="about_page_wrapper">
+				<div class="row justify-content-center">
+					<div class="col-12 col-md-10">	
+						<h1 class="page_title">About Us</h1>
+						<div class="title_underline"></div>
+					</div>	
+				<!-- Row-->	
 			</div>
-			
-			<div class="row">
-				<div class="col-12 col-md-6">
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+				<div class="row justify-content-center">
+				<div class="col-12 col-md-5 order-md-12">
+				  <img class="img-fluid latest_post_image" src="../images/pink_flamingo.jpg">	
 				</div>
-				
-				<div class="col-12 col-md-6">
-					<img class="login_side_image w-100" src="../images/details.jpg" alt="Scented candle">
-				<!-- Col -->
-				</div>
-				
-			<!-- Row -->
+
+				<div class="col-12 col-md-5 order-md-1 my-auto about_text">
+					
+					<p class="content">Vi på Eske hjelper gjerne med større og 
+						mindre innrednings-prosjekter. Synes du det er vanskelig å 
+						finne den røde tråden? Ønsker du nye farger eller puter i sofaen? 
+						Kanskje du har lyst på nye lamper eller ny tapet? Det blir fort mange valg å t
+						a når man går i gang med endringer hjemme – noen ganger er det nok å ommøblere, 
+						legge til litt mer be­lysning eller blande arvegodset med et par nye møbler. Andre 
+						ganger trenger man hjelp til å skape helhet i en større forandring eller ombygning.
+						Eskes prosjektavdeling tilbyr flere typer pakkeløsninger for de som ønsker hjelp med 
+						innredningen, og vi kan også skreddersy tilbud helt etter ditt behov.	
+					</p>
+				<!--Col-->	
+				</div>	
+			<!--Row-->	
 			</div>
-		</section>
-	</main>
+    <!--Wrapper-->	
+		</div>
+	</section>
 	
-	<aside><!-- Instagram feed--></aside>
+	<aside class="container-fluid divider_bar">
+		<div class="divider"></div>
+	</aside>
+
 	
+</main>
+
 	 <?php
-    require "../includes/footer.php"
-    ?>
+    require "../includes/footer.php";
+		?>
+		
 </body>
 
 </html>
