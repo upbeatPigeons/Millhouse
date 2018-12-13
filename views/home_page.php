@@ -12,7 +12,13 @@ $post_methods = new PostMethods($pdo);
 // Using $post_methods to actually set of the functions we want and storing them
 // in variables
 $all_posts = $post_methods->list_all_posts();
+
+// Deleting first array element using array_shift 
+$removed = array_shift($all_posts);
+
+// Get the latest post 
 $latest_post = $post_methods->list_latest_post();
+
 ?>
 
 <body id="home_page">
