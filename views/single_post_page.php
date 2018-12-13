@@ -81,13 +81,13 @@
 				$list_products_method = new ProductMethod($pdo);
 				$relevant_products = $list_products_method->list_relevant_products($category);
 				?>
-          <div class="row justify-content-center">
+          <div class="row justify-content-around">
 						<?php foreach ($relevant_products as $product):?>
 							<div class="col-5 col-md-3 product">
 
 								<img class='product img-fluid' src='../images/<?= $product->get_image(); ?>'>
-								<p class="author"><?= $product->get_title();?></p>
-								<p class="date"><?= $product->get_price(); ?></p>
+								<p class="product_title"><?= $product->get_title();?></p>
+								<p class="product_price"><?= $product->get_price(); ?>;-</p>
 								
 							</div><!-- Col Comment-->
   		  		<?php 

@@ -26,7 +26,7 @@
      </div>
 
     <div class="carousel-item">
-      <img class="d-block w-100 carousel_image" src="../images/pink_sofa1.jpg" alt="Pink sofa">
+      <img class="d-block w-100 carousel_image" src="../images/bedroom.png" alt="Pink sofa">
       <div class="carousel-caption d-none d-md-block">
         <h3 class="carousel_title">Millenium pink is here to stay</h3>
         <p class="carousel_content">Find back to the chind in you with playfull shades of pink</p>

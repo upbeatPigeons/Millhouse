@@ -20,7 +20,7 @@ class ProductMethod{
   public function list_relevant_products($category){
 
     try{
-      $statement = $this->pdo->prepare("SELECT * FROM products WHERE category = :category ORDER BY RAND() LIMIT 5");
+      $statement = $this->pdo->prepare("SELECT * FROM products WHERE category = :category ORDER BY RAND() LIMIT 4");
       $statement->execute([
       ":category" => $category
       ]
