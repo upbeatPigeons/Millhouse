@@ -78,7 +78,7 @@
             <?php } else { ?>
       
               <li class="nav-item">
-                <a class="nav-link" href="../views/login_page.php">Sign in</a>
+                <a class="nav-link" href="../views/login_page.php?action=login">Sign in</a>
               </li>
       
             <?php } ?>
