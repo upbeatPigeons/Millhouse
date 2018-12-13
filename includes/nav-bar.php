@@ -2,19 +2,25 @@
 
   <nav class="navbar-logo">
     <div class="row justify-content-center">
+
+    <?php if (isset($_SESSION["username"])) { ?>
       <a class="navbar-brand" href="../views/home_page.php">
-      
-        <img class="img-fluid d-none d-lg-block" src="../images/blue_logo%20_small.png" alt="Logo">
+    <?php } else { ?>
+      <a class="navbar-brand" href="../views/login_page.php">
+    <?php } ?>
+
+        <img class="img-fluid d-none d-lg-block" src="../images/logo_dark.png" alt="Logo">
 
         <div class="collapsed_logo img-fluid d-block d-lg-none">
           <img src="../images/Logo%20Shape.svg" alt="Logo">
         </div>
 
-      </a>
+      </a>`
+
     </div>
   </nav>
 
-  <?php if(strpos($path, "login_page") !== false) { ?>
+  <?php if(strpos($path, "login_page") === false) { ?>
     
     <nav class="navbar navbar-expand-lg navbar-light">
   
@@ -25,46 +31,57 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
         <div class="logged_in_text">
-          <p class="nav-link font-italic"> 
-            <i class="fas fa-user"></i>
-            <?php if (isset($_SESSION["username"])) { echo "Logged in as: ".$_SESSION["username"]; } ?> 
-          </p>
+          <ul class="navbar-nav navbar-center">
+            <li class="nav-item">
+              <p class="nav-link font-italic"> 
+                <?php if (isset($_SESSION["username"])) { ?>
+
+                  <i class='fas fa-user'></i>
+                  <?php echo $_SESSION["username"];
+
+                } ?>
+              </p>
+            </li>
+
+            <li class="nav-item">
+
+              <!-- Check if the user is an admin -->
+              <?php if ($_SESSION["admin"] == 1){ ?>
+                  <a class="nav-link" href="../views/create_post_page.php">
+                    <i class="fas fa-edit"></i>
+                    <p class="d-inline d-lg-none">Create post</p>
+                  </a>
+              <?php } ?>
+
+            </li>
+          </ul>
         </div>
 
         <div class="navbar_list">
 
           <ul class="navbar-nav navbar-center">
-      
-            <li class="nav-item">
-              <a class="nav-link" href="../views/home_page.php"><i class="fas fa-home"></i>Blog</a>
-            </li>
-      
-            <!-- Check if the user is an admin-->
-            <?php if ($_SESSION["admin"] == 1){?> 
-      
-              <li class="nav-item">
-                <a class="nav-link" href="../views/create_post_page.php"><i class="fas fa-edit"></i>Create post</a>
-              </li>
-      
-            <?php }?>
-      
-            <li class="nav-item">
-              <a class="nav-link" href="../views/about_page.php"><i class="fas fa-question-circle"></i>About</a>
-            </li>
     
             <?php if (isset($_SESSION["username"])) { ?>
-              
-              <li class="nav-item">
-                <a class="nav-link" href="../includes/logout.php"><i class="fas fa-door-open"></i>Log out</a>
-              </li>
-      
-            <?php } else {?>
       
               <li class="nav-item">
-                <a class="nav-link" href="../views/login_page.php">Sign in</a>
+                <a class="nav-link" href="../views/home_page.php"><i class="fas fa-home"></i><p class="d-inline d-lg-none">Blog</p></a>
+              </li>
+        
+              <li class="nav-item">
+                <a class="nav-link" href="../views/about_page.php"><i class="fas fa-question-circle"></i><p class="d-inline d-lg-none">About</p></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="../includes/logout.php"><i class="fas fa-door-open d-inline d-lg-none"></i>Log out</a>
+              </li>
+
+            <?php } else { ?>
+      
+              <li class="nav-item">
+                <a class="nav-link" href="../views/login_page.php?action=login">Sign in</a>
               </li>
       
-            <?php }?>
+            <?php } ?>
       
           </ul>
 

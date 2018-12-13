@@ -4,11 +4,7 @@
     linear-gradient(
       transparent 60%,
       $palepink_color
-      ),
-    linear-gradient(
-      $white_color 15%,
-      transparent 35%    
-    );
+      );
     
   .navbar-logo{
     background-color: transparent;
@@ -16,6 +12,11 @@
     .navbar-brand{
       margin-right: 0;
       padding: 0;
+
+      img{
+        height: 65px;
+      }
+
       .collapsed_logo{
         height: 65px;
         img{
@@ -50,9 +51,6 @@
       i{
         margin: 0.2rem 0.2rem 0 0;
       }
-    }
-    .logged_in_text{
-      margin-bottom: 0.5rem;
     }
 
     .navbar-nav{
