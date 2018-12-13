@@ -4,7 +4,7 @@
   font-family: $sans-serif;
 
 }
-.smaller_title, .carousel_title{
+.smaller_title, .carousel_title, .product_title{
     font-size: 1.5rem;
     color: $darkblue_color;
     font-family: $serif;
@@ -17,9 +17,14 @@
     
   }
 
+  .product_title, .product_price{
+    font-size: 1.125rem;
+    text-align: center;
+  }
+
 
   
-.date, .autor, .content, .footer_title, .footer_text, .carousel_content{
+.date, .autor, .content, .footer_title, .footer_text, .carousel_content .product_price{
     font-family: $sans_serif;
 }
 .carousel_content{
