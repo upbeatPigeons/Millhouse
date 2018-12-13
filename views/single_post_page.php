@@ -47,9 +47,9 @@
 			
 				<div class="row single_post_content justify-content-center">
 					<div class="col-12 col-md-9">
-					  <p class="author">Created by: <?= $post->get_created_by();?></p>
-						<p class="date"><?= $post->get_date();?></p>
 						<p class="content">Created by: <?= $post->get_description();?></p>
+						<p class="author">Created by: <?= $post->get_created_by();?></p>
+						<p class="date"><?= $post->get_date();?></p>
 					</div>		
 				</div>
 
