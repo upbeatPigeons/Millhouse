@@ -26,9 +26,9 @@
 			 			$post_methods = new PostMethods($pdo);
 						 $post = $post_methods->list_single_post($_GET["id"]);
 						 // storing category as a $_SESSION to use it as FK in list_relevant_products function
-						 $_SESSION['category'] = $post->get_category();
-						 $category = $_SESSION['category'];
-						 //var_dump($_SESSION['category']);
+						 $_POST['category'] = $post->get_category();
+						 $category = $_POST['category'];
+						
 			 		?>
 					<div class="col-12 col-md-9">	
 						<h1 class="page_title "><?= $post->get_title(); ?></h1>
