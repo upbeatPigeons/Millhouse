@@ -90,7 +90,12 @@ nested for clarity. Represents the same way the html is nested */
       .big_screen_button_container {
         padding: 15px;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+
+        .button_container {
+          padding: 10px;
+
+        }
       }
     }
   }
