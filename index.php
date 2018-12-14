@@ -51,7 +51,7 @@ require "includes/head.php"
 
           <!-- Container for image on bigger screens -->
           <div class="d-none d-md-flex col-md-7 col-lg-5 justify-content-center big_screen_image">
-            <img class="img-fluid" src="images/Eske_01.jpg" alt="Millhouse Store Responsive image">
+            <img class="img-fluid" src="images/index_tablet.png" alt="Millhouse Store Responsive image">
           </div>
 
           <!-- Wrapper for logo and buttons on bigger screens -->
