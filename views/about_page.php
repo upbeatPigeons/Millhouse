@@ -8,7 +8,7 @@
 <body id="about_page">
 
 	<?php 
-	include "../includes/alerts.php";
+	include "../includes/email_alerts.php";
 	?>
 
 	<header>
