@@ -5,7 +5,7 @@
         <p class="footer_text">Regjeringsgata 38</p>
         <p class="footer_text" >113 40 Stockholm</p>
         <p class="footer_text" >0735644999</p>
-        <p class="footer_text" >wwww.millhouse.com</p>
+        <p class="footer_text" >www.millhouse.com</p>
       </div> 
 
       <div class="col-md-5 d-md-flex justify-content-end text-center text-md-left footer_text_container">

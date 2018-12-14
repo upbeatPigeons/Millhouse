@@ -1,17 +1,24 @@
-<h2 class="login-heading">Sign in</h2>
-<div class="white_background">
-<form class="login" action="../includes/login_controller.php" method="POST">
-  <div class="form-group">
-     <label for="username">Enter your username</label>
-     <input type="text" class="form-control borders" name="username" id="username" placeholder="Username" required>
-  </div>         
 
-  <div class="form-group">
-     <label for="password">Enter your password</label>
-     <input type="password" class="form-control borders" name="password" id="password" placeholder="Password" required>
-     <!-- Gets error and formats it -->
-     <?php show_error_messages($_GET["error"]); ?> 
-  </div>
-  <button type="submit" name="login" value="Log in" class="primory_btn_inverse btn btn-m btn-block">Sign in</button>
-</form>
+<h3 class="smaller_title">Leave a comment</h3>
+   <div class="container">
+      <form class="login" action="/action_page.php">
+         <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" class="form-control borders" id="fname" name="firstname" placeholder="Your name..">
+         <div>
+    
+      <div class="form-group">
+         <label for="lname">Email</label>
+         <input type="text" class="form-control borders" id="lname" name="lastname" placeholder="Your email.." required>
+      </div>
+
+      <div class="form-group">
+		   <label for="comment" class="sr-only">Leave a comment</label>
+         <textarea type="text-area" class="col-12 col-md-9 text-area" name="comment" required></textarea>
+      </div>   
+	  	<button class="btn comment_button primory_btn col-12 col-md-9" type="submit">SUBMIT</button>	
+	</form>
+
+ <!-- Container --> 
 </div>
+

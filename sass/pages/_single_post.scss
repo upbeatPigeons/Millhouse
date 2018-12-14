@@ -10,20 +10,8 @@
 
     .single_post_content{
         
-      padding-top: 1rem;
+      margin-top: $dividing_margin;
     }
-}
-
-.title_underline{
-  height: 5px;
-  width: 100%;
-  background-color: $darkblue_color;
-  margin-bottom: 2rem;
-
-}
-
-.comment_container{
-  background-color: $white_color;
 }
 
 .divider_bar{
@@ -35,22 +23,30 @@
   }
 }
 
-// Commentform layout
-.comment_form{
-  padding: 3rem 1rem 3rem 1rem;
-  margin-bottom: 0;
 
-  .comment_field_title{
-    padding: 0.5rem 0 0.5rem 0;
-  }
+.comment_container{
+  background-color: $white_color;
+  padding-bottom: $dividing_margin;
 
-  .text-area{
-      height: 100px;
-      margin-bottom: 1rem;
-  } 
 }
 
+.divider_bar{
+  margin: 0;
+  padding: 0;
+
+  .divider{
+    @include text_divider
+  }
+}
+
+
 .edit_button, .delete_button{
-  margin: 1rem 1rem 2rem 1rem;
+  margin: 1rem 1rem 1rem 1rem;
+}
+
+.product_gallery{
+
+  margin-top: $dividing_margin;
+  margin-bottom: $dividing_margin;
 }
 
