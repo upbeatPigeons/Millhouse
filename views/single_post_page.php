@@ -114,7 +114,7 @@
 								<p class="author"><?= $comment->get_created_by();?></p>
 								<p class="date"><?= $comment->get_date(); ?></p>
 								<p class="content"><?= $comment->get_content(); ?></p>
-							
+						
 	      	  
 		      	  	<!-- If is user is an admin you see a remove comment button. If the button is pressed the, then $_POST["delete_comment"] is used to set of the if statement.  
 		      	  	Post Id is sent in the url to know which single post one has to be redirected back to. 
@@ -128,7 +128,7 @@
 									</form>
 				    		
 				    		<?php endif;?>
-					  	
+					  	  <hr>
 					
 							</div><!-- Col Comment-->
 						</div><!-- Row -->

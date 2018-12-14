@@ -14,8 +14,20 @@
     }
 }
 
+.divider_bar{
+  margin: 0;
+  padding: 0;
+
+  .divider{
+    @include text_divider
+  }
+}
+
+
 .comment_container{
   background-color: $white_color;
+  padding-bottom: $dividing_margin;
+
 }
 
 .divider_bar{
@@ -27,20 +39,6 @@
   }
 }
 
-// Commentform layout
-.comment_form{
-  padding: 3rem 1rem 3rem 1rem;
-  margin-bottom: 0;
-
-  .comment_field_title{
-    padding: 0.5rem 0 0.5rem 0;
-  }
-
-  .text-area{
-      height: 100px;
-      margin-bottom: 1rem;
-  } 
-}
 
 .edit_button, .delete_button{
   margin: 1rem 1rem 1rem 1rem;
