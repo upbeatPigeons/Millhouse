@@ -72,6 +72,8 @@ nested for clarity. Represents the same way the html is nested */
     
     .big_screen_image {
       align-items: center;
+      margin-left: $dividing_margin;
+      margin-right: $dividing_margin;
 
       img {
         max-height: 85vh;
