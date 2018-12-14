@@ -5,19 +5,25 @@ if ($_GET["action"] === "send") {
   $email = htmlspecialchars(stripslashes(trim($_POST["email"])));
   $subject = htmlspecialchars(stripslashes(trim($_POST["subject"])));
   $message = htmlspecialchars(stripslashes(trim($_POST["message"])));
-  $website = $_POST["website"];
 
   // Validations below
 
+  // Name validation: Cannot be empty and cannot contain invalid characters
   if(!preg_match("/^[A-Za-z .'-]+$/", $name)) {
     $name_error = "Invalid name";
   }
-  if(!preg_match("/^[A-Za-z .'-]+$/", $subject)) {
+
+  // Subject validation: Cannot be empty and cannot contain invalid characters
+  if(!preg_match("/^[A-Za-z0-9 .'-\?]+$/", $subject)) {
     $subject_error = "Invalid subject";
   }
+
+  // Email validation: Cannot be empty and cannot contain invalid characters
   if(!preg_match("/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/", $email)) {
     $email_error = "Invalid email";
   }
+
+  // Message validation: Cannot be empty
   if(strlen($message) === 0){
     $message_error = "Your message cannot be empty";
   }
@@ -28,11 +34,11 @@ if ($_GET["action"] === "send") {
     $body="From: $name \n Message: $message";
   // Change recipient to company email address later
     $recipient = "idaelisabethb@gmail.com";
-  //$mailheader = "From: $email \r\n";
+
     if (mail($recipient, $subject, $body)) {
-      header("Location: ../views/about_page.php?emailSent=true");
+      header("Location: ../views/about_page.php?email_sent=true");
     } else {
-      header("Location: ../views/about_page.php?emailSent=false");
+      header("Location: ../views/about_page.php?email_sent=false");
     }
   }
 }
