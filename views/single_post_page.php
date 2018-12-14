@@ -20,7 +20,7 @@
 	<main>
 		<section class="container-fluid single_post">
 			<div class="single_post_wrapper">
-				<div class="row justify-content-center">
+				
 			  	<!-- Here we need to fetch title of the post -->
 			 		<?php 
 			 			$post_methods = new PostMethods($pdo);
@@ -30,16 +30,9 @@
 						 $category = $_POST['category'];
 						
 			 		?>
-					<div class="col-12 col-md-9">	
-						<h1 class="page_title "><?= $post->get_title(); ?></h1>
-						<div class="title_underline"></div>
-					<!-- Col-->
-					</div>
-				<!--Row-->
-				</div>
 			
 				<div class="row justify-content-center">
-					<div class="col-12 col-md-9 single_post_image">
+					<div class="col-12 col-md-9 single_post_image text-center">
 						<img class="img-fluid" src="<?= $post->get_image();?>">
 					</div>
 				<!-- Row-->	
@@ -47,7 +40,8 @@
 			
 				<div class="row single_post_content justify-content-center">
 					<div class="col-12 col-md-9">
-						<p class="content">Created by: <?= $post->get_description();?></p>
+						<h1 class="main_title_single_post"><?= $post->get_title(); ?></h1>
+						<p class="content"><?= $post->get_description();?></p>
 						<p class="author">Created by: <?= $post->get_created_by();?></p>
 						<p class="date"><?= $post->get_date();?></p>
 					</div>		
@@ -80,21 +74,24 @@
 			  //Acces function ist_relevant_products to lsit the products 
 				$list_products_method = new ProductMethod($pdo);
 				$relevant_products = $list_products_method->list_relevant_products($category);
-				?>
-          <div class="row justify-content-around">
-						<?php foreach ($relevant_products as $product):?>
-							<div class="col-5 col-md-3 product">
+			?>
+      <div class="row justify-content-around product_gallery">
+				<?php foreach ($relevant_products as $product):?>
+					<div class="col-5 col-md-3 product">
+						<img class='product img-fluid' src='../images/<?= $product->get_image(); ?>'>
+						<p class="product_title"><?= $product->get_title();?></p>
+						<p class="product_price"><?= $product->get_price(); ?>;-</p>
+							
+					</div><!-- Col Comment-->
+  			<?php 
+					endforeach; ?>
+      </div><!-- Row -->
+		</section>
 
-								<img class='product img-fluid' src='../images/<?= $product->get_image(); ?>'>
-								<p class="product_title"><?= $product->get_title();?></p>
-								<p class="product_price"><?= $product->get_price(); ?>;-</p>
-								
-							</div><!-- Col Comment-->
-  		  		<?php 
-						endforeach; ?>
-        </div><!-- Row -->
-			</section>
-		
+		<aside class="container-fluid divider_bar">
+			<div class="divider"></div>
+		</aside>
+
 		<section class="comment_container container-fluid">
 			
 			<?php include "../includes/comment_form.php"?>
@@ -131,7 +128,7 @@
 									</form>
 				    		
 				    		<?php endif;?>
-					  	  <hr>
+					  	
 					
 							</div><!-- Col Comment-->
 						</div><!-- Row -->

@@ -34,7 +34,7 @@ require "../includes/validation_functions.php";
 				</div> <!-- End of col -->
 
 				<div class="d-none d-md-block col-md-6">
-					<img class="login_side_image w-100" src="../images/details.jpg" alt="Scented candle">
+					<img class="login_side_image w-100" src="../images/teaset.png" alt="Scented candle">
 				</div> <!-- end of col -->
 			</div> <!-- End of row -->
 
