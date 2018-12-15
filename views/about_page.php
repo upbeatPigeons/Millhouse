@@ -2,9 +2,14 @@
  
  session_start();
  include "../includes/head.php";
+ include "../includes/mail.php";
 ?>
 
 <body id="about_page">
+
+	<?php 
+	include "../includes/email_alerts.php";
+	?>
 
 	<header>
 		<?php
