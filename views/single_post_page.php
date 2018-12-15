@@ -5,6 +5,7 @@
     require_once "../classes/PostMethods.php";
 		require_once "../classes/CommentMethod.php";
 		require_once "../classes/ProductMethod.php";
+		require_once "../includes/comment_controller.php";
 		include "../includes/force_login.php";
 ?>
 
