@@ -2,62 +2,59 @@
 
 session_start();
 
-include "database_connection.php";
-include "../classes/CommentMethod.php";
+require_once "database_connection.php";
+require_once "../classes/CommentMethod.php";
 
 
-	$content = $_POST["comment"];
-	$created_by = $_SESSION["username"];
-	$postId = $_GET["id"];
-	$id = $_POST["delete_comment"];
+// Create comment
 
+switch ($_GET['action']) {
+  case 'create_comment':
 
+  $content = $_POST["comment"];
+  $created_by = $_SESSION["username"];
+  $postId = $_GET["id"];
+  $id = $_POST["delete_comment"];
 
-/* Delete comment function
-*  Received comment id as $_POST["delete_comment"]
-* If its set the function runs and return to single post page 
-* We send postID as $_GET in header
-*/
+  // Create new instance of class CommentMethods to have access to Class CommentMethods
 
-if(isset($_POST["delete_comment"])) {
-     
-	  //echo $id;
-    
-		$delete_comment_method = new CommentMethod($pdo);
-		$delete_comment_method->delete_comment($id);
-	
-header('Location: ../views/single_post_page.php?id='.$postId);
+  $create_method = new CommentMethod($pdo);
+
+  // If the user tries to submit an empty comment, show error message
+
+  if (empty($content)) {
+  $comment_error = "You cannot submit an empty comment";
+  } else {
+  // If the comment content is not empty, create the comment
+  $new_comment = new Comment();
+
+  // Set the comment properties
+  $new_comment->set_content($content);
+  $new_comment->set_created_by($created_by);
+  $new_comment->set_postId($postId);
+
+  // Save the comment in the database
+  $create_method->save_comment_to_database($new_comment);
+
+  // Go back to the post
+  header("Location: ../views/single_post_page.php?id=".$postId);
 }
+  break;
 
+  case 'delete_comment':
+    
+  $content = $_POST["comment"];
+  $created_by = $_SESSION["username"];
+  $postId = $_GET["id"];
+  $id = $_POST["delete_comment"];
 
-//Create new instance of class CommentMethods to have access to Class CommentMethods
+  $delete_comment_method = new CommentMethod($pdo);
+  $delete_comment_method->delete_comment($id);
 
-$create_method = new CommentMethod($pdo);
+  header("Location: ../views/single_post_page.php?id=".$postId);
 
-//create new instance of class Comment to later set properties of Comment
-$new_comment = new Comment();
+  break;
 
-/*
-* Set values for new comment through setter method
-* not setting date, cause we dont have a setter method for it
-*/
-
-if (!empty($content)) {
-
-$new_comment->set_content($content);
-$new_comment->set_created_by($created_by);
-$new_comment->set_postId($postId);
-
-/* 
-* Object $create_method accesses function save_comment_to_database 
-* from CommentMethod 
-* Saving data as object $new_comment
-*/
-$create_method->save_comment_to_database($new_comment);
-
-header('location: ../views/single_post_page.php?id='.$postId);
-	
-} 
-
+}
 
 ?>
