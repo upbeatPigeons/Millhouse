@@ -78,7 +78,7 @@
 			?>
       <div class="row justify-content-around product_gallery">
 				<?php foreach ($relevant_products as $product):?>
-					<div class="col-5 col-md-3 product">
+					<div class="col-5 col-md-2 product">
 						<img class='product img-fluid' src='../images/<?= $product->get_image(); ?>'>
 						<p class="product_title"><?= $product->get_title();?></p>
 						<p class="product_price"><?= $product->get_price(); ?>;-</p>
