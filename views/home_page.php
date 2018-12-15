@@ -31,7 +31,7 @@ $latest_post = $post_methods->list_latest_post();
 	</header>
 
 	<main>
-		<section class="container-fluid latest_post">
+		<section class="container-fluid general_wrapper">
 			<div class="text_wrapper">
 
 			  <div class="row justify-content-center">

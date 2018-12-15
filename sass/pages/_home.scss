@@ -1,11 +1,5 @@
 //This styles are specific styles for home.php
-
-
-.text_header{
-
-  padding: 0;
-}
-.latest_post{
+.general_wrapper{
 
   @include pink_background_gradient;
 
@@ -39,7 +33,14 @@
       }
     }
   }
-  
+  .blog_section {
+    margin-top: $dividing_margin;
+  }
+  .blog_title{
+    padding-top: $dividing_margin;
+
+  }
+
   //Overlay effect on post images
   
   .container{

@@ -1,8 +1,7 @@
    <div class="container">
-      <h3 class="smaller_title">Contact us</h3>
       <form class="login" action="mail.php" method="POST">
          <div class="form-group">
-            <label for="fname">First name</label>
+            <label for="fname">Name</label>
             <input type="text" class="form-control borders" id="fname" name="firstname" placeholder="Your name">
          </div>
     
