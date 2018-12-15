@@ -27,10 +27,11 @@
   //Single post 
   
   .latest_post_content{
-    margin-bottom: $dividing_margin;
+    //margin-bottom: $dividing_margin;
 
     .latest_post_text{
-    
+      padding-bottom: $dividing_margin;
+      padding-top: $dividing_margin;
       background-color: $darkblue_color;
       
       .read_more_button{
