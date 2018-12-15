@@ -1,0 +1,18 @@
+
+.about_container{
+  @include pink_background_gradient;
+
+  .text_wrapper{
+    @include wrapper;
+
+    .latest_post_image{
+      @include image_box_shadow;
+      margin-bottom: $dividing_margin;
+    }
+  }
+}
+
+.contact_details{
+  margin-top: $dividing_margin;
+}
+

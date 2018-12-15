@@ -1,11 +1,5 @@
 //This styles are specific styles for home.php
-
-
-.text_header{
-
-  padding: 0;
-}
-.latest_post{
+.general_wrapper{
 
   @include pink_background_gradient;
 
@@ -27,11 +21,11 @@
   //Single post 
   
   .latest_post_content{
-    margin-bottom: $dividing_margin;
+    //margin-bottom: $dividing_margin;
 
     .latest_post_text{
-      padding-top: $dividing_margin;
       padding-bottom: $dividing_margin;
+      padding-top: $dividing_margin;
       background-color: $darkblue_color;
       
       .read_more_button{
@@ -39,11 +33,19 @@
       }
     }
   }
-  
+  .blog_section {
+    margin-top: $dividing_margin;
+  }
+  .blog_title{
+    padding-top: $dividing_margin;
+
+  }
+
   //Overlay effect on post images
   
   .container{
     padding: 0;
+    margin-bottom: 1rem;
   }
   .overlay {
     position: absolute;
@@ -112,5 +114,10 @@
       } 
 
     } 
+
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      
+     }
 
 

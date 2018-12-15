@@ -1,10 +1,10 @@
 /* Everything that is contained inside the same element as the background-img is
 nested for clarity. Represents the same way the html is nested */
 .small_screen_background_image {
-  height: 800px;
+  height: 600px;
   background-image: 
     linear-gradient(
-      transparent 60%,
+      transparent 40%,
       $palepink_color
     ),
     linear-gradient(
@@ -26,7 +26,7 @@ nested for clarity. Represents the same way the html is nested */
 
   .flex_bottom_container {
     display: flex;
-    height: 85%;
+    height: 110%;
     flex-direction: column;
     justify-content: flex-end;
   
@@ -47,15 +47,16 @@ nested for clarity. Represents the same way the html is nested */
   width: 100%;
   background-color: $palepink_color;
   padding: 40px 0 40px 0;
+  text-align: center;
   
   .hero {
     max-width: 300px;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     @include sides_auto_margin;                       
   }
 
   .hr_imitation {
-    height: 5px;
+    height: 2px;
     width: 20%;
     background-color: $darkblue_color;
     @include sides_auto_margin;
@@ -72,7 +73,7 @@ nested for clarity. Represents the same way the html is nested */
     
     .big_screen_image {
       align-items: center;
-
+    
       img {
         max-height: 85vh;
         @include image_box_shadow;
@@ -83,14 +84,21 @@ nested for clarity. Represents the same way the html is nested */
       align-items: center;
 
       .big_screen_logo {
-        padding-bottom: 8px;
+        margin-left: 4rem;
+        margin-right: 4rem;
+        padding-bottom: 15px;
         border-bottom: 6px solid $darkblue_color;
       }
 
       .big_screen_button_container {
         padding: 15px;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+
+        .button_container {
+          padding: 10px;
+
+        }
       }
     }
   }

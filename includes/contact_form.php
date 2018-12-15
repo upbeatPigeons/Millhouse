@@ -3,9 +3,7 @@
 require_once "validation_functions.php";
 
 ?>
-
    <div class="container">
-      <h3 class="smaller_title">Contact us</h3>
       <form class="login" action="about_page.php?action=send" method="POST">
          <div class="form-group">
             <label for="name">Name</label>
