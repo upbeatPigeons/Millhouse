@@ -3,6 +3,7 @@
  session_start();
  include "../includes/head.php";
  include "../includes/mail.php";
+ include "../includes/force_login.php";
 ?>
 
 <body id="about_page">
