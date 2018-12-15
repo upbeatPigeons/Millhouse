@@ -32,8 +32,11 @@ require "includes/head.php"
     </div> <!-- Background-image for smaller screens -->
 
     <div class="hero_container d-md-none">
-      <div class="hero">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat magni necessitatibus at optio, quod adipisci modi veritatis impedit vero. Reprehenderit? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, aperiam.
+      <div class="hero content">
+      Drivkraften bak Millhouse er de uendelige mulighetene innen 
+      interiørdesign og bolig-innredning, og gleden av å utforske disse. 
+      Vi er overbevist om at et godt innredet hjem vil øke livskvaliteten, 
+      og er på evig leting etter inspirasjon over hele verden. 
 
       </div>
       <div class="hr_imitation"></div>
@@ -50,7 +53,7 @@ require "includes/head.php"
         <div class="row justify-content-around">
 
           <!-- Container for image on bigger screens -->
-          <div class="d-none d-md-flex col-md-7 col-lg-5 justify-content-center big_screen_image">
+          <div class="d-none d-md-flex col-md- col-lg-5 justify-content-center big_screen_image">
             <img class="img-fluid" src="images/index_tablet.png" alt="Millhouse Store Responsive image">
           </div>
 
@@ -67,7 +70,7 @@ require "includes/head.php"
               <div class="big_screen_button_container">
 
                 <div class="button_container">             
-                  <button type="button" onclick="location.href='views/login_page.php?action=login';" class="btn primory_btn_inverse">
+                  <button type="button" onclick="location.href='views/login_page.php?action=login';" class="btn primory_btn">
                     LOG IN
                   </button>
                 </div> 
