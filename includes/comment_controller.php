@@ -6,29 +6,6 @@ require_once "database_connection.php";
 require_once "../classes/CommentMethod.php";
 
 
-	$content = $_POST["comment"];
-	$created_by = $_SESSION["username"];
-	$postId = $_GET["id"];
-	$id = $_POST["delete_comment"];
-
-
-
-/* Delete comment function
-*  Received comment id as $_POST["delete_comment"]
-* If its set the function runs and return to single post page 
-* We send postID as $_GET in header
-*/
-
-if(isset($_POST["delete_comment"])) {
-     
-	  //echo $id;
-    
-		$delete_comment_method = new CommentMethod($pdo);
-		$delete_comment_method->delete_comment($id);
-	
-header("Location: ../views/single_post_page.php?id=".$postId);
-}
-
 // Create comment
 
 switch ($_GET['action']) {
@@ -62,6 +39,20 @@ switch ($_GET['action']) {
   // Go back to the post
   header("Location: ../views/single_post_page.php?id=".$postId);
 }
+  break;
+
+  case 'delete_comment':
+    
+  $content = $_POST["comment"];
+  $created_by = $_SESSION["username"];
+  $postId = $_GET["id"];
+  $id = $_POST["delete_comment"];
+
+  $delete_comment_method = new CommentMethod($pdo);
+  $delete_comment_method->delete_comment($id);
+
+  header("Location: ../views/single_post_page.php?id=".$postId);
+
   break;
 
 }

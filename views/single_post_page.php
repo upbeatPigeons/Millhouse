@@ -124,7 +124,7 @@
 		      	  
 			      		<?php if ($_SESSION["admin"] == 1) :?>
 								
-									<form action="../includes/comment_controller.php?id=<?= $post->get_id();?>"method="post">
+									<form action="../includes/comment_controller.php?action=delete_comment&id=<?= $post->get_id();?>"method="post">
               			<input type="hidden" value="<?= $comment->get_id();?>" name="delete_comment">
 		              	<button type="submit" name="remove" value="remove" class="secondary_btn"><i class="fas fa-trash-alt"></i></button>
 									</form>
