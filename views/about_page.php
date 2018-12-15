@@ -50,7 +50,7 @@
 				</div>
 
 				<div class="row justify-content-center contact_details">
-					<div class="col-11 col-md-6">
+					<div class="col-11 col-md-">
 					  <h1 class="main_title_single_post latest_blogpost_title">Get in Touch</h1>
 						<p class="content">Vi på Eske hjelper gjerne med større og 
 						mindre innrednings-prosjekter. Synes du det er vanskelig å 
