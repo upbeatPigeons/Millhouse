@@ -53,12 +53,12 @@ require "includes/head.php"
         <div class="row justify-content-around">
 
           <!-- Container for image on bigger screens -->
-          <div class="d-none d-md-flex col-md- col-lg-5 justify-content-center big_screen_image">
+          <div class="d-none d-md-flex col-md-8 order-md-12 col-lg-5 justify-content-center big_screen_image">
             <img class="img-fluid" src="images/index_tablet.png" alt="Millhouse Store Responsive image">
           </div>
 
           <!-- Wrapper for logo and buttons on bigger screens -->
-          <div class="d-none d-md-flex col-md-4 col-lg-5 big_screen_logo_btn_container">
+          <div class="d-none d-md-flex col-md-8 order-md-1 col-lg-5 big_screen_logo_btn_container">
 
             <div>
               <!--Logo for bigger screens-->
