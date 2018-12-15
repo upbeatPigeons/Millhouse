@@ -2,6 +2,7 @@
 session_start();
 include "../includes/head.php";
 include "../includes/actions_posts.php";
+include "../includes/force_login.php";
 ?>
 
 <body id="create_post_page">

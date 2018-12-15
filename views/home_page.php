@@ -4,6 +4,7 @@
  include "../includes/head.php";
  require_once "../includes/database_connection.php";
  require_once "../classes/PostMethods.php";
+ include "../includes/force_login.php";
 ?>
 
 <?php 

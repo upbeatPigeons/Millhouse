@@ -1,6 +1,7 @@
 <?php
     session_start();
-    include "../includes/head.php";  
+    include "../includes/head.php"; 
+    include "../includes/force_login.php"; 
 ?>
 
 
