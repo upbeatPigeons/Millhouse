@@ -55,9 +55,9 @@ $latest_post = $post_methods->list_latest_post();
 
 					<div class="col-11 col-md-4 order-md-1 latest_post_text">
 						<!--latest post title from Post.php-->
-						<h1 class="main_title title"><?= $latest_post->get_title();?></h1>
+						<h1 class="title_inverse latest_blogpost_title "><?= $latest_post->get_title();?></h1>
 						<!--latest post summary or text from Post.php-->
-						<p class="body1_inverse">
+						<p class="body1_inverse latest_post_content">
 							<?php 
 								// Print only the summary of the latest post content
 								$text = $latest_post->get_description();
@@ -89,7 +89,7 @@ $latest_post = $post_methods->list_latest_post();
 				<div class="row justify-content-center text-center">
 					<?php foreach ($all_posts as $post): ?>
 					  <!-- Mobile blog display -->
-						<div class="d-block col-11 d-lg-none blog_post">
+						<div class="d-block col-10 d-lg-none blog_post">
 							<div class="blog_image">
 								<img class="img-fluid" src="<?= $post->get_image();?>">
 							</div>
