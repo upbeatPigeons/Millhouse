@@ -20,7 +20,7 @@ class Product
 
     }
 
-    // Getter functions to access private properties of class Product
+    // Getter methods to access private properties of class Product
     public function get_id(){
 			 
       return $this->id;
