@@ -1,5 +1,6 @@
 <?php
-require "includes/head.php"
+require "includes/head.php";
+require "includes/validation_functions.php";
 ?>
 
 <body id="index_page">
@@ -17,6 +18,21 @@ require "includes/head.php"
         <!-- Container for buttons  -->
         <div class="small_screen_button_container justify-content-between">
          
+          <form class="login" action="../includes/login_controller.php" method="POST">
+            <div class="form-group">
+              <label for="username" class="sr-only">Enter your username</label>
+              <input type="text" class="form-control borders" name="username" id="username" placeholder="Username" required>
+            </div>         
+
+            <div class="form-group">
+              <label for="password" class="sr-only">Enter your password</label>
+              <input type="password" class="form-control borders" name="password" id="password" placeholder="Password" required>
+              <!-- Gets error and formats it -->
+              <?php show_error_messages($_GET["error"]); ?> 
+            </div>
+            <button type="submit" name="login" value="Log in" class="primory_btn_inverse btn btn-m btn-block">SIGN IN</button>
+          </form>
+         <!--
           <button type="button" onclick="location.href='views/login_page.php?action=login';" class="btn primory_btn_inverse">
             LOG IN
           </button>
@@ -24,6 +40,7 @@ require "includes/head.php"
           <button type="button" onclick="location.href='views/login_page.php?action=register';" class="btn primory_btn">
             REGISTER
           </button>
+          -->
         
         </div> <!-- Container for buttons  -->
 
@@ -39,7 +56,7 @@ require "includes/head.php"
       og er på evig leting etter inspirasjon over hele verden. 
 
       </div>
-      <div class="hr_imitation"></div>
+      <div class="hr_imitation"></div> 
 
       <?php
       require "includes/footer.php"

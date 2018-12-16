@@ -29,7 +29,6 @@ require "../includes/validation_functions.php";
           } else { 
 						/* Show both if no */
 						include "../includes/login_form.php"; 
-						
     				include "../includes/register_form.php";
 					}?>
 				</div> <!-- End of col -->
