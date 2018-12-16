@@ -5,6 +5,7 @@ require_once "validation_functions.php";
 ?>
 
 <?php 
+// Retrive the post we are going to edit with its ID
 $post_methods = new PostMethods($pdo);
 $post = $post_methods->list_single_post($_GET["id"]);
 ?>

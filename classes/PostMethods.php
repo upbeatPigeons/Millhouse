@@ -5,14 +5,14 @@ require_once "Post.php";
 class PostMethods
 {
   private $pdo;
-  /* Inject the pdo connection so it is available inside of the class
-   * so we can call it with '$this->pdo', always available inside of the class
-   */
+
+  // PDO object gets passed as a parameter to encapsulate the database operations for Posts inside this class
   public function __construct($pdo)
   {
     $this->pdo = $pdo;
   }
 
+  // Creates a post
   public function create(Post $new_post)
   {    
   	$statement = $this->pdo->prepare("INSERT INTO posts (title, description, image, created_by, date, category) VALUES (:title, :description, :image, :created_by, :date, :category)");
@@ -26,6 +26,7 @@ class PostMethods
     ]);
   }
 
+  // Lists all posts 
   public function list_all_posts()
   {
     try {
@@ -45,7 +46,7 @@ class PostMethods
    }
   }
 
-
+  // Lists a single post
   public function list_single_post($id)
   {
     try {
@@ -61,6 +62,7 @@ class PostMethods
     }
   } 
 
+  // Lists latest post
   public function list_latest_post()
   {
     try {
@@ -74,7 +76,7 @@ class PostMethods
     }
   }
 
-
+  // Deletes a post
   public function delete_posts($id) 
   {
     $statement = $this->pdo->prepare("DELETE from posts WHERE id = :id; DELETE from comments WHERE post_id = :id;");
@@ -83,6 +85,7 @@ class PostMethods
     ]);
   }
 
+  // Edits a post
   public function edit_post(Post $edited_post)
   {
     try{

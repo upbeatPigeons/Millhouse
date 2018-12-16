@@ -5,8 +5,11 @@ session_start();
 require_once "database_connection.php";
 require_once "../classes/CommentMethod.php";
 
+/*
+* Controller file with the actions and validations for creating and deleting a comment.
+* Is included on single_post_page.
+*/
 
-// Create comment
 
 switch ($_GET['action']) {
   case 'create_comment':

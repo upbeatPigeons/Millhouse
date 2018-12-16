@@ -3,9 +3,12 @@ session_start();
 require_once "../classes/Post.php";
 require_once "../classes/PostMethods.php";
 require_once "database_connection.php";
+
 /*
-* Controller file 
+* Controller file with the actions and validations for creating, editing and deleting a post.
+* Is included on create_post_page and edit_post_page.
 */
+
 switch ($_GET["action"]) {
   case 'create':
   

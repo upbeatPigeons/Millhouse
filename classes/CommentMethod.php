@@ -2,21 +2,18 @@
 
 require "Comment.php";
 
-class CommentMethod{
-
-// now when we use class Comment we call with parameter $pdo	
+class CommentMethod
+{
 	
 	private $pdo;
 	
+  // PDO object gets passed as a parameter to encapsulate the database operations for Comments inside this class
 	public function __construct($pdo){
 		
     $this->pdo =$pdo;
 	}
 
-	/*We create $new_comment from class Comment
-	* new function to save comment to database
-	*/
-		
+	// Saves the comment to database.
 	public function save_comment_to_database(Comment $new_comment){
 		
 		$statement =$this->pdo->prepare("INSERT INTO comments(content, post_id, created_by, date) VALUES(:content, :post_id, :created_by, :date)");
@@ -29,7 +26,7 @@ class CommentMethod{
     ]);
   }
 	
-  // new function to list all comments
+ // List all comments as instances of the Comment class
  public function list_all_comments($postId)
  {
 	 $statement= $this->pdo->prepare("SELECT * FROM comments WHERE post_id = :post_id ORDER BY date DESC");
@@ -53,7 +50,7 @@ class CommentMethod{
  }
 	
 	
-	//new function to delete a comment
+	//Deletes a comment
   public function delete_comment($id)
   {
 	 $statement = $this->pdo->prepare("DELETE from comments WHERE id = :id ");

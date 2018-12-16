@@ -18,7 +18,7 @@ class Register
 
   public function get_password() 
   {
-    //Hashing the register_password immiditaly
+    // Hashing the register_password immediately
     return password_hash($this->register_password, PASSWORD_DEFAULT);  
   }
 

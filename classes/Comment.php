@@ -9,24 +9,21 @@
 
 class Comment
 {
-//Include all the properties that a class has
-	
     private $id;
 		private $content;
 	  private $postId;
 		private $created_by;
 	  private $date;
 	
-
-	// Because we will use FETCH:: CLASS don't need to include parameters in construct
+	// Because we use FETCH:: CLASS, we don't include parameters in the constructor
     public function __construct(){
 	
- //date() creates a datestamp automatically
+  // We only initialize the date in the constructor
 			$this->date = date("Y-m-d H:i:s");
     }
 	
 	
-	//getter functions to access private properties of class Comment
+	// Getter methods below to access private properties of class Comment
 	   public function get_id(){
 			 
 			 return $this->id;
@@ -52,11 +49,11 @@ class Comment
 			 return $this->date;
 		 }
 	
-//setter functions 
+// Setter methods below
 	
-     public function set_content($content){
+    public function set_content($content){
 			   $this->content = $content;	 
-		 }
+		}
 	  
 		public function set_postId($postId){
 			 	

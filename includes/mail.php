@@ -1,4 +1,10 @@
 <?php 
+
+/*
+* Validates the form submissions and sends the email if there are no errors
+* Is used on about_page.php
+*/
+
 if ($_GET["action"] === "send") {
 
   $name = htmlspecialchars(stripslashes(trim($_POST["name"])));
@@ -29,7 +35,6 @@ if ($_GET["action"] === "send") {
   }
 
   // If there are no errors, send the email
-
   if(!isset($name_error) && !isset($subject_error) && !isset($email_error) && !isset($message_error)) {
     $body="From: $name \n Message: $message";
   // Change recipient to company email address later
