@@ -16,8 +16,9 @@ require "includes/validation_functions.php";
       <!-- Container for elements we want to flex-end -->
       <div class="flex_bottom_container">
         <!-- Container for buttons  -->
+
         <div class="small_screen_button_container justify-content-between">
-         
+
           <form class="login" action="../includes/login_controller.php" method="POST">
             <div class="form-group">
               <label for="username" class="sr-only">Enter your username</label>
@@ -33,7 +34,7 @@ require "includes/validation_functions.php";
             <button type="submit" name="login" value="Log in" class="primory_btn_inverse btn btn-m btn-block">SIGN IN</button>
           </form>
 
-          <div>Don't have an account?<a href="views/login_page.php?action=register"> Sign up here</a></div>
+          <div class="login_text_box content">Don't have an account?<a href="views/login_page.php?action=register"> Sign up here</a></div>
          
         </div> <!-- Container for buttons  -->
 
@@ -46,7 +47,6 @@ require "includes/validation_functions.php";
       <?php
       require "includes/footer.php"
       ?>
-
     </div>
 
   <div class="desktop_background_gradient">
