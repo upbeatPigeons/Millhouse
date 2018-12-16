@@ -30,10 +30,26 @@ p{
 
 //Headers & subheaders
 
+.title{
+  color: $darkblue_color;
+  font-size: 1.5rem;
+}
+
+.title_inverse{
+  color: $white_color;
+  font-size: 1.5rem;
+}
+
 .subheading{
   color: $darkblue_color;
-  font-size: 10rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
 
+
+.subheading2{
+  color: $palepink_color;
+  font-size: 1.2rem;
 }
 
 // Typography for main text
@@ -52,8 +68,7 @@ p{
       color: $darkblue_color;
       font-weight: 600;
     }
-
-}
+  }
 
 
 
@@ -85,7 +100,7 @@ p{
 }
 
 .page_title, .footer_title {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
 
 }
@@ -95,24 +110,6 @@ p{
 
 }
 
-.main_title {
-  font-size: 1.5rem;
-  color: $white_color;
-
-}
-.main_title_single_post{
-  font-size: 1.5rem;
-  color: $darkblue_color;
- 
-
-}
-.carousel_title {
-  font-size: 2rem;
-  color: $white_color;
-  margin-left: 0;
-  margin-left: 0;
-
-}
 
 .product_title, .product_price {
   font-size: 1.125rem;
@@ -133,33 +130,14 @@ p{
   font-style: italic;
   font-weight: 500;
   margin-bottom: -2px; 
-
 }
 
-.content{
-  //color: $darkblue_color;
-  color: $darkblue_color;
+//Tablet view
 
-}
+@media (min-width: 992px) {
 
-.carousel_content, .latest_post_content, .footer_text{
-  color: $white_color;
+  .title, .title_inverse{
+    font-size: 2rem;
 
-}
-
-.footer_title{
-  color: $palepink_color;
-}
-
-.footer_text{
-  font-weight: 500;
-
-}
-
-
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { 
-  
-      
+  }
 }
