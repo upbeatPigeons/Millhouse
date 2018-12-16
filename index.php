@@ -32,16 +32,9 @@ require "includes/validation_functions.php";
             </div>
             <button type="submit" name="login" value="Log in" class="primory_btn_inverse btn btn-m btn-block">SIGN IN</button>
           </form>
-         <!--
-          <button type="button" onclick="location.href='views/login_page.php?action=login';" class="btn primory_btn_inverse">
-            LOG IN
-          </button>
 
-          <button type="button" onclick="location.href='views/login_page.php?action=register';" class="btn primory_btn">
-            REGISTER
-          </button>
-          -->
-        
+          <div>Don't have an account?<a href="views/login_page.php?action=register"> Sign up here</a></div>
+         
         </div> <!-- Container for buttons  -->
 
       </div> <!-- Container for elements we want to flex-end -->
@@ -49,14 +42,6 @@ require "includes/validation_functions.php";
     </div> <!-- Background-image for smaller screens -->
 
     <div class="hero_container d-md-none">
-      <div class="hero content">
-      Drivkraften bak Millhouse er de uendelige mulighetene innen 
-      interiørdesign og bolig-innredning, og gleden av å utforske disse. 
-      Vi er overbevist om at et godt innredet hjem vil øke livskvaliteten, 
-      og er på evig leting etter inspirasjon over hele verden. 
-
-      </div>
-      <div class="hr_imitation"></div> 
 
       <?php
       require "includes/footer.php"
@@ -86,16 +71,25 @@ require "includes/validation_functions.php";
               <!-- Container for buttons  -->
               <div class="big_screen_button_container">
 
-                <div class="button_container">             
-                  <button type="button" onclick="location.href='views/login_page.php?action=login';" class="btn primory_btn">
-                    LOG IN
-                  </button>
-                </div> 
+             <div class="button_container">   
+
+              <form class="login" action="../includes/login_controller.php" method="POST">
+            <div class="form-group">
+              <label for="username" class="sr-only">Enter your username</label>
+              <input type="text" class="form-control borders" name="username" id="username" placeholder="Username" required>
+            </div>         
+
+            <div class="form-group">
+              <label for="password" class="sr-only">Enter your password</label>
+              <input type="password" class="form-control borders" name="password" id="password" placeholder="Password" required>
+              <!-- Gets error and formats it -->
+              <?php show_error_messages($_GET["error"]); ?> 
+            </div>
+            <button type="submit" name="login" value="Log in" class="primory_btn_inverse btn btn-m btn-block">SIGN IN</button>
+          </form>
+
+          <div>Don't have an account?<a href="views/login_page.php?action=register"> Sign up here</a></div>          
                 
-                <div class="button_container">  
-                  <button type="button" onclick="location.href='views/login_page.php?action=register';" class="btn primory_btn">
-                    REGISTER
-                  </button>
                 </div>  
 
               </div> <!-- Container for buttons  -->
