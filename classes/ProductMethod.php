@@ -6,17 +6,13 @@ class ProductMethod{
 
   private $pdo;
 
+  // PDO object gets passed as a parameter to encapsulate the database operations for Products inside this class
   public function __construct($pdo){
-   
-    /* Making pdo connection available within this class by 
-     * We can call it with $this-> pdo
-     */ 
 
     $this->pdo =$pdo;
   } 
   
-  /* Creating new function to be able to list the products with relevant category to the post */
-
+  // Lists relevant products
   public function list_relevant_products($category){
 
     try{
@@ -27,7 +23,7 @@ class ProductMethod{
     );
       /* 
 		  * We will use FETCH_CLASS to return an array consisting of       
-		  * objects from the Comment class
+		  * objects from the Product class
       * FETCH_CLASS fetches database rows into an object
       */
       return $statement->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, "Product");

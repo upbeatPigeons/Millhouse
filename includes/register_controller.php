@@ -4,7 +4,10 @@ session_start();
 require_once ("database_connection.php");
 require_once ("../classes/DatabaseFunctions.php"); 
 
-/* register_controller is the "central" for Register and here is were al the functions in Register are initialized and the instances of both classes RegisterDataSetup and Register are initalized. Register_controller also contains error-handling and $_POST Globals */
+/* Register_controller is the "central" for Register
+* Here is where all the functions in Register are initialized and the instances of both classes RegisterDataSetup and Register are initalized. 
+* Register_controller also contains error-handling and $_POST Globals 
+*/
 
 $register_username = $_POST["username"];
 $register_password = $_POST["password"]; 

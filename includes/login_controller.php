@@ -4,6 +4,10 @@ session_start();
 require_once ("database_connection.php");
 require_once ("../classes/DatabaseFunctions.php");
 
+/*
+* Controller file that retrieves the user from the database, checks if the password matches and saves the user to the session
+*/
+
 $login_username = $_POST["username"];
 $login_password = $_POST["password"];
 

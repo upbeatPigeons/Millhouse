@@ -9,7 +9,6 @@
 
 class Post 
 {
-  // Properties below
 	private $title;
 	private $description;
 	private $created_by;
@@ -18,10 +17,10 @@ class Post
 	private $category;
 	private $id;
 
-  // Method to create a new post. 
-	public function __construct() 
-	{
-		// we only initialize the date in the constructor
+  // Because we use FETCH:: CLASS, we don't include parameters in the constructor 
+	public function __construct() {
+
+	// We only initialize the date in the constructor
 		$this->date = date("Y-m-d H:m"); // Prints SQL friendly date 2018-11-22 18:11:24
 	}
 
@@ -78,7 +77,6 @@ class Post
 	}
 
 }
-
 
 
 

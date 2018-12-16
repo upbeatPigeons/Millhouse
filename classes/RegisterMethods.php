@@ -1,6 +1,5 @@
 <?php
 
-
 require_once ('Register.php');
 //Register uses the incoming data from Class RegisterDataSetup and is controlled by register_controller
 
@@ -8,14 +7,13 @@ class RegisterMethods
 {
   private $pdo;
 
-  /* Inject the pdo connection so it is available inside of the class
-   * so we can call it with '$this->pdo', always available inside of the class
-   */
+  // PDO object gets passed as a parameter to encapsulate the database operations for Register inside this class
   public function __construct($pdo)
   {
     $this->pdo = $pdo;
   }
   
+  // Checks for the user in the database
   public function check_for_user_in_database(Register $new_user)
   {  
     //Construct the SQL statement and prepare it.
@@ -31,6 +29,7 @@ class RegisterMethods
 
   }
 
+  // Registers the user 
   public function register_user(Register $new_user) 
   {
     //Prepare our INSERT statement.
