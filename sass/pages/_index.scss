@@ -109,12 +109,17 @@ nested for clarity. Represents the same way the html is nested */
       }
 
       .big_screen_button_container {
+        margin-top: 1rem;
         padding: 15px;
         display: flex;
         justify-content: center;
 
         .button_container {
           padding: 10px;
+
+          .login{
+            padding-bottom: 1rem;
+          }
 
         }
       }
