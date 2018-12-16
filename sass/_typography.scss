@@ -15,7 +15,7 @@ p {
     padding: 0;
 }
 
-h1{
+h1, h3{
   font-family: $serif;
 }
 
@@ -24,7 +24,7 @@ h2, p, {
 }
 
 p{
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 
 
@@ -46,10 +46,14 @@ p{
   text-transform: uppercase;
 }
 
-
 .subheading2{
   color: $palepink_color;
   font-size: 1.2rem;
+}
+
+.subheading_serif{
+  color: $darkblue_color;
+  font-size: 1.125rem;
 }
 
 // Typography for main text
@@ -63,6 +67,11 @@ p{
 }
 
 .body2{
+  color: $darkblue_color;
+  font-style: italic;
+  }
+
+.body2_link{
   font-style: italic;
     &:hover{
       color: $darkblue_color;
@@ -70,67 +79,9 @@ p{
     }
   }
 
-
-
-//font family sans-serif
-
-.page_title, .footer_title ,
-.date, .autor, .content, .footer_text, 
-.carousel_content .product_price,
-.carousel_content, .latest_post_content{
-  font-family: $sans_serif;
-
-}
-
-// font family serif
-
-.main_title, .main_title_single_post, 
-.product_title, .product_price, 
-.carousel_title{
-  font-family: $serif;
-
-}
-
-//font-size{
-.date, .autor, .content, .footer_text, 
-.carousel_content .product_price,
-.carousel_content, .latest_post_content{
-  font-size: 1rem; 
-
-}
-
-.page_title, .footer_title {
-  font-size: 1.5rem;
-  text-transform: uppercase;
-
-}
-
-.page_title {
-  color: $darkblue_color;
-
-}
-
-
-.product_title, .product_price {
-  font-size: 1.125rem;
-  text-align: center;
-  color: $darkblue_color;
-
+  .body3{
+    color: $palepink_color;
   }
- 
-
-.date{
-  color: $palepink_color;
-  font-weight: 600;
-
-}
-
-.author{
-  color: $darkblue_color;
-  font-style: italic;
-  font-weight: 500;
-  margin-bottom: -2px; 
-}
 
 //Tablet view
 
@@ -138,6 +89,9 @@ p{
 
   .title, .title_inverse{
     font-size: 2rem;
+  }
 
+  .body1, .body2, .body2_link, .body3{
+    font-size: 1rem;
   }
 }

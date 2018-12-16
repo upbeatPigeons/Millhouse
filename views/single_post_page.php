@@ -42,10 +42,13 @@
 			
 				<div class="row single_post_content justify-content-center">
 					<div class="col-12 col-md-9">
-						<h1 class="main_title_single_post"><?= $post->get_title(); ?></h1>
-						<p class="content"><?= $post->get_description();?></p>
-						<p class="author">Created by: <?= $post->get_created_by();?></p>
-						<p class="date"><?= $post->get_date();?></p>
+						<h1 class="title"><?= $post->get_title(); ?></h1>
+						<div class="underline"></div>
+						<p class="body1"><?= $post->get_description();?></p>
+						<div class="create_post_info">
+							<p class="body2">Created by: <?= $post->get_created_by();?></p>
+							<p class="body3"><?= $post->get_date();?></p>
+            </div>	
 					</div>		
 				</div>
 
@@ -79,10 +82,10 @@
 			?>
       <div class="row justify-content-around product_gallery">
 				<?php foreach ($relevant_products as $product):?>
-					<div class="col-5 col-md-2 product">
+					<div class="col-5 col-md-2 product text-center">
 						<img class='product img-fluid' src='../images/<?= $product->get_image(); ?>'>
-						<p class="product_title"><?= $product->get_title();?></p>
-						<p class="product_price"><?= $product->get_price(); ?>;-</p>
+						<h3 class="subheading_serif"><?= $product->get_title();?></h3>
+						<h3 class="subheading_serif"><?= $product->get_price(); ?>-;</h3>
 							
 					</div><!-- Col Comment-->
   			<?php 
@@ -113,9 +116,14 @@
 					<div class="row justify-content-center">
 
 						<div class="col-12 col-md-9 comment">
-								<p class="author"><?= $comment->get_created_by();?></p>
-								<p class="date"><?= $comment->get_date(); ?></p>
-								<p class="content"><?= $comment->get_content(); ?></p>
+							<div class="comment_info">
+								<p class="body2"><?= $comment->get_created_by();?></p>
+								<p class="body3"><?= $comment->get_date(); ?></p>
+							</div>
+							<div class="comment_content">
+								<p class="body1"><?= $comment->get_content(); ?></p>
+							</div>	
+							
 						
 	      	  
 		      	  	<!-- If is user is an admin you see a remove comment button. If the button is pressed the, then $_POST["delete_comment"] is used to set of the if statement.  

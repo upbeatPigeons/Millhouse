@@ -15,5 +15,5 @@
 </form>
 
  <div class="login_text_box content">   
-    <p class="body1">Don't have an account?<a class="body2" href="views/login_page.php?action=register"> Sign up here</p></a>
+    <p class="body1">Don't have an account?<a class="body2_link" href="views/login_page.php?action=register"> Sign up here</p></a>
 </div>   
