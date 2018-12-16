@@ -1,5 +1,6 @@
 <?php
-require "includes/head.php"
+require "includes/head.php";
+require "includes/validation_functions.php";
 ?>
 
 <body id="index_page">
@@ -15,16 +16,10 @@ require "includes/head.php"
       <!-- Container for elements we want to flex-end -->
       <div class="flex_bottom_container">
         <!-- Container for buttons  -->
-        <div class="small_screen_button_container justify-content-between">
-         
-          <button type="button" onclick="location.href='views/login_page.php?action=login';" class="btn primory_btn_inverse">
-            LOG IN
-          </button>
 
-          <button type="button" onclick="location.href='views/login_page.php?action=register';" class="btn primory_btn">
-            REGISTER
-          </button>
-        
+        <div class="small_screen_button_container justify-content-between">
+          <?php include "includes/login_form.php"; ?>
+         
         </div> <!-- Container for buttons  -->
 
       </div> <!-- Container for elements we want to flex-end -->
@@ -32,19 +27,10 @@ require "includes/head.php"
     </div> <!-- Background-image for smaller screens -->
 
     <div class="hero_container d-md-none">
-      <div class="hero content">
-      Drivkraften bak Millhouse er de uendelige mulighetene innen 
-      interiørdesign og bolig-innredning, og gleden av å utforske disse. 
-      Vi er overbevist om at et godt innredet hjem vil øke livskvaliteten, 
-      og er på evig leting etter inspirasjon over hele verden. 
-
-      </div>
-      <div class="hr_imitation"></div>
 
       <?php
       require "includes/footer.php"
       ?>
-
     </div>
 
   <div class="desktop_background_gradient">
@@ -69,19 +55,9 @@ require "includes/head.php"
               <!-- Container for buttons  -->
               <div class="big_screen_button_container">
 
-                <div class="button_container">             
-                  <button type="button" onclick="location.href='views/login_page.php?action=login';" class="btn primory_btn">
-                    LOG IN
-                  </button>
-                </div> 
-                
-                <div class="button_container">  
-                  <button type="button" onclick="location.href='views/login_page.php?action=register';" class="btn primory_btn">
-                    REGISTER
-                  </button>
-                </div>  
-
-              </div> <!-- Container for buttons  -->
+                <div class="button_container">   
+                  <?php include "includes/login_form.php"; ?> 
+                </div> <!-- Container for buttons  -->
             </div> 
 
           </div> <!-- Wrapper for logo and buttons on bigger screens -->

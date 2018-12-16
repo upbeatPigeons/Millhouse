@@ -12,6 +12,10 @@
         
       margin-top: $dividing_margin;
     }
+
+    .create_post_info{
+      margin-top: 1rem;
+    }
 }
 
 .divider_bar{
@@ -28,6 +32,13 @@
   background-color: $white_color;
   padding-bottom: $dividing_margin;
 
+  .comment_info{
+    margin-bottom:1rem;
+  }
+
+  .comment_content{
+    margin-bottom:1rem;
+  }
 }
 
 .divider_bar{

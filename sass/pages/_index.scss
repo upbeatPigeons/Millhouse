@@ -1,15 +1,15 @@
 /* Everything that is contained inside the same element as the background-img is
 nested for clarity. Represents the same way the html is nested */
 .small_screen_background_image {
-  height: 600px;
+  height: 700px;
   background-image: 
     linear-gradient(
       transparent 40%,
       $palepink_color
     ),
     linear-gradient(
-      $white_color 15%,
-      transparent 35%    
+      $white_color 10%,
+      transparent 40%    
     ),
     url(../images/Eske_01.jpg);
   background-repeat: no-repeat;
@@ -36,6 +36,14 @@ nested for clarity. Represents the same way the html is nested */
       align-items: center;
       min-height: 290px;
       padding-bottom: 200px;
+      padding-top: 400px;
+      margin-bottom: 180px;
+
+      .login{
+        margin-bottom: 1rem;
+        margin-top: 0.5rem;
+      }
+
     }     
   }
 }
@@ -93,12 +101,17 @@ nested for clarity. Represents the same way the html is nested */
       }
 
       .big_screen_button_container {
+        margin-top: 1rem;
         padding: 15px;
         display: flex;
         justify-content: center;
 
         .button_container {
           padding: 10px;
+
+          .login{
+           padding-bottom: 1rem;
+          }
 
         }
       }

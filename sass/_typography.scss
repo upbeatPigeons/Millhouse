@@ -1,106 +1,97 @@
-//font family sans-serif
+//Resets
 
-.page_title, .footer_title ,
-.date, .autor, .content, .footer_text, 
-.carousel_content .product_price,
-.carousel_content, .latest_post_content{
-  font-family: $sans_serif;
-
+a{
+  text-decoration: none;
 }
 
-// font family serif
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
 
-.main_title, .main_title_single_post, 
-.product_title, .product_price, 
-.carousel_title{
+h1, h3{
   font-family: $serif;
-
 }
 
-//font-size{
-.date, .autor, .content, .footer_text, 
-.carousel_content .product_price,
-.carousel_content, .latest_post_content{
-  font-size: 1rem; 
-
+h2, p, {
+  font-family: $sans-serif;
 }
 
-.page_title, .footer_title {
-  font-size: 1.2rem;
-  text-transform: uppercase;
-
-}
-
-.page_title {
-  color: $darkblue_color;
-
-}
-
-.main_title {
-  font-size: 1.5rem;
-  color: $white_color;
-
-}
-.main_title_single_post{
-  font-size: 1.5rem;
-  color: $darkblue_color;
- 
-
-}
-.carousel_title {
-  font-size: 2rem;
-  color: $white_color;
-  margin-left: 0;
-  margin-left: 0;
-
-}
-
-.product_title, .product_price {
+p{
   font-size: 1.125rem;
-  text-align: center;
-  color: $darkblue_color;
-
-  }
- 
-
-.date{
-  color: $palepink_color;
-  font-weight: 600;
-
 }
 
-.author{
+
+//Headers & subheaders
+
+.title{
+  color: $darkblue_color;
+  font-size: 1.5rem;
+}
+
+.title_inverse{
+  color: $white_color;
+  font-size: 1.5rem;
+}
+
+.subheading{
+  color: $darkblue_color;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.subheading2{
+  color: $palepink_color;
+  font-size: 1.2rem;
+}
+
+.subheading_serif{
+  color: $darkblue_color;
+  font-size: 1.125rem;
+}
+
+// Typography for main text
+
+.body1 {
+  color: $darkblue_color;
+}
+
+.body1_inverse {
+  color: $white_color;
+}
+
+.body2{
   color: $darkblue_color;
   font-style: italic;
-  font-weight: 500;
-  margin-bottom: -2px; 
+  }
 
-}
+.body2_link{
+  font-style: italic;
+    &:hover{
+      color: $darkblue_color;
+      font-weight: 600;
+    }
+  }
 
-.content{
-  //color: $darkblue_color;
-  color: $darkblue_color;
+  .body3{
+    color: $palepink_color;
+  }
 
-}
+//Tablet view
 
-.carousel_content, .latest_post_content, .footer_text{
-  color: $white_color;
+@media (min-width: 992px) {
 
-}
+  .title, .title_inverse{
+    font-size: 2rem;
+  }
 
-.footer_title{
-  color: $palepink_color;
-}
-
-.footer_text{
-  font-weight: 500;
-
-}
-
-
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { 
-  
-      
+  .body1, .body2, .body2_link, .body3{
+    font-size: 1rem;
+  }
 }

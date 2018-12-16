@@ -21,7 +21,6 @@
   //Single post 
   
   .latest_post_content{
-    //margin-bottom: $dividing_margin;
 
     .latest_post_text{
       padding-bottom: $dividing_margin;
@@ -33,15 +32,47 @@
       }
     }
   }
+  
   .blog_section {
     margin-top: $dividing_margin;
   }
+
   .blog_title{
     padding-top: $dividing_margin;
-
   }
 
-  //Overlay effect on post images
+  .blog_post{
+    margin-bottom: 2rem;
+
+    .blog_header{
+      margin: 1rem;
+    }
+  }
+
+
+
+  // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+
+      .latest_post_image {
+        margin-bottom: 0;
+
+      }
+
+      .latest_post_text{
+        padding: 0;
+
+        .latest_blogpost_title, .latest_post_content, .read_more_button  {
+          padding-left: 3rem;
+          padding-right: 3rem;
+        }
+  
+        .latest_blogpost_title {
+          padding-top: 4rem;
+        }
+
+      } 
+      //Overlay effect on post images
   
   .container{
     padding: 0;
@@ -90,34 +121,5 @@
     transform: translate(-50%, -50%);
     text-align: center;
   }
-
-  // Large devices (desktops, 992px and up)
-    @media (min-width: 992px) {
-
-      .latest_post_image {
-        margin-bottom: 0;
-
-      }
-
-      .latest_post_text{
-        padding: 0;
-
-        .latest_blogpost_title, .latest_post_content, .read_more_button  {
-          padding-left: 3rem;
-          padding-right: 3rem;
-        }
-  
-        .latest_blogpost_title {
-          padding-top: 6rem;
-        }
-
-      } 
-
     } 
-
-
-    @media (min-width: 768px) and (max-width: 991.98px) {
-      
-     }
-
 

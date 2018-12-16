@@ -1,19 +1,23 @@
 footer {
   background-color: $darkblue_color;
-  color: $white_color;
   padding-top: 2rem;
   padding-bottom: 2rem;  
 
-  .footer_title{
-    padding: 1.5rem 0px 1rem 0px;
-  }
-    
-  .social_media_links{
+  .footer_text_container{
+    margin-bottom: 1rem;
+
+    .footer_title{
+      margin-bottom: 0.5rem;
+    }
+
+    .social_media_links{
       color: $white_color;
       margin: 5px;
 
       &:hover{
         color: $palepink_color;
       }
-  }
+    }
+  } 
+  
 }

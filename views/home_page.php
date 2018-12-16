@@ -39,10 +39,10 @@ $latest_post = $post_methods->list_latest_post();
 					<?php
 					// If there are no posts in the table, show a error message
 						if (!$latest_post) : ?>
-							<h2 class="page_title">Hm, it seems like there are no blog posts to show..</h2>
+							<h2 class="subheading">Hm, it seems like there are no blog posts to show..</h2>
 						<?php else: ?>
 			      <div class="col-11 col-md-10 text_header">	
-							<h2 class="page_title">Latest Posts</h2>
+							<h2 class="subheading">Latest Posts</h2>
 						  <div class="underline"></div>
 						</div>	
 					<!-- Row-->	
@@ -55,9 +55,9 @@ $latest_post = $post_methods->list_latest_post();
 
 					<div class="col-11 col-md-4 order-md-1 latest_post_text">
 						<!--latest post title from Post.php-->
-						<h1 class="main_title latest_blogpost_title"><?= $latest_post->get_title();?></h1>
+						<h1 class="title_inverse latest_blogpost_title "><?= $latest_post->get_title();?></h1>
 						<!--latest post summary or text from Post.php-->
-						<p class="latest_post_content">
+						<p class="body1_inverse latest_post_content">
 							<?php 
 								// Print only the summary of the latest post content
 								$text = $latest_post->get_description();
@@ -76,26 +76,36 @@ $latest_post = $post_methods->list_latest_post();
 
 				<div class="row justify-content-center"> 
 					<div class="col-11 col-md-10 blog_section">	
-						<h2 class="page_title">Blog</h2>		
+						<h2 class="title">Blog</h2>		
 				</div>
 
 					<div class="col-11 col-md-10 text_header">
 						<div class="underline"></div>
 					</div>
+				<!-- Row -->	
 				</div>
 
 				<!-- Here we loop through and show every individual post in database. And use the getter info from the class Post.php so we can loop out the correct data where we want it -->
 				<div class="row justify-content-center text-center">
 					<?php foreach ($all_posts as $post): ?>
-
-						<div class="col-11 col-md-5 blog_post">
+					  <!-- Mobile blog display -->
+						<div class="d-block col-10 d-lg-none blog_post">
+							<div class="blog_image">
+								<img class="img-fluid" src="<?= $post->get_image();?>">
+							</div>
+								<h1 class="title blog_header"><?= $post->get_title();?></h2>	
+								<a href="single_post_page.php?id=<?= $post->get_id();?>" class="btn pink_primory_btn">READ MORE</a>
+						</div>
+						
+						<!-- Tablet blog display -->
+						<div class="d-none d-lg-block col-5">
          	 		<div class="container">
 								<img class="img-fluid" src="<?= $post->get_image();?>">
 								<div class="overlay">
 									<h2 class="text_overlay"><?= $post->get_title();?></h2>	
 									<a href="single_post_page.php?id=<?= $post->get_id();?>" class="btn pink_primory_btn text_link">READ MORE</a>
 								</div>
-							
+
 							<!--Container-->
 							</div>
 
