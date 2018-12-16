@@ -1,3 +1,56 @@
+//Resets
+
+a{
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+  font-family: $serif;
+}
+
+h2, p, {
+  font-family: $sans-serif;
+}
+
+p{
+  font-size: 1rem;
+}
+
+
+//Headers & subheaders
+
+// Typography for main text
+
+.body1 {
+  color: $darkblue_color;
+}
+
+.body1_inverse {
+  color: $white_color;
+}
+
+.body2{
+  font-style: italic;
+    &:hover{
+      color: $darkblue_color;
+      font-weight: 600;
+    }
+
+}
+
+
+
 //font family sans-serif
 
 .page_title, .footer_title ,

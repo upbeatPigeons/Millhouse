@@ -20,17 +20,9 @@ require "../includes/validation_functions.php";
 			<div class="row signin-wrapper justify-content-between">
 				<div class="col-sm-12 col-md-6 login_form_wrapper">
 
-					<?php if ($_GET['action'] == "login"){
-            /* Include the login form */
-          	include "../includes/login_form.php"; 
-          }elseif ($_GET['action'] == "register"){
-            /* Include the register form */
+					<?php 
     				include "../includes/register_form.php";
-          } else { 
-						/* Show both if no */
-						include "../includes/login_form.php"; 
-    				include "../includes/register_form.php";
-					}?>
+          ?>
 				</div> <!-- End of col -->
 
 				<div class="d-none d-md-block col-md-6">

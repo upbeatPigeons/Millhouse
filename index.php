@@ -34,7 +34,9 @@ require "includes/validation_functions.php";
             <button type="submit" name="login" value="Log in" class="primory_btn_inverse btn btn-m btn-block">SIGN IN</button>
           </form>
 
-          <div class="login_text_box content">Don't have an account?<a href="views/login_page.php?action=register"> Sign up here</a></div>
+          <div class="login_text_box content">
+            <p class="body1">Don't have an account?<a class="body2" href="views/login_page.php?action=register"> Sign up here</p></a></div> 
+          </div>
          
         </div> <!-- Container for buttons  -->
 
@@ -87,8 +89,8 @@ require "includes/validation_functions.php";
                   <button type="submit" name="login" value="Log in" class="primory_btn_inverse btn btn-m btn-block">LOG IN</button>
                 </form>
 
-          <div class="login_text_box content">Don't have an account?<a href="views/login_page.php?action=register"> Sign up here</a></div>          
-                
+                <div class="login_text_box text-center">
+                  <p class="body1">Don't have an account?<a class="body2" href="views/login_page.php?action=register"> Sign up here</p></a></div>          
                 </div>  
 
               </div> <!-- Container for buttons  -->

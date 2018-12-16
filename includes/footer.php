@@ -2,10 +2,10 @@
   <div class="row footer justify-content-center">
       <div class="col-5 text-center text-md-left footer_text_container">
         <h3 class="footer_title">Contact Us</h3>
-        <p class="footer_text">Regjeringsgata 38</p>
-        <p class="footer_text" >113 40 Stockholm</p>
-        <p class="footer_text" >0735644999</p>
-        <p class="footer_text" >www.millhouse.com</p>
+        <p class="body1_inverse">Regjeringsgata 38</p>
+        <p class="body1_inverse" >113 40 Stockholm</p>
+        <p class="body1_inverse" >0735644999</p>
+        <p class="body1_inverse" >www.millhouse.com</p>
       </div> 
 
       <div class="col-md-5 d-md-flex justify-content-end text-center text-md-left footer_text_container">
