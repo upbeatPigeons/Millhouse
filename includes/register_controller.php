@@ -52,7 +52,7 @@ if ($row["num"] > 0) {
 
 if (empty($validation_vars)) {
   $registration_steps->register_user($new_user);
-  header("Location: ../views/login_page.php?user_registered=User_succesfully_registered&action=login");
+  header("Location: ../index.php?user_registered=User_succesfully_registered%2E_You_can_now_log_in%2E&action=login");
 } else {
   header("Location: ../views/login_page.php?" . $validation_vars);
 }
