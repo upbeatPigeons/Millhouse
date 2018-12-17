@@ -6,6 +6,6 @@
 */
 
 if (empty($_SESSION["username"])) {
-  header("Location: ../views/login_page.php");
+  header("Location: ../index.php");
 }
 ?>
