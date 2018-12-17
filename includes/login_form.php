@@ -1,5 +1,5 @@
 
-<form class="login" action="../includes/login_controller.php" method="POST">
+<form class="login" action="includes/login_controller.php" method="POST">
    <div class="form-group">
       <label for="username" class="sr-only">Enter your username</label>
       <input type="text" class="form-control borders" name="username" id="username" placeholder="Username" required>
