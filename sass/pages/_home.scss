@@ -26,6 +26,11 @@
       padding-bottom: $dividing_margin;
       padding-top: $dividing_margin;
       background-color: $darkblue_color;
+
+       .latest_blogpost_title{
+         margin-bottom: 1rem;
+       }
+
       
       .read_more_button{
         margin-top: 1rem;
@@ -33,6 +38,7 @@
     }
   }
   
+
   .blog_section {
     margin-top: $dividing_margin;
   }
@@ -76,6 +82,7 @@
   
   .container{
     padding: 0;
+    margin-bottom: 2rem;
   }
   .overlay {
     position: absolute;

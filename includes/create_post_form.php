@@ -29,7 +29,7 @@ require_once "validation_functions.php";
 		<div class="<?php get_class_for_error_message($empty_description)?>"><?php echo $empty_description_error_message;?></div>
 	</div>
 	<div class="cta_area">
-	<button type="submit" class="btn create-post-button primory_btn btn-block">CREATE POST</button>
-	<a class="btn cancel-action-button primory_btn btn-block" href="../views/home_page.php" role="button">CANCEL</a>
+	<button type="submit" class="btn create-post-button primory_btn_inverse btn-block">CREATE POST</button>
+	<a class="btn cancel-action-button primory_btn_inverse btn-block" href="../views/home_page.php" role="button">CANCEL</a>
 </div>
 </form>
