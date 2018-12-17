@@ -3,11 +3,11 @@
     <nav class="navbar navbar-expand-lg navbar-light row">
       <div class="container d-lg-none">
       <div class="navbar_logo d-block d-lg-none col-12">
-      <?php if (isset($_SESSION["username"])) { ?>
+      <?php if (isset($_SESSION["username"])) : ?>
         <a class="navbar-brand" href="../views/home_page.php">
-      <?php } else { ?>
+      <?php else : ?>
         <a class="navbar-brand" href="../views/login_page.php">
-      <?php } ?>
+      <?php endif; ?>
           <div class="collapsed_logo d-block d-lg-none">
             <img src="../images/Logo%20Shape.svg" alt="Logo">
           </div>
