@@ -11,7 +11,7 @@ require_once "validation_functions.php";
 	</div>
 	<div class="form-group">
 		<label for="image" class="content">Enter image URL</label>
-		<input type="text" class="form-control borders" name="image" placeholder="http://example.com/image.jpg">
+		<input type="text" class="form-control borders" name="image" placeholder="http://example.com/image.jpg"><div class="<?php get_class_for_error_message($empty_image)?>"><?php echo $empty_image_error_message;?></div>
 	</div>
 
 	<div class="form-group">

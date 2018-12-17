@@ -27,14 +27,10 @@ switch ($_GET["action"]) {
       $new_post = new Post();
 
       $new_post->set_title($title);
+      $new_post->set_image($image_url);
       $new_post->set_description($description);
       $new_post->set_created_by($created_by);
       $new_post->set_category($category);
-
-      // if the image url is not empty, set it
-      if (!empty($image_url)) {
-        $new_post->set_image($image_url);
-      }
 
       $post_methods->create($new_post);
       header("Location: ../views/home_page.php");
@@ -62,13 +58,9 @@ switch ($_GET["action"]) {
 
     // Set the title, description and category
     $edited_post->set_title($title);
+    $edited_post->set_image($image_url);
     $edited_post->set_description($description);
     $edited_post->set_category($category);
-
-    // if the image url is not empty, set it
-      if (!empty($image_url)) {
-        $edited_post->set_image($image_url);
-      }
 
     // Update the post and go back to the single post page
     $post_methods->edit_post($edited_post);

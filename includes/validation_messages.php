@@ -15,6 +15,13 @@ if (empty($title)) {
   $do_redirect = false;
 } 
 
+// Image validation: Cannot be empty
+if (empty($image_url)) {
+  $empty_image = true;
+  $empty_image_error_message = "Please choose an image";
+  $do_redirect = false;
+}
+
 // Description validation: Cannot be empty
 if (empty($description)) {
   $empty_description = true;
