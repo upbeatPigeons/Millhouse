@@ -29,5 +29,5 @@ if($is_password_correct){
 
 }else{
   //Handle errors
-  header("Location: ../views/login_page.php?action=login&error=Wrong_password");
+  header("Location: ../index.php?action=login&error=Wrong_password");
 }
