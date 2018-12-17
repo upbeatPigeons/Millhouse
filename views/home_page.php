@@ -55,7 +55,7 @@ $latest_post = $post_methods->list_latest_post();
 
 					<div class="col-11 col-md-4 order-md-1 latest_post_text">
 						<!--latest post title from Post.php-->
-						<h1 class="title_inverse latest_blogpost_title "><?= $latest_post->get_title();?></h1>
+						<h1 class="title_inverse latest_blogpost_title"><?= $latest_post->get_title();?></h1>
 						<!--latest post summary or text from Post.php-->
 						<p class="body1_inverse latest_post_content">
 							<?php 
@@ -76,7 +76,7 @@ $latest_post = $post_methods->list_latest_post();
 
 				<div class="row justify-content-center"> 
 					<div class="col-11 col-md-10 blog_section">	
-						<h2 class="title">Blog</h2>		
+						<h2 class="subheading">Blog</h2>		
 				</div>
 
 					<div class="col-11 col-md-10 text_header">
@@ -85,8 +85,9 @@ $latest_post = $post_methods->list_latest_post();
 				<!-- Row -->	
 				</div>
 
-				<!-- Here we loop through and show every individual post in database. And use the getter info from the class Post.php so we can loop out the correct data where we want it -->
-				<div class="row justify-content-center text-center">
+	 			<!-- Here we loop through and show every individual post in database. And use the getter info from the class Post.php so we can loop out the correct data where we want it -->
+				<div class="row justify-content-center text-center blog_post_container">
+
 					<?php foreach ($all_posts as $post): ?>
 					  <!-- Mobile blog display -->
 						<div class="d-block col-10 d-lg-none blog_post">
@@ -94,7 +95,8 @@ $latest_post = $post_methods->list_latest_post();
 								<img class="img-fluid" src="<?= $post->get_image();?>">
 							</div>
 								<h1 class="title blog_header"><?= $post->get_title();?></h2>	
-								<a href="single_post_page.php?id=<?= $post->get_id();?>" class="btn pink_primory_btn">READ MORE</a>
+								<a href="single_post_page.php?id=<?= $post->get_id();?>" class="btn primory_btn_inverse">READ MORE</a>
+								<hr>
 						</div>
 						
 						<!-- Tablet blog display -->
@@ -105,10 +107,8 @@ $latest_post = $post_methods->list_latest_post();
 									<h2 class="text_overlay"><?= $post->get_title();?></h2>	
 									<a href="single_post_page.php?id=<?= $post->get_id();?>" class="btn pink_primory_btn text_link">READ MORE</a>
 								</div>
-
 							<!--Container-->
 							</div>
-
           	<!--Col-->
 						</div>	
 

@@ -28,17 +28,17 @@
             <?php if (isset($_SESSION["username"])) { ?>
       
               <li class="nav-item">
-                <a class="nav-link content" href="../views/home_page.php"><i class="fas fa-home d-inline d-lg-none"></i>BLOG</a>
+                <a class="nav-link" href="../views/home_page.php"><i class="fas fa-home d-inline d-lg-none"></i>BLOG</a>
               </li>
         
               <li class="nav-item">
-                <a class="nav-link content" href="../views/about_page.php"><i class="fas fa-question-circle d-inline d-lg-none"></i>ABOUT</a>
+                <a class="nav-link" href="../views/about_page.php"><i class="fas fa-question-circle d-inline d-lg-none"></i>ABOUT</a>
               </li>
 
             <?php if ($_SESSION["admin"] == 1){ ?>
             <li class="nav-item">
               <!-- Check if the user is an admin -->
-                  <a class="nav-link content" href="../views/create_post_page.php">
+                  <a class="nav-link" href="../views/create_post_page.php">
                     <i class="fas fa-edit d-inline d-lg-none"></i>CREATE POST
                   </a>
             </li>
@@ -65,7 +65,7 @@
         <div class="logged_in_text">
           <ul class="navbar-nav navbar-center">
             <li class="nav-item">
-              <p class="nav-link content font-italic"> 
+              <p class="nav-link font-italic"> 
                 <?php if (isset($_SESSION["username"])) { ?>
 
                   <i class='fas fa-user'></i>
@@ -76,11 +76,11 @@
             </li>
             <?php if(isset($_SESSION["username"])) { ?>
             <li class="nav-item">
-                <a class="nav-link content" href="../includes/logout.php"><i class="fas fa-door-open"></i>LOG OUT</a>
+                <a class="nav-link" href="../includes/logout.php"><i class="fas fa-door-open"></i>LOG OUT</a>
             </li>
             <?php } else { ?>
               <li class="nav-item">
-                <a class="nav-link content" href="../views/login_page.php">SIGN IN/REGISTER</a>
+                <a class="nav-link" href="../views/login_page.php">SIGN IN/REGISTER</a>
               </li>
             <?php }?>
           </ul>

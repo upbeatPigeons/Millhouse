@@ -9,10 +9,34 @@
       @include image_box_shadow;
       margin-bottom: $dividing_margin;
     }
+
+    .about_content{
+      margin-bottom: 1rem;
+      background-color: $darkblue-color;
+      padding: 4rem 2rem 2rem 2rem;
+
+        .about_title{
+          margin-bottom: 1rem;
+        }
+      }
+    
+      .divider{
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+      }
+
   }
 }
 
-.contact_details{
+.contact_container{
   margin-top: $dividing_margin;
+
+  .contact_content{
+    align-content: center;
+  }
+
+  .contact_title{
+    margin-bottom: 1rem;
+  } 
 }
 

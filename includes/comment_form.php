@@ -10,6 +10,6 @@ require_once "validation_functions.php";
 			<label for="comment" class="sr-only">Leave a comment</label>
 			<textarea type="text-area" class="col-12 col-md-9 text-area" name="comment"></textarea>
 			<div class="<?php get_class_for_error_message($comment_error)?>"><?php echo $comment_error;?></div>
-	  	<button class="btn comment_button primory_btn col-12 col-md-9" type="submit">SUBMIT</button>	
+	  	<button class="btn comment_button primory_btn_inverse col-12 col-md-9" type="submit">SUBMIT</button>	
 		</div>
 	</form>
