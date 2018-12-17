@@ -2,7 +2,7 @@
 session_start();
 
 require_once ("database_connection.php");
-require_once ("../classes/DatabaseFunctions.php"); 
+require_once ("../classes/UserMethods.php"); 
 
 /* Register_controller is the "central" for Register
 * Here is where all the functions in Register are initialized and the instances of both classes RegisterDataSetup and Register are initalized. 
