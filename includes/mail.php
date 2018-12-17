@@ -37,8 +37,7 @@ if ($_GET["action"] === "send") {
   // If there are no errors, send the email
   if(!isset($name_error) && !isset($subject_error) && !isset($email_error) && !isset($message_error)) {
     $body="From: $name \n Message: $message";
-  // Change recipient to company email address later
-    $recipient = "idaelisabethb@gmail.com";
+    $recipient = "millhouse@millhousecompany.com";
 
     if (mail($recipient, $subject, $body)) {
       header("Location: ../views/about_page.php?email_sent=true");
