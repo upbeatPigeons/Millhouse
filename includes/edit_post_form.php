@@ -17,7 +17,7 @@ $post = $post_methods->list_single_post($_GET["id"]);
 	</div>
 	<div class="form-group borders">
 		<label for="image" class="content">Edit image URL</label>
-		<input type="text" class="form-control borders" name="image" value="<?=$post->get_image()?>"><div class="<?php get_class_for_error_message($empty_title)?>"><?php echo $empty_image_error_message;?></div>
+		<input type="text" class="form-control borders" name="image" value="<?=$post->get_image()?>"><div class="<?php get_class_for_error_message($empty_image)?>"><?php echo $empty_image_error_message;?></div>
 	</div>
 
 	<div class="form-group">
