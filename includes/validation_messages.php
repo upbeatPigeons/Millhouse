@@ -20,6 +20,14 @@ if (empty($image_url)) {
   $empty_image = true;
   $empty_image_error_message = "Please choose an image";
   $do_redirect = false;
+} else {
+  $image_url = filter_var($image_url, FILTER_SANITIZE_URL);
+
+  if (!filter_var($image_url, FILTER_VALIDATE_URL, FILTER_FLAG_PATH_REQUIRED)) {
+    $empty_image = true;
+    $empty_image_error_message = "Image url has an invalid format";
+    $do_redirect = false;
+  }
 }
 
 // Description validation: Cannot be empty
