@@ -19,13 +19,11 @@ class Post
 
   // Because we use FETCH:: CLASS, we don't include parameters in the constructor 
 	public function __construct() {
-
-	// We only initialize the date in the constructor
+		// We only initialize the date in the constructor
 		$this->date = date("Y-m-d H:m"); // Prints SQL friendly date 2018-11-22 18:11:24
 	}
 
 	// Setter methods below
-
 	public function set_title($title) {
 		$this->title = $title;
 	}
@@ -47,7 +45,6 @@ class Post
 	}
 
 	// Below are all the getters methods for the class properties
-
 	public function get_title() {
 		return $this->title;
 	}
@@ -75,9 +72,6 @@ class Post
 	public function get_id() {
 		return $this->id;
 	}
-
 }
-
-
 
 ?>
