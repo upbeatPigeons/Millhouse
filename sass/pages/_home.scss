@@ -60,8 +60,6 @@
   }
 }
 
-
-
   // Large devices (desktops, 992px and up)
   @media (min-width: 992px) {
 
@@ -81,60 +79,7 @@
     .latest_blogpost_title {
       padding-top: 4rem;
     }
-    //Overlay effect on post images
-    
-    .tablet_container{
-      margin-bottom: 2rem;
-
-      .container{
-        padding: 0;
-        margin-bottom: 2rem;
-      
-          .overlay {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: auto;
-            width: 100%;
-            opacity: 0;
-            transition: .5s ease;
-            background-color: $darkblue_color;
-
-              .container:hover & {
-                opacity: 0.9;
-              }
-          }
-
-          // Text for overlay effect 
-          .text_overlay {
-            font-size: 1.2rem;
-            text-align: center;
-            font-family: $serif;
-            color: white;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-          }
-
-          .text_link {
-            outline: none; 
-            cursor: pointer;
-            position: absolute;
-            top: 80%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            text-align: center;
-          }      
-        } 
-      }
-    }
+   }
 
 
 
