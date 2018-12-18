@@ -90,27 +90,20 @@ $latest_post = $post_methods->list_latest_post();
 
 					<?php foreach ($all_posts as $post): ?>
 					  <!-- Mobile blog display -->
-						<div class="d-block col-10 d-lg-none blog_post">
+						<div class="d-block col-10 col-md- blog_post">
 							<div class="blog_image">
 								<img class="img-fluid" src="<?= $post->get_image();?>">
 							</div>
+
+							<div>
 								<h1 class="title blog_header"><?= $post->get_title();?></h2>	
 								<a href="single_post_page.php?id=<?= $post->get_id();?>" class="btn primory_btn_inverse">READ MORE</a>
 								<hr>
-						</div>
-						
-						<!-- Tablet blog display -->
-						<div class="d-none d-lg-block col-5 tablet_container">
-         	 		<div class="container">
-								<img class="img-fluid" src="<?= $post->get_image();?>">
-								<div class="overlay">
-									<h2 class="text_overlay"><?= $post->get_title();?></h2>	
-									<a href="single_post_page.php?id=<?= $post->get_id();?>" class="btn pink_primory_btn text_link">READ MORE</a>
-								</div>
-							<!--Container-->
 							</div>
+					
+							<!--Container-->
+						</div>
           	<!--Col-->
-						</div>	
 
 					<?php endforeach; ?>
 			
