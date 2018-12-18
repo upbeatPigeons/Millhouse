@@ -8,14 +8,14 @@ class CommentMethod
 	private $pdo;
 	
   // PDO object gets passed as a parameter to encapsulate the database operations for Comments inside this class
-	public function __construct($pdo){
-		
+	public function __construct($pdo)
+	{	
     $this->pdo =$pdo;
 	}
 
 	// Saves the comment to database.
-	public function save_comment_to_database(Comment $new_comment){
-		
+	public function save_comment_to_database(Comment $new_comment)
+	{	
 		$statement =$this->pdo->prepare("INSERT INTO comments(content, post_id, created_by, date) VALUES(:content, :post_id, :created_by, :date)");
 		
 		$statement->execute ([
@@ -27,8 +27,8 @@ class CommentMethod
   }
 	
   // List all comments as instances of the Comment class
-  public function list_all_comments($postId){
-
+	public function list_all_comments($postId)
+	{
 		$statement= $this->pdo->prepare("SELECT * FROM comments WHERE post_id = :post_id ORDER BY date DESC");
 		
 		$statement->execute([
@@ -50,7 +50,8 @@ class CommentMethod
   }
 	
 	//Deletes a comment
-  public function delete_comment($id){
+	public function delete_comment($id)
+	{
 	  $statement = $this->pdo->prepare("DELETE from comments WHERE id = :id ");
 	
 	  $statement->execute([
