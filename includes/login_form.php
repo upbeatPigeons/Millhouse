@@ -12,6 +12,7 @@
       <?php show_error_messages($_GET["error"]); ?> 
    </div>
    <button type="submit" name="login" value="Log in" class="primory_btn_inverse btn btn-m btn-block">SIGN IN</button> 
+   <?php show_error_messages($_GET["user_registered"]); ?> 
 </form>
 
  <div class="login_text_box content">   
