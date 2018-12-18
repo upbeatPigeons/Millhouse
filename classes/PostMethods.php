@@ -30,20 +30,21 @@ class PostMethods
   public function list_all_posts()
   {
     try {
-    $statement = $this->pdo->prepare("SELECT * from posts ORDER BY date DESC");
-    $statement->execute();
+      $statement = $this->pdo->prepare("SELECT * from posts ORDER BY date DESC");
+      $statement->execute();
 
-    /* 
-    * We will use FETCH_CLASS to return an array consisting of objects from the Post class
-    * FETCH_CLASS fetches database rows into an object
-    * With FETCH_CLASS, data is populated before the constructor is called 
-    * Our constructor initializes the date, so to avoid that the values from the database are being overwritten with the same values every time, we simply add PDO::FETCH_PROPS_LATE when calling fetchAll so the constructor will be called first.
-    */
+      /* 
+      * We will use FETCH_CLASS to return an array consisting of objects from the Post class
+      * FETCH_CLASS fetches database rows into an object
+      * With FETCH_CLASS, data is populated before the constructor is called 
+      * Our constructor initializes the date, so to avoid that the values from the database are being overwritten with the same values every time, we simply add PDO::FETCH_PROPS_LATE when calling fetchAll so the constructor will be called first.
+      */
 
-    return $statement->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, "Post");
-   } catch (PDOException $exception) {
-    echo "Connection error" . $exception->getMessage();
-   }
+      return $statement->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, "Post");
+
+    } catch (PDOException $exception) {
+      echo "Connection error" . $exception->getMessage();
+    }
   }
 
   // Lists a single post
@@ -54,9 +55,12 @@ class PostMethods
       $statement->execute([
         ":id" => $id
       ]);
+
       // return a single post object. 
       $statement->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, "Post");
+
       return $statement->fetch();
+
     } catch (PDOException $exception) {
       echo "Connection error" . $exception->getMessage();
     }
@@ -68,9 +72,12 @@ class PostMethods
     try {
       $statement = $this->pdo->prepare("SELECT * from posts ORDER BY date DESC LIMIT 1");
       $statement->execute();
+
       // return a single post object 
       $statement->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, "Post");
+
       return $statement->fetch();
+
     } catch (PDOException $exception) {
       echo "Connection error" . $exception->getMessage();
     }
@@ -97,11 +104,11 @@ class PostMethods
         ":category" => $edited_post->get_category(),
         ":id" => $edited_post->get_id()
       ]);
+
     }catch (PDOException $exception) {
       echo "Connection error" . $exception->getMessage();
     }
   }
-
 }
 
 ?>
