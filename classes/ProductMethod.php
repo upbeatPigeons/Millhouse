@@ -19,6 +19,7 @@ class ProductMethod{
       $statement = $this->pdo->prepare(
         "SELECT * FROM products WHERE category = :category ORDER BY RAND() LIMIT 4"
       );
+      
       $statement->execute([
       ":category" => $category
       ]);
