@@ -79,6 +79,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="../includes/logout.php"><i class="fas fa-door-open"></i>LOG OUT</a>
             </li>
+          
           <?php else : ?>
             <li class="nav-item">
               <a class="nav-link" href="../views/login_page.php">SIGN IN/REGISTER</a>

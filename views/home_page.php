@@ -100,7 +100,7 @@ $latest_post = $post_methods->list_latest_post();
 						</div>
 						
 						<!-- Tablet blog display -->
-						<div class="d-none d-lg-block col-5">
+						<div class="d-none d-lg-block col-5 tablet_container">
          	 		<div class="container">
 								<img class="img-fluid" src="<?= $post->get_image();?>">
 								<div class="overlay">
@@ -113,6 +113,7 @@ $latest_post = $post_methods->list_latest_post();
 						</div>	
 
 					<?php endforeach; ?>
+			
 				</div>	
 
 			<!-- text wrapper div -->	
