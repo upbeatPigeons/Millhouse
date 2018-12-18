@@ -2,7 +2,7 @@
 session_start();
 
 require_once ("database_connection.php");
-require_once ("../classes/DatabaseFunctions.php");
+require_once ("../classes/UserMethods.php");
 
 /*
 * Controller file that retrieves the user from the database, checks if the password matches and saves the user to the session
