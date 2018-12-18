@@ -73,6 +73,7 @@ switch ($_GET["action"]) {
 
     break;
 }
+
 if (isset($_POST['remove_post'])) {
   $id = $_GET["id"];
   $this_post = New PostMethods($pdo);
