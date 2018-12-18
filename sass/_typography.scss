@@ -73,15 +73,16 @@ p{
 
 .body2_link{
   font-style: italic;
+
     &:hover{
       color: $darkblue_color;
       font-weight: 600;
     }
-  }
+}
 
-  .body3{
-    color: $palepink_color;
-  }
+.body3{
+  color: $palepink_color;
+}
 
 //Tablet view
 
