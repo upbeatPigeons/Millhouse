@@ -3,7 +3,6 @@
 require_once "validation_functions.php";
 
 ?>
-
 <form action="create_post_page.php?action=create" method="POST">
 	<div class="form-group">
 		<label for="title" class="content">Enter blog title</label>
