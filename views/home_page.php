@@ -100,8 +100,7 @@ $latest_post = $post_methods->list_latest_post();
 								<a href="single_post_page.php?id=<?= $post->get_id();?>" class="btn primory_btn_inverse">READ MORE</a>
 								<hr>
 							</div>
-					
-							<!--Container-->
+						
 						</div>
           	<!--Col-->
 
