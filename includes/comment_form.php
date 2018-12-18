@@ -1,6 +1,7 @@
 <?php
 
 require_once "validation_functions.php";
+
 ?>
 	<form action="../views/single_post_page.php?action=create_comment&id=<?=$post->get_id();?>" method="POST">
 		<div class="row form-group comment_form justify-content-center">

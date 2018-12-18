@@ -1,5 +1,7 @@
 <?php
+
 session_start();
+
 require_once "../classes/Post.php";
 require_once "../classes/PostMethods.php";
 require_once "database_connection.php";
@@ -69,9 +71,7 @@ switch ($_GET["action"]) {
     header("Location: ../views/single_post_page.php?id=" . $post_id);
     }
 
-
     break;
-
 }
 if (isset($_POST['remove_post'])) {
   $id = $_GET["id"];

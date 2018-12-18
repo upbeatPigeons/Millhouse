@@ -1,4 +1,3 @@
-
 <!-- Indicators -->
 <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -23,7 +22,7 @@
         <h1 class="title_invese">An ocean of comfort</h1>
         <p class="body1_inverse">Reimagine your house with some colourful pillows</p>
       </div>
-     </div>
+    </div>
 
     <div class="carousel-item">
       <img class="d-block w-100 carousel_image" src="../images/bedroom.png" alt="Pink sofa">
