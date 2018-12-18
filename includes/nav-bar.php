@@ -80,7 +80,7 @@
             </li>
             <?php } else { ?>
               <li class="nav-item">
-                <a class="nav-link" href="../views/login_page.php">SIGN IN/REGISTER</a>
+                <a class="nav-link" href="../index.php">SIGN IN/REGISTER</a>
               </li>
             <?php }?>
           </ul>
