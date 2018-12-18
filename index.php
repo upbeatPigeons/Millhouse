@@ -5,33 +5,34 @@ require "includes/validation_functions.php";
 
 <body id="index_page">
   
-    <!-- Background & main-container for smaller screens -->
-    <div class="d-block d-md-none small_screen_background_image">
+  <!-- Background & main-container for smaller screens -->
+  <div class="d-block d-md-none small_screen_background_image">
 
-      <!--Logo-->
-      <div class="container logo_container">
-        <img class="small_screen_logo_image" src="images/logo_dark.png" alt="Logo">
-      </div>
-
-      <!-- Container for elements we want to flex-end -->
-      <div class="flex_bottom_container">
-        <!-- Container for buttons  -->
-
-        <div class="small_screen_button_container justify-content-between">
-          <?php include "includes/login_form.php"; ?>
-         
-        </div> <!-- Container for buttons  -->
-
-      </div> <!-- Container for elements we want to flex-end -->
-
-    </div> <!-- Background-image for smaller screens -->
-
-    <div class="hero_container d-md-none">
-
-      <?php
-      require "includes/footer.php"
-      ?>
+    <!--Logo-->
+    <div class="container logo_container">
+      <img class="small_screen_logo_image" src="images/logo_dark.png" alt="Logo">
     </div>
+
+    <!-- Container for elements we want to flex-end -->
+    <div class="flex_bottom_container">
+      <!-- Container for buttons  -->
+
+      <div class="small_screen_button_container justify-content-between">
+        <?php include "includes/login_form.php"; ?>
+
+      </div> <!-- Container for buttons  -->
+
+    </div> <!-- Container for elements we want to flex-end -->
+
+  </div> <!-- Background-image for smaller screens -->
+
+  <div class="hero_container d-md-none">
+
+  <?php
+  require "includes/footer.php"
+  ?>
+  
+  </div>
 
   <div class="desktop_background_gradient">
     <section class="container desktop_container d-none d-md-flex">
