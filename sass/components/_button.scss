@@ -55,14 +55,17 @@
   height: 44px;
   width: 44px;
   border: none;
+
   i {
     color: $white_color;
   }
+
   &:hover, &:focus {
     background-color: $white_color;
     border: solid 1px $darkblue_color;
     cursor: pointer;
     outline: none;
+    
     i {
       color: black;
     }

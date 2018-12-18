@@ -11,6 +11,7 @@
   .navbar_logo{
     background-color: transparent;
     text-align: center;
+
     .navbar-brand{
       margin-right: 0;
       padding: 0;
@@ -22,6 +23,7 @@
 
       .collapsed_logo{
         height: 65px;
+        
         img{
           height: 100%;
         }
@@ -49,9 +51,11 @@
       color: $darkblue_color;
       margin: 0 1rem;
       margin-top: 2rem;
+
       i{
         margin: 0.2rem 0.2rem 0 0;
       }
+
       &:hover{
         font-weight: 75;
       }
@@ -65,7 +69,6 @@
   // Desktop styles 
 
   @media (min-width: 992px) {
-
     .logged_in_text {
       position: absolute;
       right: 50px;
@@ -75,7 +78,5 @@
       position: absolute;
       left: 50px;
     }
-
   }
-
 }

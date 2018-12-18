@@ -1,9 +1,11 @@
 <?php
  
  session_start();
+
  include "../includes/head.php";
  include "../includes/mail.php";
  include "../includes/force_login.php";
+ 
 ?>
 
 <body id="about_page">
@@ -50,6 +52,7 @@
 					<div class="col-11 col-md-5">
 				  	<img class="img-fluid latest_post_image" src="../images/staff.jpg" alt="Staff at Millhouse">	
 					</div>
+
 				<!-- Row -->
 				</div>
 
@@ -87,20 +90,19 @@
 					</div>
 				</div>
 
-    <!--Wrapper-->	
-		</div>
-	</section>
+			<!--Wrapper-->	
+			</div>
+		</section>
 	
-	<aside class="container-fluid divider_bar">
-		<div class="divider"></div>
-	</aside>
-
+		<aside class="container-fluid divider_bar">
+			<div class="divider"></div>
+		</aside>
 	
-</main>
+	</main>
 
-	 <?php
-    require "../includes/footer.php";
-		?>
+  <?php
+  require "../includes/footer.php";
+	?>
 		
 </body>
 

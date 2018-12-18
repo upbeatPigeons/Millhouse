@@ -1,13 +1,13 @@
 <?php
  
  session_start();
+
  include "../includes/head.php";
  require_once "../includes/database_connection.php";
  require_once "../classes/PostMethods.php";
  include "../includes/force_login.php";
-?>
 
-<?php 
+ 
 // First have to create a new instance post to access functions in Class
 $post_methods = new PostMethods($pdo);
 // Using $post_methods to actually set of the functions we want and storing them
@@ -38,15 +38,15 @@ $latest_post = $post_methods->list_latest_post();
 			  <div class="row justify-content-center">
 					<?php
 					// If there are no posts in the table, show a error message
-						if (!$latest_post) : ?>
-							<h2 class="subheading">Hm, it seems like there are no blog posts to show..</h2>
-						<?php else: ?>
-			      <div class="col-11 col-md-10 text_header">	
+					if (!$latest_post) : ?> 
+						<h2 class="subheading">Hm, it seems like there are no blog posts to show..</h2>
+					<?php else: ?>
+						<div class="col-11 col-md-10 text_header">	
 							<h2 class="subheading">Latest Posts</h2>
-						  <div class="underline"></div>
-						</div>	
-					<!-- Row-->	
-			  	</div>
+							<div class="underline"></div>
+						</div>
+				<!-- Row-->	
+				</div>
 
 				<div class="row justify-content-center latest_post_content">
 					<div class="col-11 col-md-6 order-md-12 latest_post_image_wrapper">
@@ -59,10 +59,10 @@ $latest_post = $post_methods->list_latest_post();
 						<!--latest post summary or text from Post.php-->
 						<p class="body1_inverse latest_post_content">
 							<?php 
-								// Print only the summary of the latest post content
-								$text = $latest_post->get_description();
-								preg_match('/^([^.!?]*[\.!?]+){0,2}/', strip_tags($text), $abstract);
-								echo $abstract[0]."...";
+							// Print only the summary of the latest post content
+							$text = $latest_post->get_description();
+							preg_match('/^([^.!?]*[\.!?]+){0,2}/', strip_tags($text), $abstract);
+							echo $abstract[0]."...";
 							?>
 						</p>
 						<!-- If "read more" btn is clicked we send a $_GET variable with the id so we know which post to show on next page  -->
@@ -77,7 +77,7 @@ $latest_post = $post_methods->list_latest_post();
 				<div class="row justify-content-center"> 
 					<div class="col-11 col-md-10 blog_section">	
 						<h2 class="subheading">Blog</h2>		
-				</div>
+					</div>
 
 					<div class="col-11 col-md-10 text_header">
 						<div class="underline"></div>
@@ -123,11 +123,10 @@ $latest_post = $post_methods->list_latest_post();
 
 	</main>
 
-<?php endif; ?> <!-- (!$latest_post) -->
-
-<?php
-require "../includes/footer.php"
-?>
+	<?php 
+	endif; //(!$latest_post)
+	require "../includes/footer.php";
+	?>
 
 </body>
 

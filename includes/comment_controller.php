@@ -20,28 +20,26 @@ switch ($_GET['action']) {
   $id = $_POST["delete_comment"];
 
   // Create new instance of class CommentMethods to have access to Class CommentMethods
-
   $create_method = new CommentMethod($pdo);
 
   // If the user tries to submit an empty comment, show error message
-
   if (empty($content)) {
-  $comment_error = "You cannot submit an empty comment";
+    $comment_error = "You cannot submit an empty comment";
   } else {
-  // If the comment content is not empty, create the comment
-  $new_comment = new Comment();
+    // If the comment content is not empty, create the comment
+    $new_comment = new Comment();
 
-  // Set the comment properties
-  $new_comment->set_content($content);
-  $new_comment->set_created_by($created_by);
-  $new_comment->set_postId($postId);
+    // Set the comment properties
+    $new_comment->set_content($content);
+    $new_comment->set_created_by($created_by);
+    $new_comment->set_postId($postId);
 
-  // Save the comment in the database
-  $create_method->save_comment_to_database($new_comment);
+    // Save the comment in the database
+    $create_method->save_comment_to_database($new_comment);
 
-  // Go back to the post
-  header("Location: ../views/single_post_page.php?id=".$postId);
-}
+    // Go back to the post
+    header("Location: ../views/single_post_page.php?id=".$postId);
+  }
   break;
 
   case 'delete_comment':
@@ -57,7 +55,6 @@ switch ($_GET['action']) {
   header("Location: ../views/single_post_page.php?id=".$postId);
 
   break;
-
 }
 
 ?>

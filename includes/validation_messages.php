@@ -44,7 +44,4 @@ if (empty($category)) {
   $do_redirect = false;
 } 
 
-
 ?>
-
-

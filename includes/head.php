@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -21,20 +20,17 @@
 	this is to get all "local" paths right-->
 	<?php $path = getcwd();
 	if(strpos($path, "views") === false): ?>
-	
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 		<!--CSS-->
 		<link rel="stylesheet" href="css/style.css">
-	
-	<?php else: ?>
 
+	<?php else: ?>
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
 		<!--CSS-->        
 		<link rel="stylesheet" href="../css/style.css">    
-	
+		
 	<?php endif; ?>
-
 </head>
 

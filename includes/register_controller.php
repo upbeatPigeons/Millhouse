@@ -15,6 +15,7 @@ $confirm_password = $_POST["confirm_password"];
 
 $registration_steps = new UserMethods($pdo);
 
+
 /* 
 * Error handling below
 * In order to show more error messages at once, we will declare an aggregator called $validation_vars
@@ -22,9 +23,9 @@ $registration_steps = new UserMethods($pdo);
 * These error messages will print under the field(s) it regards using $_GET
 */
 
-$validation_vars = "";
-
 // Validate password length
+
+$validation_vars = "";
 
 if (strlen($register_password) <= 6) {
   $validation_vars = $validation_vars . "password_error=Password_must_be_longer_than_6_characters&";

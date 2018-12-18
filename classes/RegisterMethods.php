@@ -24,6 +24,7 @@ class RegisterMethods
     $statement->execute ([
   		":username" => $new_user->get_username(),
     ]);
+
     //Return the row, to be able to check if the usrname is taken
     return $statement->fetch(PDO::FETCH_ASSOC);  
 
@@ -43,5 +44,4 @@ class RegisterMethods
       ":password" => $new_user->get_password()
     ]);   
   }
-
 }

@@ -1,4 +1,3 @@
-
 <!-- Indicators -->
 <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -13,7 +12,7 @@
       <img class="d-block w-100" src="../images/kitchen.jpg" alt="Kitchen">
       <div class="carousel-caption d-none d-md-block">
         <h1 class="title_inverse carousel_title">Give your house a facelift</h1>
-        <p class="body1_inverse">All you need is just some wallpaper!</p>
+        <p class="body1_inverse">All you need is some wallpaper!</p>
       </div>
     </div>
 
@@ -21,15 +20,15 @@
       <img class="d-block w-100" src="../images/living_room1.png" alt="Living room">
       <div class="carousel-caption d-none d-md-block">
         <h1 class="title_invese">An ocean of comfort</h1>
-        <p class="body1_inverse">Reimagine your house whit some coloufull pillows</p>
+        <p class="body1_inverse">Reimagine your house with some colourful pillows</p>
       </div>
-     </div>
+    </div>
 
     <div class="carousel-item">
       <img class="d-block w-100 carousel_image" src="../images/bedroom.png" alt="Pink sofa">
       <div class="carousel-caption d-none d-md-block">
         <h1 class="title_inverse">Millenium pink is here to stay</h1>
-        <p class="body1_inverse">Find back to the chind in you with playfull shades of pink</p>
+        <p class="body1_inverse">Find back to the child in you with playful shades of pink</p>
       </div>
     </div>
 
