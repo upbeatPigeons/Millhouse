@@ -21,6 +21,4 @@ class Register
     // Hashing the register_password immediately
     return password_hash($this->register_password, PASSWORD_DEFAULT);  
   }
-
 }
-  
