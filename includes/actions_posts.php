@@ -20,9 +20,9 @@ switch ($_GET["action"]) {
 
     $post_methods = new PostMethods($pdo);
 
-     include "validation_messages.php";
+    include "validation_messages.php";
 
-      // If all the fields have been filled out, create the post and store it in the db
+    // If all the fields have been filled out, create the post and store it in the db
     if ($do_redirect) {
       $new_post = new Post();
 
@@ -33,6 +33,7 @@ switch ($_GET["action"]) {
       $new_post->set_category($category);
 
       $post_methods->create($new_post);
+
       header("Location: ../views/home_page.php");
     }
 
@@ -50,7 +51,7 @@ switch ($_GET["action"]) {
 
     include "validation_messages.php";
 
-      // If all the fields have been filled out, create the post and store it in the db
+    // If all the fields have been filled out, create the post and store it in the db
     if ($do_redirect) {
 
     // Assign the post you retrieve from the database with its id to a new var called $edited_post
@@ -64,6 +65,7 @@ switch ($_GET["action"]) {
 
     // Update the post and go back to the single post page
     $post_methods->edit_post($edited_post);
+
     header("Location: ../views/single_post_page.php?id=" . $post_id);
     }
 
@@ -72,9 +74,9 @@ switch ($_GET["action"]) {
 
 }
 if (isset($_POST['remove_post'])) {
-    $id = $_GET["id"];
-    $this_post = New PostMethods($pdo);
-    $this_post->delete_posts($id);
-    header("Location: ../views/home_page.php");
-  }
+  $id = $_GET["id"];
+  $this_post = New PostMethods($pdo);
+  $this_post->delete_posts($id);
+  header("Location: ../views/home_page.php");
+}
 ?>
