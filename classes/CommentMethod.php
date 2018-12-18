@@ -26,40 +26,37 @@ class CommentMethod
     ]);
   }
 	
- // List all comments as instances of the Comment class
- public function list_all_comments($postId)
- {
-	 $statement= $this->pdo->prepare("SELECT * FROM comments WHERE post_id = :post_id ORDER BY date DESC");
-	 
-	 $statement->execute([
-		 ":post_id" => $postId
-	 ]);
-	 
-	 /* 
-		* We will use FETCH_CLASS to return an array consisting of       
-		* objects from the Comment class
-    * FETCH_CLASS fetches database rows into an object
-    * With FETCH_CLASS, data is populated before the constructor is * called 
-    * Our constructor initializes the date, so to avoid that the 
-		* values from the database are being overwritten with the same 
-		* values every time, we simply add PDO::FETCH_PROPS_LATE when 
-		* calling fetchAll so the constructor will be called first.
-    */
-	 
-	 return $statement->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, "Comment");
- }
-	
+  // List all comments as instances of the Comment class
+  public function list_all_comments($postId){
+
+		$statement= $this->pdo->prepare("SELECT * FROM comments WHERE post_id = :post_id ORDER BY date DESC");
+		
+		$statement->execute([
+			":post_id" => $postId
+		]);
+		
+		/* 
+			* We will use FETCH_CLASS to return an array consisting of       
+			* objects from the Comment class
+			* FETCH_CLASS fetches database rows into an object
+			* With FETCH_CLASS, data is populated before the constructor is * called 
+			* Our constructor initializes the date, so to avoid that the 
+			* values from the database are being overwritten with the same 
+			* values every time, we simply add PDO::FETCH_PROPS_LATE when 
+			* calling fetchAll so the constructor will be called first.
+			*/
+		
+		return $statement->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, "Comment");
+  }
 	
 	//Deletes a comment
-  public function delete_comment($id)
-  {
-	 $statement = $this->pdo->prepare("DELETE from comments WHERE id = :id ");
+  public function delete_comment($id){
+	  $statement = $this->pdo->prepare("DELETE from comments WHERE id = :id ");
 	
-	 $statement->execute([
-			 ":id" => $id
-     ]); 
- }
- 
+	  $statement->execute([
+			":id" => $id
+    ]); 
+  }
 }
 
 ?>
