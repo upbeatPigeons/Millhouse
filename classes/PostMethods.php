@@ -15,7 +15,10 @@ class PostMethods
   // Creates a post
   public function create(Post $new_post)
   {    
-  	$statement = $this->pdo->prepare("INSERT INTO posts (title, description, image, created_by, date, category) VALUES (:title, :description, :image, :created_by, :date, :category)");
+  	$statement = $this->pdo->prepare(
+      "INSERT INTO posts (title, description, image, created_by, date, category) VALUES (:title, :description, :image, :created_by, :date, :category)"
+    );
+    
   	$statement->execute ([
   		":title" => $new_post->get_title(),
   		":description" => $new_post->get_description(),
@@ -30,7 +33,10 @@ class PostMethods
   public function list_all_posts()
   {
     try {
-      $statement = $this->pdo->prepare("SELECT * from posts ORDER BY date DESC");
+      $statement = $this->pdo->prepare(
+        "SELECT * from posts ORDER BY date DESC"
+      );
+
       $statement->execute();
 
       /* 
@@ -51,7 +57,10 @@ class PostMethods
   public function list_single_post($id)
   {
     try {
-      $statement = $this->pdo->prepare("SELECT * from posts WHERE id = :id ORDER BY date DESC");
+      $statement = $this->pdo->prepare(
+        "SELECT * from posts WHERE id = :id ORDER BY date DESC"
+      );
+
       $statement->execute([
         ":id" => $id
       ]);
@@ -70,7 +79,10 @@ class PostMethods
   public function list_latest_post()
   {
     try {
-      $statement = $this->pdo->prepare("SELECT * from posts ORDER BY date DESC LIMIT 1");
+      $statement = $this->pdo->prepare(
+        "SELECT * from posts ORDER BY date DESC LIMIT 1"
+      );
+
       $statement->execute();
 
       // return a single post object 
@@ -86,7 +98,10 @@ class PostMethods
   // Deletes a post
   public function delete_posts($id) 
   {
-    $statement = $this->pdo->prepare("DELETE from posts WHERE id = :id; DELETE from comments WHERE post_id = :id;");
+    $statement = $this->pdo->prepare(
+      "DELETE from posts WHERE id = :id; DELETE from comments WHERE post_id = :id;"
+    );
+
     $statement->execute([
       "id" => $id
     ]);
@@ -96,7 +111,10 @@ class PostMethods
   public function edit_post(Post $edited_post)
   {
     try{
-      $statement = $this->pdo->prepare("UPDATE posts SET title = :title, description = :description, image = :image, category = :category WHERE posts.id = :id;");
+      $statement = $this->pdo->prepare(
+        "UPDATE posts SET title = :title, description = :description, image = :image, category = :category WHERE posts.id = :id;"
+      );
+
       $statement->execute ([
         ":title" => $edited_post->get_title(),
         ":description" => $edited_post->get_description(),

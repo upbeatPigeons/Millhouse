@@ -29,7 +29,9 @@ class CommentMethod
   // List all comments as instances of the Comment class
 	public function list_all_comments($postId)
 	{
-		$statement= $this->pdo->prepare("SELECT * FROM comments WHERE post_id = :post_id ORDER BY date DESC");
+		$statement= $this->pdo->prepare(
+			"SELECT * FROM comments WHERE post_id = :post_id ORDER BY date DESC"
+		);
 		
 		$statement->execute([
 			":post_id" => $postId
@@ -52,7 +54,9 @@ class CommentMethod
 	//Deletes a comment
 	public function delete_comment($id)
 	{
-	  $statement = $this->pdo->prepare("DELETE from comments WHERE id = :id ");
+	  $statement = $this->pdo->prepare(
+			"DELETE from comments WHERE id = :id "
+		);
 	
 	  $statement->execute([
 			":id" => $id
