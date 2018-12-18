@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 require "../includes/head.php"; 
@@ -9,17 +10,15 @@ require "../includes/validation_functions.php";
 <body id="login_page">
 	<header>
 		<?php 
-			include "../includes/nav-bar.php";
-      include "../includes/carousel.php";
+		include "../includes/nav-bar.php";
+		include "../includes/carousel.php";
     ?>
 	</header>
 
 	<main class="main_content">
 		<section class="container login-container">
-
 			<div class="row signin-wrapper justify-content-between">
 				<div class="col-sm-12 col-md-6 login_form_wrapper">
-
 					<?php 
     				include "../includes/register_form.php";
           ?>
@@ -35,8 +34,8 @@ require "../includes/validation_functions.php";
 	</main>
 
 	<?php
-require "../includes/footer.php"
-?>
+	require "../includes/footer.php"
+	?>
 </body>
 
 </html>
